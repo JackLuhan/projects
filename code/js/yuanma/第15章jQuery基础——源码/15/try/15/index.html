@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为后面的div元素设置相同的CSS样式</title>
+<style type="text/css">
+	.mydiv{
+	width:200px;
+	height:50px;
+	line-height:50px;
+	background:#66CC99;
+	margin-top:5px;
+	color:#9900FF}
+</style>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#first~div").addClass("mydiv");
+	});
+</script>
+</head>
+<body>
+<div id="first">第一个div元素</div>
+<div>第二个div元素</div>
+<div>第三个div元素</div>
+<div>第四个div元素</div>
+</body>
+</html>

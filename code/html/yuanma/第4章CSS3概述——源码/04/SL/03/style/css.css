@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*css document*/
+.cont{                                 /*类选择器设置页面的整体大小以及背景图片*/
+    width: 1536px;                     /*设置页面的宽度为1536像素*/
+    height: 840px;                     /*设置页面的高度为840像素*/
+    margin:0 auto;                     /*设置页面外边距上下为0，左右为自适应*/
+    text-align: center;                /*文字对齐方式居中对齐*/
+    background: url("../img/bg.jpg");  /*为页面设置背景图片*/
+}
+h1{                                    /*标记选择器选择<h1>标题标记*/
+    padding-top: 80px;                 /*设置向上的内边距*/
+}
+.top{                                  /*使用类选择器，改变主题内容的样式*/
+    line-height: 30px;                 /*设置行高为30像素*/
+    margin: 0 auto;                    /*设置主体部分的外边距*/
+    text-align: center;                /*设置文字的对其方式为居中对齐*/
+    width: 650px;                      /*设置主体部分宽度为650像素*/
+	font-size: 20px;                   /*设置文字的大小*/
+}
+.top:after{                            /*在类名为top的div后面添加内容*/
+    content: url("../img/phone.png");  /*添加的内容为1张图片，url为图片地址*/
+    display: block;                    /*设置显示方式*/
+    margin-top: 50px;                  /*设置所天机啊内容向上的外边距*/
+}
+.top:first-line{                       /*类选择器中第一行文字的样式*/
+    font-size: 30px;                   /*设置第一行文字的字体*/
+    line-height: 90px;                 /*设置第一行文字的行高*/
+}
+a:link{                                /*设置未被访问的超链接的样式*/
+	text-decoration: none;             /*取消其默认的下划线*/
+	color:#000;                        /*设置字体颜色为黑色*/
+}
+a:visited{                             /*设置访问后超链接的样式*/
+	color:purple;                      /*设置访问后的超链接字体为紫色*/
+}
+a:hover{                               /*设置鼠标停在超链接上的样式*/
+	text-decoration: underline;        /*鼠标滑过超链接时，文字下方出现下划线*/
+	color:#B49668;                     /*设置鼠标停在超链接上时的文字颜色*/
+}
+a:active{                              /*设置正在被单击的超链接样式*/
+	color: red;                        /*设置正在被单击的超链接的文字颜色*/
+	text-decoration: none;             /*取消正在被单击的超链接的下划线*/
+}
+

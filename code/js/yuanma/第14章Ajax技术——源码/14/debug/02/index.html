@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<script type="text/javascript">
+var xmlHttp;
+function ReqHtml(){
+	if(window.ActiveXObject){
+		xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xmlHttp=new XMLHttpRequest();
+	}
+	xmlHttp.onreadystatechange=StatHandler;
+	xmlHttp.open("GET","text.html",true);//在该行代码下一行添加xmlHttp.send(null);
+}
+function StatHandler(){
+	if(xmlHttp.readyState==4 && xmlHttp.status==200){
+		document.getElementById("answer").innerHTML=xmlHttp.responseText;
+	}
+}
+</script>
+<body>
+在金庸小说《鹿鼎记》中，韦小宝共有几个老婆？
+<a href="#" onclick="ReqHtml();">查看答案</a><p>
+<div id="answer"></div>
+</body>
+</html>

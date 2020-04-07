@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出尚未使用的卡位</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+document.write("尚未使用的卡位：<p>");
+for(var i=1; i<=3; i++){
+	for(var j=1; j<=3; j++){
+		if(i==1 && j==3){
+			continue;
+		}
+		if(i==3 && j==2){
+			continue;
+		}
+		document.write("第"+i+"排第"+j+"个 ");//输出结果
+	}
+	document.write("<br>");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*css document*/
+.cont{
+    width: 1120px;   /*设置页面的总体宽度*/
+    height: 400px;   /*设置页面的总体高度*/
+    margin: 0 auto;   /*设置页面的总体外边距*/
+    border: 2px solid red;   /*设置总体页面的边框，设置4条边框的样式相同*/
+}
+dl{
+    width: 265px;   /*设置每一个商品列表的宽度*/
+    height: 393px;   /*设置每一个商品列表的高度*/
+    text-align: center;   /*设置文字的对齐方式*/
+    float: left;   /*设置浮动方式*/
+    margin: 5px;   /*设置商品列表的外边距*/
+}
+dl:hover{   /*设置当鼠标滑过商品列表的样式*/
+    border: 2px solid #447BD3;   /*设置边框样式*/
+}
+dl dt img{   /*设置商品图片的样式*/
+    margin-top: 20px;;   /*设置向上的外边距*/
+    height: 210px;   /*设置商品图片大小*/
+}
+dl dd{
+    text-align: left;   /*设置文字的总体样式*/
+    margin: 8px 20px 8px;   /*设置外边距*/
+    /*color: #acacac;   !*设置字体样式*!*/
+    border-bottom: 1px solid #fff;   /*设置底部边框的样式*/
+}
+dl dd img{   /*设置设置小图标的样式*/
+    height: 35px;   /*设置小图标的大小*/
+    padding: 5px;   /*设置图片的内边距*/
+    border:2px solid #fff ;   /*设置小图标边框*/
+}
+dl dd img:hover{   /*设置当鼠标滑过小图标时的样式*/
+    border-style: solid dashed ;   /*设置边框样式*/
+    border-color:#00f #f0f;   /*设置边框颜色*/
+}
+.price~dd:hover{   /*设置鼠标滑过价格后面的文字的样式*/
+    border-bottom: 2px solid #00f;   /*设置下边框的样式*/
+}
+.price{   /*设置价格文字的样式*/
+    color: red;   /*设置字体颜色*/
+    font-size: 20px;   /*设置文字大小*/
+}
+.price:first-letter{   /*设置价格符号的样式*/
+    font-size: 12px;   /*设置字体大小*/
+}

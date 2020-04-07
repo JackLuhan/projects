@@ -1,0 +1,30 @@
+.cont{
+    height: 500px;
+    width: 500px;
+    border: 1px solid pink;
+    margin: 0 auto;
+}
+div img{
+    height: 240px;
+    width: 240px;
+    float: left;
+    border: 5px dashed red;
+}
+.A:hover img{
+    transform: rotate(180deg) translate(200px) ;
+    /*transition: all 10s;*/
+    transition-property: all;
+    transition-duration: 10s;
+}
+.B:hover img{
+    transform: translateX(190px);
+    transition: all 5s ease-in;
+}
+.C:hover img{
+    transform: scale(2);
+    transition: all 5s ease-out;
+}
+.D:hover img{
+    transform: skew(30deg);
+    transition: all 10s ease-in-out;
+}

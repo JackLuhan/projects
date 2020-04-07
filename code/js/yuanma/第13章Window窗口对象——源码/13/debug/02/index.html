@@ -1,0 +1,27 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script language="javascript">
+	var flag=0;
+	function beg(){
+		var i=form1.num.value;
+		i++;
+		form1.num.value=i;
+		var timeID=setTimeout("beg()",1000);//去掉var关键字，并将timeID变量在beg()函数外声明为全局变量
+	}
+	function sta(){
+		if(flag==0){
+			beg();
+			flag=1;
+		}
+	}
+	function pau(){
+		clearTimeout(timeID);
+		flag=0;
+	}
+</script>
+<body background="bg.gif">
+<form id="form1" name="form1" method="post" action="">
+	<input type="text" name="num" size="1" value="0" />
+	<input type="button" name="start" value="开始计时" onClick="sta();" />
+	<input type="button" name="pause" value="暂停计时" onClick="pau();" />
+</form>
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断当前的月份属于哪个季节</title>
+</head>
+<body>
+<script>
+    //获取当前的日期对象
+    var date =new Date();
+    //获取当前的月份
+    var month= date.getMonth()+1
+    var jijie="";
+    //判断
+    switch (month) {
+        case 1:
+        case 2:
+        case 3:
+        jijie="春季";
+        break;
+
+        case 4:
+        case 5:
+        case 6:
+        jijie="夏季";
+        break;
+
+        case 7:
+        case 8:
+        case 9:
+        jijie="秋季";
+        break;
+
+        default:
+        jijie="冬季";
+        break;
+
+    }
+    alert(jijie)
+    // alert(month)
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+#cont{
+	width: 790px;
+	margin: 0 auto;
+}
+#cont>div>div{         /*设置装在图片的div的样式*/
+	float: left; 
+	margin: 0 20px;    /*设置其外边距*/
+	width: 220px;
+	height: auto;
+}
+.pic1 div :hover{       /*设置鼠标滑过第一行图片时的倾斜以及平移效果*/
+	transform: translateX(-50px) skew(20deg,3deg);
+	transition: 9s ease-in;   /*设置特效的过渡属性*/
+}
+.pic2 div :hover{      /*设置鼠标滑过第一行图片时的缩放效果*/
+	transform:scale(0.5,0.5); /*设置缩放的程度*/
+	transition: 1s ease-in-out;
+}
+.pic3 div :hover{       /*设置鼠标滑过第二行图片时的旋转效果*/
+	border-radius: 50px;/*旋转时，由于图片四角会影响其他图片，所以设置圆角边框*/
+	transform:rotate(20deg) ;/*旋转特效*/
+	transition: 1s ease-out;
+}

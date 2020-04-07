@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>显示图片信息</title>
+<style type="text/css">
+body{
+font-size:14px;}
+</style>
+</head>
+<body>
+<img width="340" height="138" name="book" src="book.png" border="3"><br><br>
+<script type="text/javascript">
+document.write("图片名称："+document.images[0].name+"<br>");//输出图片名称
+document.write("图片宽度："+document.images[0].width+"<br>");//输出图片宽度
+document.write("图片高度："+document.images[0].height+"<br>");//输出图片高度
+document.write("图片边框："+document.images[0].border+"<br>");//输出图片边框
+document.write("图片URL："+document.images[0].src);//输出图片URL
+</script>
+</body>
+</html>

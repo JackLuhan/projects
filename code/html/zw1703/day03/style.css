@@ -1,0 +1,11 @@
+p{
+    color: green;
+    background: red;
+}
+a{
+    /*去除下划线*/
+    text-decoration: none;
+}
+.p1{
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>排错练习</title>
+</head>
+<body>
+<script type="text/javascript">
+var result=0;//这段代码的作用是生成4位随机数，在对变量进行初始化赋值时出现错误，应赋值为空字符串""
+for(i=0;i<4;i++){
+	result=result+(Math.floor(Math.random()*10));
+}
+alert(result);
+</script>
+</body>
+</html>

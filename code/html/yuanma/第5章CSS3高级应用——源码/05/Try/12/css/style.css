@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 1056px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid #f00;
+}
+.pic{
+	position: absolute;
+}
+/*打乱图片的摆放样式*/
+.pic1{
+	top: 50px;
+	left: 450px;
+	transform:  rotate(30deg)
+}
+.pic4{
+	top: 82px;
+	left: 820px;
+	transform:  rotate(75deg)
+}
+.pic3{
+	top: 70px;
+	left: 630px;
+	transform:  rotate(-30deg)
+}
+.pic2{
+	top: 303px;
+    left: 544px;
+	transform:  rotate(100deg)
+}
+.pic5{
+	top: 316px;
+    left: 769px;
+	transform:  rotate(90deg)
+}
+.pic6{
+	top:290px;
+    left: 450px;
+	transform:  rotate(180deg)
+}
+.all{
+	position: absolute;
+	top:100px;
+	left: 30px;
+	height: 300px;
+	width: 400px;
+	border: 1px #0f0 solid;
+}
+/*鼠标滑过方框时，图片在方框中摆放整齐*/
+.all:hover .pic1{
+	transform:  rotate(-360deg) translate(-450px,-50px);
+	transition: 2s all ease;
+}
+.all:hover .pic2{
+	transform:  rotate(-360deg) translate(-416px,-303px);
+	transition: 2s all ease;
+}
+.all:hover .pic3{
+	transform:  rotate(-360deg) translate(-398px,-70px);
+	transition: 2s all ease;
+}
+.all:hover .pic4{
+	transform:  rotate(-360deg) translate(-820px,81px);
+	transition: 2s all ease;
+}
+.all:hover .pic5{
+	transform:  rotate(-360deg) translate(-620px,-153px);
+	transition: 2s all ease;
+}
+.all:hover .pic6{
+	transform:  rotate(-360deg) translate(-126px,-127px);
+	transition: 2s all ease;
+}

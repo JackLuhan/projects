@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为指定图书名称添加字体颜色</title>
+<style type="text/css">
+	td{
+		font-size:14px;		/*设置单元格的样式*/
+		padding:3px;		/*设置内边距*/
+		background-color:#F9FCEF;	/*设置背景颜色*/
+	}
+</style>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("td:contains('JavaScript从入门到精通'),td:contains('HTML自学视频教程')").css("color","red");
+	});
+</script>
+</head>
+<body>
+	<table width="500" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#3F873B">
+      <tr>
+        <td width="40" height="27" align="center">编号</td>
+        <td width="160" align="center">JavaScript</td>
+        <td width="150" align="center">HTML</td>
+        <td width="150" align="center">PHP</td>
+      </tr>
+      <tr>
+        <td height="27">1</td>
+        <td>JavaScript从入门到精通</td>
+        <td>HTML从入门到精通</td>
+        <td>PHP从入门到精通</td>
+      </tr>
+      <tr>
+        <td height="27">2</td>
+        <td>JavaScript自学视频教程</td>
+        <td>HTML自学视频教程</td>
+        <td>PHP自学视频教程</td>
+      </tr>
+      <tr>
+        <td height="27">3</td>
+        <td>JavaScript入门经典</td>
+        <td>HTML入门经典</td>
+        <td>PHP入门经典</td>
+      </tr>
+  </table>
+</body>
+</html>

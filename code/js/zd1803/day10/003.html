@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建对象date1
+    var date1 =new Date();
+    var nextYear=date1.getFullYear()+1;
+    date1.setFullYear(nextYear);
+    date1.setMonth(0);
+    date1.setDate(1);
+    //创建对象date2
+    var date2 =new Date()
+    var date3 =date1.getTime()-date2.getTime();
+    var days= Math.ceil(date3/(24*60*60*1000))
+    document.write("距离明年元旦还有"+days+"天")
+</script>
+</body>
+</html>

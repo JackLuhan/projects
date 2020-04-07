@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+	padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function getInfo(){
+	var message = "";
+	message += "您的爱好：";
+	//将以下代码中的checkbox修改为复选框的名称interest
+	for(var i=0; i<form1.checkbox.length; i++){
+		if(form1.checkbox[i].checked){
+			message += form1.checkbox[i].value + " ";
+		}
+	}
+	alert(message);
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" onsubmit="getInfo()">
+  爱好：<input type="checkbox" name="interest" value="看电影" />看电影
+      <input type="checkbox" name="interest" value="听音乐" />听音乐
+      <input type="checkbox" name="interest" value="演奏乐器" />演奏乐器
+      <input type="checkbox" name="interest" value="打篮球" />打篮球
+      <input type="checkbox" name="interest" value="看书" />看书
+      <input type="checkbox" name="interest" value="上网" />上网<br />
+     <input type="submit" name="Submit" value="提交" />
+      <input type="reset" name="Submit2" value="重置" />
+    </tr>
+  </table>
+</form>
+</body>
+</html>

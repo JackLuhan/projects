@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>单击重置按钮弹出确认对话框</title>
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("input[type='button']+input").click(function(){
+			if(window.confirm("您确定要重置表单吗")){
+				return true;
+			}else{
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+  <form name="form1">
+    用户昵称：<input type="text" class="name" name="username" size="25"><br />
+    注册密码：<input type="password" class="pass" name="pwd" size="25"><br />  
+    <input type="button" value="注册">&nbsp;&nbsp;<input type="reset" value="重置">
+  </form> 
+</body>
+</html>

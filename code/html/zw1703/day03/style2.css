@@ -1,0 +1,12 @@
+.div1 p{
+    font-size: 50px;
+    color: red;
+}
+.div2 div{
+    color: green;
+}
+.div2 .name{
+    font-size: 20px;
+    border: 1px dashed red;
+}
+

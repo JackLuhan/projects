@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*css document*/
+*{                        /*清楚页面默认的内外边距*/
+    padding: 0;
+    margin: 0;
+}
+body{                    /*页面的背景颜色*/
+    background: #f7f1f1;
+}
+.cont{                   /*整体布局*/
+    height: 797px;
+    width: 387px;
+    margin: 0 auto;
+    background: url("../img/phone.png");
+}
+.header{                     /*头部标题的样式*/
+    height: 165px;
+    color: #fff;
+    font-size: 23px;
+}
+.title{                   /*网站的标题*/
+    margin-left: 10px;
+    padding-top: 70px;
+}
+.head{                          /*返回按钮以及选票页面样式*/
+    margin-top: 15px;
+    height: 50px;
+    background: #0f0;
+    font-size: 20px;
+    line-height: 50px;
+}
+.head :first-child{                 /*返回按钮样式*/
+    margin:0px 80px 0 10px;
+}
+.top{                                    /*购票日期*/
+    height: 50px;
+}
+.top div{
+    float: left;
+    height: 40px;
+    padding: 0 23px;
+    line-height: 40px;
+    border-right: 1px solid #F6E1DC;
+    border-bottom: 1px solid #F6E1DC;
+}
+
+.content{                         /*车次信息总体样式*/
+    background: #f7f7f5;
+    height: 576px;
+}
+.travel ul{                         /*车次信息样式*/
+    margin-top: 5px;
+    height: 50px;
+    list-style: none;
+    border-bottom: 1px solid #F6E1DC;
+    border-top: 1px solid #F6E1DC;
+}
+.travel ul li{                         /*车次信息样式*/
+    width: 119px;
+    float: left;
+}
+.travel ul>:first-child{                         /*车次时间样式*/
+    width: 40px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.travel ul li p :first-child{                         /*起点和终到的样式*/
+    font-size: 9px;
+    color: magenta;
+}
+p{                         /*票价信息*/
+    padding: 0 10px;
+}
+.travel ul>:last-child{                         /*购票按钮*/
+    width: 65px;
+    padding-top:10px ;
+}
+input{                  /*购票按钮*/
+    border-radius: 3px;
+    background: #0f0;
+    width:60px ;
+    height: 30px;
+}
+.top :first-child{                         /*车次时间样式*/
+    border-left: 1px solid #F6E1DC;
+    padding-left: 27px;
+}
+.bottom{                         /*为底部添加边框*/
+    border-top: 1px solid #F6E1DC;
+}
+.bottom ul li{                         /*底部导航样式*/
+    list-style: none;
+    float: left;
+    line-height: 50px;
+    padding: 10px 27px;
+}
+.price:first-letter{                     /*人民币符号样式*/
+    font-size: 9px;
+    color: #f00;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //给数组对象添加新的方法以及属性
+    Array.prototype.outlast=function () {
+            document.write(this[this.length-1])
+    }
+    var array =new Array(1,2,2,3,4,5,6,7,8)
+    array.outlast();
+
+</script>
+</body>
+</html>

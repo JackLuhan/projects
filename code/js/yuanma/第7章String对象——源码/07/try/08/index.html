@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>生成指定位数的随机字符串</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function ranStr(digit){
+	if(digit=="" || isNaN(digit)){//判断输入的值是否为空或非数字
+		alert("请输入数字");
+	}else{
+   		var sourceStr="0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G";    //定义字符串
+   		arrStr=sourceStr.split(",");//将字符串拆分成数组
+   		var result="";//定义变量并初始化
+   		var index=0;//定义变量并初始化
+   		for(i=0;i<digit;i++){
+      		index=parseInt(Math.random()*arrStr.length);//获取字符串随机索引
+      		result=result+arrStr[index];//对单个字符进行连接
+   		}
+   		alert(result);//输出结果
+   	}
+}
+</script>
+请输入要生成随机数的位数：<p>
+<form name="form">
+  <input type="text" name="digit" />
+  <input type="button" value="生成" onClick="ranStr(form.digit.value)"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<form name="form1">
+选择页面的背景颜色：
+  <select name="menu1" onChange="Fcolor()">
+    <option value="">请选择</option>
+    <option value="black">黑色</option>
+    <option value="yellow">黄色</option>
+    <option value="blue">蓝色</option>
+    <option value="green">绿色</option>
+    <option value="red">红色</option>
+    <option value="purple">紫色</option>
+  </select>
+</form>
+<script type="text/javascript">
+function Fcolor(){
+   var e=window.event;
+   var obj=e.srcelement;//将srcelement修改为srcElement
+   document.bgColor = obj.value;
+}
+</script>
+</body>
+</html>

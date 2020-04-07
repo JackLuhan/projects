@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function account() {
+            var name = form.name.value;
+            var unitprice= form.unitprice.value;
+            var num = form.num.value
+            var totalprice= num*unitprice
+            if (isNaN(unitprice)){
+                alert("输入正确的商品价格")
+                return false
+            }
+            if (isNaN(num)){
+                alert("输入正确的商品数量")
+                return false
+            }
+            alert("商品名称为："+name+"\n"+"商品总价为："+totalprice)
+        }
+    </script>
+
+</head>
+<body>
+<form action="" name="form">
+    商品名称：<input type="text" size="15" name="name" ><br>
+    商品单价：<input type="text" size="15" name="unitprice" ><br>
+    商品数量：<input type="text" size="15" name="num" ><br>
+    <input type="button" onclick="account()" value="计算">
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 应用构造函数创建一个演员对象Actor，在构造函数中定义对象的属性和方法，
+    // 通过创建的对象实例调用对象中的方法，输出演员的图片、中文名、代表作品以及主要成就。
+    function Actor(name,chineseName,works,achievement) {
+        this.name=name;
+        this.chineseName=chineseName;
+        this.works=works;
+        this.achievement=achievement;
+        this.show=show;
+    }
+    function show() {
+        document.write("姓名为："+this.name+"<br>");
+        document.write("中文名为："+this.chineseName+"<br>");
+        document.write("作品为："+this.works+"<br>");
+        document.write("主要成就为："+this.achievement+"<br>");
+    }
+    // 实例对象
+    var actor = new Actor("MJ","迈克杰克逊","太空步","空前绝后的演唱会");
+    actor.show();
+</script>
+</body>
+</html>

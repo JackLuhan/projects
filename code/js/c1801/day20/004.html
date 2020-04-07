@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function completePoem() {
+            //创建新的div元素
+            var divElement = document.createElement("div");
+            divElement.className="poem";
+            //获取输入框的值
+            var last = myform.last.value;
+            //创建文本节点
+            var text = document.createTextNode(last);
+            //将文本的节点添加到div元素中
+            divElement.appendChild(text)
+            //将创建好的div元素添加到poemDiv的div元素中
+            document.getElementById("poemDiv").appendChild(divElement)
+        }
+    </script>
+</head>
+<body>
+<div id="poemDiv">
+    <div class="poemtitle">春晓</div>
+    <div class="poem">春眠不觉晓</div>
+    <div class="poem">处处闻啼鸟</div>
+    <div class="poem">夜来风雨声</div>
+</div>
+<p>
+<form name="myform">
+    请输入最后一句：<input type="text" name="last">
+    <input type="button" value="添加" onClick="completePoem()">
+</form>
+
+</body>
+</html>

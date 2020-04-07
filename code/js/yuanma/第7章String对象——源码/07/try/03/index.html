@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>验证注册邮箱格式是否正确</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function check(form){
+	var email=form.email.value;
+	var index1=email.indexOf("@");
+	var index2=email.indexOf(".");
+	if(email==""){
+		alert("注册邮箱不能为空！");
+	}else if(index1>0 && index2-index1>1 && index2<email.length-1){
+		alert("注册邮箱符合要求！");
+	}else{
+		alert("注册邮箱格式不正确！");
+	}
+}
+</script>
+<table align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="banner.gif" width="400" height="65" /></td>
+  </tr>
+</table>
+<table width="400" height="10" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<table width="400" height="157" bgcolor="#1170FF" border="0" align="center" cellpadding="0" cellspacing="1">
+  <form name="form1">
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">用户注册</div></td>
+    </tr>
+    <tr>
+      <td width="130" height="25" bgcolor="#FFFFFF"><div align="center">注册邮箱：</div></td>
+      <td width="267" bgcolor="#FFFFFF">&nbsp;<input type="text" name="email" size="25"></td>
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">注册密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd" size="25"></td>
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">确认密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd2" size="25"></td>
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="button" value="注册" onclick="check(form1)">&nbsp;&nbsp;<input type="reset" value="重写"></div></td>
+    </tr>
+  </form> 
+</table>
+</body>
+</html>

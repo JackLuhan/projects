@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>通过输入编号删除对应的影片资讯</title>
+<style type="text/css">
+ul{
+list-style-type:none;
+}
+</style>
+<script type="text/javascript">
+	function delMovieInfo(){
+		var num=myform.num.value;
+		var deleteN=document.getElementById('movie');
+		if(deleteN.hasChildNodes()){
+			deleteN.removeChild(document.getElementById(num));
+		}
+	}	
+</script>
+</head>
+<body background="bg.gif">
+<div>
+	<h3>最新电影资讯</h3>
+	<ul id="movie">
+	  <li id="1">1.《愤怒的小鸟》小鸟飞起来</li>
+	  <li id="2">2.《极度惊悚》胆小者勿入</li>
+	  <li id="3">3.《黑海夺金》裘德.洛成摸金校尉</li>
+	  <li id="4">4.《潜伏者》毒师卧底贩毒集团</li>
+	</ul>
+</div>
+<form name="myform">
+	输入影片资讯编号：<input type="text" name="num" />
+	<input type="button" value="删除" onclick="delMovieInfo()" />	
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[att=content]{
+    width: 405px;
+	height:300px;
+    margin: 0 auto;
+    text-align: center;
+}
+p{
+    float: left;
+    margin: 0;
+    border: double 1px #000;
+}
+[att:list]{            /*通过属性选择器控制表中每条信息项目的样式*/
+    color:red;          /*设置其文字颜色*/
+    width:200px;        /*设置宽度*/
+    height:40px;         /*设置其高度*/
+    line-height: 40px;  /*设置其文字行高*/
+	background: url(../img/bg.jpg)
+}
+[att:txt]{             /*通过属性选择器控制表中每条信息的信息内容的样式*/
+    color:green;
+    width:200px;
+    height:40px;
+    line-height: 40px;
+	background: url(../img/bg.jpg)
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>在页面的指定位置显示当前日期</title>
+<script type="text/javascript">
+function clockon(){
+	var now=new Date();			//创建日期对象
+	var year=now.getFullYear();			//获取年份
+	var month=now.getMonth();		//获取月份
+	var date=now.getDate();			//获取日期
+	var day=now.getDay();			//获取星期
+	var week;//声明表示星期的变量
+	month=month+1;//获取实际月份
+	var arr_week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");//定义星期数组
+	week=arr_week[day];			//获取中文星期
+	time=year+"年"+month+"月"+date+"日 "+week;	//组合当前日期
+	var textTime=document.createTextNode(time);	//创建文本节点
+	document.getElementById("clock").appendChild(textTime);	//显示当前日期
+}
+window.onload=clockon;//页面载入后调用函数
+</script>
+</head>
+<body background="bg.gif">
+<div id="clock">当前日期：</div>
+</body>
+</html>

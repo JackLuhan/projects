@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>选择超过6门课程时给出相应提示</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+	padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function selectLesson(les){
+	var count = 0;
+	for(var i=0; i<form1.lesson.length; i++){
+		if(form1.lesson[i].checked){
+			count++;
+		}
+	}
+	if(count > 6){
+		alert("您最多可以选择6门课程");
+		for(var i=0; i<form1.lesson.length; i++){
+			if(form1.lesson[i].value==les.value){
+				form1.lesson[i].checked="";
+			}
+		}
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1">
+  <table width="260" border="0" cellspacing="1" bgcolor="#BBBBBB">
+    <tr>
+      <td colspan="2" align="center" height="46" background="images/bg.gif"><h2>请选择课程</h2></td>
+    </tr>
+    
+    <tr>
+      <td height="20" background="images/bg.gif"><input type="checkbox" name="lesson" value="C语言" onclick="selectLesson(this)" />C语言<br />
+      <input type="checkbox" name="lesson" value="机械制图" onclick="selectLesson(this)" />机械制图<br />
+      <input type="checkbox" name="lesson" value="单片机" onclick="selectLesson(this)" />单片机<br />
+      <input type="checkbox" name="lesson" value="自动控制" onclick="selectLesson(this)" />自动控制<br />
+      <input type="checkbox" name="lesson" value="传感器" onclick="selectLesson(this)" />传感器<br /></td>
+	  <td background="images/bg.gif">
+      <input type="checkbox" name="lesson" value="高等数学" onclick="selectLesson(this)" />高等数学<br />
+	  <input type="checkbox" name="lesson" value="计算机基础" onclick="selectLesson(this)" />计算机基础<br />
+	  <input type="checkbox" name="lesson" value="Oracle数据库" onclick="selectLesson(this)" />Oracle数据库<br />
+	  <input type="checkbox" name="lesson" value="商务英语" onclick="selectLesson(this)" />商务英语<br />
+	  <input type="checkbox" name="lesson" value="PLC设计基础" onclick="selectLesson(this)" />PLC设计基础</td>
+    </tr>
+
+  </table>
+</form>
+</body>
+</html>

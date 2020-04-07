@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义构造函数
+    function Computer(cpu,motherBoard,hardDisk) {
+        this.cpu=cpu;
+        this.motherBoard=motherBoard;
+        this.hardDisk=hardDisk;
+    }
+    //创建实例对象
+    //联想
+    let computer1 = new Computer("AND 速龙","技嘉","西部数据");
+    //外星人
+    let computer2 = new Computer("I7","技嘉2020","希捷数据");
+    //输出实例对象中的数据
+    alert(computer1.cpu);
+    alert(computer1.motherBoard);
+    alert(computer1.hardDisk);
+    alert(computer2.cpu);
+    alert(computer2.motherBoard);
+    alert(computer2.hardDisk);
+</script>
+</body>
+</html>

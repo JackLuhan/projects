@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>实现复选框的全选、反选和全不选</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function checkAll(){
+	var length = document.getElementsByName('ball').length;
+	for(var i=0; i<length; i++){
+		document.getElementsByName('ball')[i].checked=true;
+	}
+}
+function inverse(){
+	var length = document.getElementsByName('ball').length;
+	for(var i=0; i<length; i++){
+		if(document.getElementsByName('ball')[i].checked){
+			document.getElementsByName('ball')[i].checked=false;
+		}else{
+			document.getElementsByName('ball')[i].checked=true;
+		}
+	}
+}
+function checkNo(){
+	var length = document.getElementsByName('ball').length;
+	for(var i=0; i<length; i++){
+		document.getElementsByName('ball')[i].checked=false;
+	}
+}
+</script>
+<input type="checkbox" name="ball">篮球
+<input type="checkbox" name="ball">足球
+<input type="checkbox" name="ball">排球
+<input type="checkbox" name="ball">乒乓球
+<input type="checkbox" name="ball">羽毛球<p>
+<input type="button" name="but" value="全选" onClick="checkAll()">
+<input type="button" name="but" value="反选" onClick="inverse()">
+<input type="button" name="but" value="全不选" onClick="checkNo()">
+</body>
+</html>

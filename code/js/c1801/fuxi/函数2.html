@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hanshu2</title>
+</head>
+<body>
+    <script>
+        //假如今天白菜的价格为2元一斤，超过五斤，超过按照1.5元一斤处理，今天我买了10斤
+        function suanshu(price,jin) {
+                if (jin>5){
+                   var sum= 5*price+1.5*(jin-5);
+                    return sum;
+                }
+                if(jin<5){
+                    document.write(price*jin+"<br>")
+                }
+        }
+       document.write(suanshu(2,10)) ;
+
+        suanshu(2,4)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+.mr-content{
+	width: 713px;
+    height: 500px;
+	margin: 0 auto;
+    background: url(../images/10-6.jpg) no-repeat;
+    position: relative;		
+	}
+.mr-news{
+	width: 200px;
+	height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 130px;
+    left: 472px;
+	}
+.mr-p{
+	height: 30px;			/*设置宽度*/
+	margin-top: 0;			/*设置外边距*/
+    color: #333;			/*设置字体颜色*/
+    font-size: 24px;		/*设置字体大小*/
+    animation: lun 10s linear infinite;		/*设置动画*/
+	}
+@keyframes lun {		/*通过百分比指定过度各个状态时间*/
+	0%{margin-top:0;}
+	10%{margin-top:-30px;}
+	20%{margin-top:-60px;}
+	30%{margin-top:-90px;}
+	40%{margin-top:-120px;}
+	50%{margin-top:-150px;}
+	60%{margin-top:-180px;}
+	70%{margin-top:-210px;}
+	80%{margin-top:-240px;}
+	90%{margin-top:-270px;}
+	100%{margin-top:-310px;}
+	}

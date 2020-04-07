@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>图片翻转效果</title>
+</head>
+
+<body>
+<table width="433" border="2" align="center" cellpadding="3" cellspacing="4" bordercolor="#006699" bgcolor="#FFFFFF">
+  <tr>
+    <td colspan="2"><div align="center"><font color="#FF0000" size="6">水平翻转</font></div></td>
+  </tr>
+  <tr>
+    <td width="165"><font color="#FF9900" face="黑体" size="4">原图：</font></td>
+    <td width="252"><font color="#FF9900" face="黑体" size="4">水平翻转执行结果：</font></td>
+  </tr>
+  <tr>
+    <td><img src="test.jpg" border="0" id="image1"></td>
+    <td><img src="test.jpg" border="0" id="image11"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center"><font color="#FF0000" size="6">垂直翻转</font></div></td>
+  </tr>
+  <tr>
+    <td><font color="#FF9900" face="黑体" size="4">原图：</font></td>
+    <td><font color="#FF9900" face="黑体" size="4">垂直翻转执行结果：</font></td>
+  </tr>
+  <tr>
+    <td><img src="test.jpg" border="0" id="image2"></td>
+    <td><img src="test.jpg" border="0" id="image22"></td>
+  </tr>
+</table>
+<p>
+<center>
+<input type="button" name="button1" value="水平翻转" onClick="Hturn()">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" name="button2" value="垂直翻转" onClick="Vturn()">
+</center>
+</p>
+
+<script type="text/javascript">
+function Hturn(){
+	image11.style.filter = image11.style.filter =="flipH"?"":"flipH";//设置水平翻转
+}
+function Vturn(){
+	image22.style.filter = image22.style.filter =="flipV"?"":"flipV";//设置垂直翻转
+}
+</script>
+
+</body>
+</html>

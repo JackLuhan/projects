@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义构造函数
+    function User(weight) {
+        this.weight=weight;
+    }
+    //利用prototype添加对象的属性
+    User.prototype.name="张三";
+    let user = new User(150);
+    alert(user.name);
+    alert(user.weight)
+</script>
+</body>
+</html>

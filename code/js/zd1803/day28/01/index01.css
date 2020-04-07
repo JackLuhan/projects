@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(120deg,#a8edea,#fed6e3);
+}
+.one{
+    border: 1px solid pink;
+    width: 800px;
+    height: 400px;
+    margin: 8% auto;
+    background-color: #ffffff70;
+    border-radius: 20px;//制作边框圆角
+}
+.title{
+    text-align: center;
+    color: #576574;
+    padding-top: 15px;
+}
+.Start{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px #00cec9 solid;
+    margin:33% 40%;
+}
+.Start:hover{
+    transition-duration: 0.4s;
+    background-color: #00cec9;
+    color: white;
+}
+input{
+    font-size:18px;
+    font-family:"黑体";
+}
+
+text{
+    position:absolute;
+    font-size: 100px;
+    z-index: 100;
+    top: 30%;
+    left: 42%;
+    text-align: center;
+}
+
+
+
+
+.name{
+    position:absolute;
+    left: 20px;
+}

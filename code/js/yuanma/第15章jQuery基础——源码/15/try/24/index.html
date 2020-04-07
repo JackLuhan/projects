@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>通过单选按钮改变字体大小</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(":radio").click(function(){
+		$(":radio").each(function(){
+			if($(this).prop("checked")){
+				$("p").css("font-size",$(this).val());
+			}
+		});
+		alert(str);
+	});
+})
+</script>
+<form>
+    小号<input type="radio" name="size" value="12pt" checked="checked"/>
+	中号<input type="radio" name="size" value="18pt"/>
+	大号<input type="radio" name="size" value="24pt"/>
+</form>
+<p>明日科技是一家专注于编程教育的IT公司</p>
+</body>
+</html>

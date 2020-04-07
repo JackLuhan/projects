@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义函数
+    function createTable(row,col,width,height) {
+        //定义接收结果的变量
+        var table="";
+        //table+=1--->table=table+1
+        // table+=("<table width="+width+" height="+height+" align=center border=1>");
+        // table=table+("<table width="+width+" height="+height+" align=center border=1>");
+        table+=("<table width="+width+" height="+height+" align=center border=1>");
+        //定义外层for循环
+        var color;
+        for (var i = 1; i <=row ; i++) {
+            if (i%2==0){
+                color="white"
+            }else {
+                color="red"
+            }
+            table+=("<tr bgcolor="+color+">");//<tr bgcolor="red"></tr>
+            //定义内层for循环
+            for (var j = 1; j <=col ; j++) {
+                table+=("<td width=50 align=center></td>");
+            }
+            table+=("</tr>")
+        }
+        table+=("</table>");
+        return table
+    }
+    //调用函数
+    document.write(createTable(5,5,500,150))
+</script>
+
+</body>
+</html>

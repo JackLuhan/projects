@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var x=0,y=0;
+function MousePlace(){
+   x=window.event.x;
+   y=window.event.y;
+   document.getElementById('position').innerHTML="鼠标当前位置的横坐标X："+x+" 纵坐标Y："+y;
+}
+document.onmousemove=MousePlace();	//在函数名后不能加小括号
+</script>
+<span id="position"></span>
+
+</body>
+</html>

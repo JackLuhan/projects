@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>单击超链接将粗体字替换为斜体字</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function changeFont(){
+	var oldnode = document.getElementById('oldnode');
+	var newnode = document.createElement('i');
+	var newText=document.createTextNode(oldnode.firstChild.nodeValue);
+	newnode.appendChild(newText);
+	oldnode.parentNode.replaceChild(newnode,oldnode);
+}
+</script>
+<div><b id="oldnode">一生只爱一个人</b></div>
+<a href="javascript:changeFont()">将粗体改为斜体</a>
+</body>
+</html>

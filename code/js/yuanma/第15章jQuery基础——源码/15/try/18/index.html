@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>将指定字体颜色进行描红</title>
+<style type="text/css">
+ul{ list-style:none;
+margin:0px; padding:0px;}
+.light{ color:#FF0000}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#book li:first").addClass("light");
+  $("#book li:last").addClass("light");
+});
+</script>
+</head>
+
+<body>
+<ul id="book">
+  <li>1.零基础学JavaScript</li>
+  <li>2.零基础学HTML</li>
+  <li>3.零基础学PHP</li>
+  <li>4.零基础学Java</li>
+</ul>
+</body>
+</html>

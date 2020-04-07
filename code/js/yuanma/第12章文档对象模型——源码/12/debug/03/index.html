@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+
+</head>
+<body>
+<script type="text/javascript">
+   function delNode(){
+      var deleteN=document.getElementById('di');
+      deleteN.removeChild(deleteN.lastChild());//将lastChild()修改为lastChild
+   }
+</script>
+<h2>删除节点</h2>
+   <div id="di">
+      <p>零基础学JavaScript</p>
+      <p>零基础学HTML</p>
+      <p>零基础学PHP</p>
+   </div>
+<form>
+   <input type="button" value="删除" onclick="delNode()" /> 
+</form>
+</body>
+</html>

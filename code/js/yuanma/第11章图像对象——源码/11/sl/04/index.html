@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>图片总置于顶端</title>
+<style type="text/css">
+body{
+text-align:center}
+</style>
+</head>
+
+<body>
+<div id="Tdiv" style="height:45px; left:0px; position:absolute; top:0px; width:45px; z-index:25">
+<input name="image1" type="image" id="image1" src="mrsoft.jpg" border="0">
+</div>
+<p>
+<script type="text/javascript">
+var ImgW=parseInt(image1.width);//获取图片的宽度
+function permute(tfloor,Top,left){
+   	var RealTop=parseInt(document.documentElement.scrollTop);//获取纵向滚动条滚动的距离
+   	buyTop=Top+RealTop;//获取图片在垂直方向的绝对位置
+   	document.all[tfloor].style.top=buyTop+"px";//设置图片在垂直方向的绝对位置
+   	var buyLeft=parseInt(document.documentElement.scrollLeft)+parseInt(document.documentElement.clientWidth)-ImgW;//获取图片在水平方向的绝对位置
+   	document.all[tfloor].style.left=buyLeft-left+"px";//设置图片在水平方向的绝对位置
+}
+setInterval('permute("Tdiv",2,2)',1);//每隔1毫秒就执行一次permute()函数
+</script>
+<img src="gougo.jpg">
+</body>
+</html>

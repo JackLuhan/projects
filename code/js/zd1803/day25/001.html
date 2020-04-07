@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义构造函数
+    function User(username,pwd) {
+        this.username=username;
+        this.pwd=pwd;
+        this.showUserInfo=showUserInfo;
+    }
+    //定义构造函数中的方法
+    function showUserInfo() {
+        document.write("用户名为："+this.username+"<br>")
+        document.write("密码为："+this.pwd+"<br>")
+    }
+    //实例化对象1
+    var user1 = new User("安徽新华","123456");
+    user1.showUserInfo();
+    //实例化对象2
+    var user2 = new User("中电1803","123456");
+    user2.showUserInfo()
+</script>
+</body>
+</html>

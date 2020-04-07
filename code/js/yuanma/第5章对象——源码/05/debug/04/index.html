@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>排错练习</title>
+</head>
+<body>
+<script type="text/javascript">
+function Student(name,sex,age){
+	this.name = name;
+	this.sex = sex;
+	this.age = age;
+}
+var student1=new Student("张三","男",26);
+with(Student){//with后面小括号中指定的是对象名称，而不是构造函数的名称
+	alert("姓名："+name+"\n性别："+sex+"\n年龄："+age);
+}
+</script>
+</body>
+</html>

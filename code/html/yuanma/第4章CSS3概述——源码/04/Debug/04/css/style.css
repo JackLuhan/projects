@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+.content{
+	width: 780px;   /*画面总体大小和位置*/
+	margin: 0 auto;
+}
+.top,.bottom{      /*上下模块的样式设置*/
+	height: 100px;
+	background: #(0,0,255)
+}
+.bom>div,.cont>div{     /*设置上下模块和主体内容都为向左浮动*/
+	float:left;
+}
+.bom{ 
+	padding: 23px 140px;
+}
+.txt{                  /*顶部和底部的文字样式*/
+	font-size: 50px;
+	font-weight:lighter;
+	color: rgb(243,238,128);
+}
+.circle >div{        /*顶部和底部的文字两边的小彩圈样式*/
+	height: 5px;
+	width: 5px;
+	border-radius: 15px;
+	background: rgba(241,74,9,1.00);
+	border:rgb(243,238,128) 7px double;
+}
+.circle :first-child+div{
+	margin-left: 15px;
+}
+.cont{                  /*设置主体部分的高度*/
+	height: 280px;
+}
+.tit{                   /*设置主体部分的标题的样式*/
+	font-size: 45em;
+	font-weight: bold;
+	color:darkcyan;
+	padding: 10px 50px;
+}
+hr{                    /*设置主体部分的标题下方的水平线的样式*/
+	width: 370px;
+	border: 1px darkcyan solid;
+}
+.show{              /*设置主体部分的标题下方文字的样式*/
+	margin-left: 50px;
+	font-size: 20px;
+	color: rgb(135,131,131);
+}
+
+/*功能展示部分*/
+
+.conv{               /*功能部分的总体大小*/
+	width: 460px;
+	margin-left: 35px;
+}
+.conv dl{        /*向左浮动*/
+	float: left;
+}
+dd{           /*功能部分的文字样式*/
+	float: left;
+	margin: -30px  53px;
+	font-size: 20px;
+	color: rgb(135,131,131);
+}

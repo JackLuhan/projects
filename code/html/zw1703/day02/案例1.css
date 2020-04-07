@@ -1,0 +1,49 @@
+.content{
+    width:1090px;                   /*设置整体页面宽度为1200像素*/
+    height:390px;                   /*设置整体页面高度为411像素*/
+    border: 1px solid red;
+    margin: 0 auto;         /*上下边距为0 左右自适应*/
+    background: yellow;
+}
+.top{
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    color: red;
+    text-align: center;
+}
+.bottom{
+    height: 300px;
+    margin-top: 20px;
+}
+.block{
+    width: 260px;
+    background: white;
+    height: 300px;
+    float: left;
+    margin-left: 10px;
+}
+/*标签选择器*/
+img{
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+}
+p{
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+}
+.price{
+    color: red;
+    font-weight: bold;
+    margin-left: 70px;
+    float: left;
+}
+.miaosha{
+    color: red;
+    font-weight: bold;
+    margin-left: 30px;
+    float: left;
+}

@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body background="images/bg.gif">
+<script type="text/javascript">
+function changeImage(imageName){
+	document.images[imageName].src = 'book2.jpg';//将图片路径修改为images/book2.jpg
+}
+function resetImage(imageName){
+	document.images[imageName].src = 'book1.jpg';//将图片路径修改为images/book1.jpg
+}
+</script>
+<img name="book1" src="images/book1.jpg" onMouseOver="changeImage('book1')" onMouseOut="resetImage('book1')">
+</body>
+</html>

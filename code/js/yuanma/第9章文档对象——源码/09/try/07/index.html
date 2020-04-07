@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>动态向页面中逐个添加文字</title>
+<script type="text/javascript">
+var str = "零基础学JavaScript";
+var i=0;
+function addWord(){
+	var txt=document.createElement("span");
+	txt.style.color="#FF0000";
+	txt.innerHTML=str.charAt(i);
+	document.getElementById("show").appendChild(txt);	
+	i++;
+}
+</script>
+</head>
+<body background="bg.gif">
+<form name="form1">
+<input type="button" name="btn1" value="添加文字" onclick="addWord()" />
+</form>
+<p id="show"></p>
+</body>
+</html>

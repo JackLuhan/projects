@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>横向导航菜单的滑动效果</title>
+</head>
+    
+<body>
+<style type="text/css">
+.menubar{
+	position:absolute;
+	top:10px;
+	width:100px;
+	height:20px;
+	line-height:20px;
+	cursor:default;
+	border-width:1px;
+	border-style:outset;
+	color:#99FFFF;
+	background:#669900
+}
+.menu{top:32px;
+	width:90px;
+	display:none;
+	border-width:2px;
+	border-style:outset;
+	border-color:white sliver sliver white;
+	background:#333399;
+	padding:5px
+}
+.menu a{
+	text-decoration:none;
+	color:#99FFFF;
+}
+.menu a:hover{
+	color: #FFFFFF;
+}
+</style>
+<script src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".menubar").hover(function(){
+			$(this).find(".menu").slideDown("fast");
+		},function(){
+			$(this).find(".menu").slideUp("fast");
+		});
+	});
+</script>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size:15px">
+	<tr>
+		<td width="20%">
+			<div align="center" id="Tdiv_1" class="menubar">
+				<div class="header">教育网站</div>
+				<div align="left" id="Div1" class="menu">
+					<a href="#">重庆XX大学</a><br>
+					<a href="#">长春XX大学</a><br>
+					<a href="#">吉林XX大学</a>
+				</div>
+			</div>
+		</td>
+		<td width="20%">
+			<div align="center" id="Tdiv_2" class="menubar">
+				<div class="header">电脑丛书网站</div>
+				<div align="left" id="Div2" class="menu">
+					<a href="#">PHP图书</a><br>
+					<a href="#">JScript图书</a><br>
+					<a href="#">Java图书</a>
+				</div>
+			</div>
+		</td>
+		<td width="20%">
+			<div align="center" id="Tdiv_3" class="menubar">
+				<div class="header">新出图书</div>
+				<div align="left" id="Div3" class="menu">
+					<a href="#">Delphi图书</a><br>
+					<a href="#">VB图书</a><br>
+					<a href="#">Java图书</a>
+				</div>
+			</div>
+		</td>
+		<td width="20%">
+			<div align="center" id="Tdiv_4" class="menubar">
+				<div class="header">其它网站</div>
+				<div align="left" id="Div4" class="menu">
+					<a href="#">明日科技</a><br>
+					<a href="#">明日图书网</a><br>
+					<a href="#">技术支持网</a>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

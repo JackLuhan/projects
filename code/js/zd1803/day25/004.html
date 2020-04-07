@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="请输入邮箱" id="email">
+</body>
+<script>
+    email.onchange = function(){
+        var email = this.value;
+        var reg =/^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)(?![a-zA-z\d]+$)(?![a-zA-z!@#$%^&*]+$)(?![\d!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/;
+        if(reg.test(email)){
+            alert("邮箱格式正确");
+        }else{
+            alert("邮箱格式不正确");
+        }
+    }
+</script>
+</html>

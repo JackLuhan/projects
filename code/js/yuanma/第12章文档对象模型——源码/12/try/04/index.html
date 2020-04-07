@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>添加英语成绩</title>
+<style type="text/css">
+li{
+list-style-type:none;
+line-height:23px;}
+</style>
+<script type="text/javascript">
+	function addscore(nodeId){
+		var newNode=document.createElement("li");
+		var score=document.form.score.value;
+		var newTxt=document.createTextNode(score);
+		newNode.appendChild(newTxt);
+		var node=document.getElementById(nodeId);
+		if(node.parentNode)
+			node.parentNode.insertBefore(newNode,node);
+	}	
+</script>
+</head>
+<body background="bg.gif">
+	<div id="h">
+	  <h3>考试成绩列表</h3>
+	  <ul>
+	    <li>数学：90分</li>
+		<li>语文：80分</li>
+		<li id="physics">物理：85分</li>
+		<li>化学：88分</li>
+      </ul>
+	</div>
+	<p>
+	<form id="form" name="form">
+	添加考试科目及成绩：<input type="text" name="score" />
+	<input type="button" value="添加成绩" onclick="addscore('physics');" />
+	</form>
+</body>
+</html>

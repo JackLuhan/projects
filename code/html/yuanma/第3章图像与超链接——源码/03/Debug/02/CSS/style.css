@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 960px;
+	height: 600px;
+	margin: 0 auto;
+	background: url(../img/bg.png) no-repeat;
+}
+.mr-cont div{
+	margin: 0 0 0 250px;
+}

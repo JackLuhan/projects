@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>动态向页面中添加用户头像</title>
+<script type="text/javascript">
+var i=0;
+function addPic(){
+	var imgArr=new Array("5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg");
+	var img=document.createElement("img");
+	img.src="images/"+imgArr[i];
+	img.hspace="5";
+	if(i<imgArr.length){
+		document.getElementById("show").appendChild(img);
+	}
+	i++;
+}
+</script>
+</head>
+<body background="bg.gif">
+<form name="form1">
+<input type="button" name="btn1" value="添加用户头像" onclick="addPic()" />
+</form>
+<p id="show"></p>
+</body>
+</html>

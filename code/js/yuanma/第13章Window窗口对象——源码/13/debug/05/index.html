@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+</head>
+
+<body>
+<div id="showtime"></div>
+<script type="text/javascript">
+function ShowTime(){
+   var today = new Date();				
+   var hour = today.getHours();			
+   var minu = today.getMinutes();		
+   var seco = today.getSeconds();		
+   if(hour < 10)						
+      hour ="0" + hour;					
+   if(minu < 10)						
+      minu ="0" + minu;					
+   if(seco < 10)						
+      seco ="0" + seco;					
+   var datestr="-------"+today.getFullYear()+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日"+hour+"时"+minu+"分"+seco+"秒"+"-------"; 
+   showtime.innerHTML=datestr;
+}
+window.setTimeout("ShowTime();",1000);//将该行代码放在函数的最后一行，然后在定义的函数后面调用函数
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><TITLE>图片无间断滚动</TITLE>
+<META content="MSHTML 6.00.2800.1264" name=GENERATOR>
+</HEAD>
+<BODY leftMargin=0 topMargin=2 marginheight="0" marginwidth="0">
+<CENTER>
+<DIV id="div1" style=" overflow:hidden; width:750px; color:#FFFFFF">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0>
+        <TR>
+          <TD id="td1" vAlign=top>
+		  <table width="1320" height="89"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="110" background="1.jpg"></td>
+              <td width="110" background="2.jpg"></td>
+              <td width="110" background="3.jpg"></td>
+              <td width="110" background="4.jpg"></td>
+              <td width="110" background="5.jpg"></td>
+              <td width="110" background="6.jpg"></td>
+              <td width="110" background="7.jpg"></td>
+              <td width="110" background="8.jpg"></td>
+              <td width="110" background="9.jpg"></td>
+              <td width="110" background="10.jpg"></td>
+			  <td width="110" background="11.jpg"></td>
+			  <td width="110" background="12.jpg"></td>
+            </tr>
+          </table>
+		  </TD>
+<TD id="td2" vAlign=top>&nbsp;</TD></TR></TABLE>
+</DIV>
+<SCRIPT type="text/javascript">
+var n=5;
+//数值越小图片滚动的越快
+td2.innerHTML=td1.innerHTML;
+var Mycheck;
+function move(){
+	if(td2.offsetWidth-div1.scrollLeft<=0){
+		div1.scrollLeft-=td1.offsetWidth;
+	}else{
+		div1.scrollLeft++;
+	}
+    Mycheck=setTimeout(move,n);
+}
+div1.onmouseover=function(){
+	clearTimeout(Mycheck);
+}
+div1.onmouseout=function(){
+	Mycheck=setTimeout(move,n);
+}
+move();
+</SCRIPT>
+</CENTER>
+</BODY>
+</HTML>

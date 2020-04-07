@@ -1,0 +1,16 @@
+.box1{
+    width: 100px;
+    height: 100px;
+    background: yellow;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+.box2{
+    /*相对定位*/
+    position: relative;
+    top: -50px;
+    left: 50px;
+}

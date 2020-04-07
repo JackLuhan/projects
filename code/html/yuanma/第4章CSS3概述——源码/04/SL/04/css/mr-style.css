@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
+	font-size: 12px;
+}
+.mr-header {            		        /*类选择器,设置网页首部导航部分的样式*/
+	height: 30px;              		    /*设置其高度为30像素*/
+	width: 100%;
+	background: #393f52;      		    /*设置其背景颜色*/
+	color: white;                  		/*设置字体颜色*/
+}
+.mr-li:hover {                  		/*类选择器和伪类选择器设置鼠标滑过无序列表中第一项时的样式*/
+	color: #F00;                   		/*设置鼠标滑过时颜色为红色*/
+	background: #393f52;         		/*设置鼠标滑过时的背景颜色*/
+}
+nav ul {
+	width: 1560px;
+	padding: 0 365px;
+}
+ul li {                             	/*元素选择器,设置无序列表项的公共样式*/
+	height: 28px;                      	/*设置无序列表项的高度*/
+	float: left;                       	/*每一项都向左浮动*/
+	line-height: 28px;                 	/*设置行高，时期垂直居中显示*/
+	text-align: center;               	/*水平对齐方式为居中*/
+	cursor: pointer;                  	/*鼠标悬停时，鼠标变为小手状*/
+	font-size: 14px;                   	/*设置字体大小*/
+	}
+ul .mr-li {                           	/*类选择器,设置无序列表第一项的样式*/
+	margin-right: 390px;               	/*右边距390像素*/
+	float: left;                       	/*向左浮动*/
+}
+ul .mr-li~li {                        	/*通用兄弟元素选择器,设置除第一个以外的所有列表项的样式*/
+	width: 100px;
+}
+.mr-content {                         	/*类选择器，设置主体部分样式*/
+	width: 1199px;
+	height: 332px;
+	margin: 0 auto;
+}
+.mr-content div {                    	/*设置每一个版块的公共样式*/
+	float: left;                      	/*设置其浮动为左浮动*/
+	color: white;                     	/*设置其字体颜色为白色*/
+	font-size: 36px;                    /*设置字号为36px*/
+	font-weight: bolder;               /*设置文字加粗*/
+	text-align: center;                /*字体水平对齐方式为居中*/
+}
+.mr-content .mr-block1 {     		/*设置第一个版块的样式*/
+	width: 280px;                     	/*设置其宽度为280像素*/
+	height: 332px;
+	background: #e36e60;        		/*设置背景颜色*/
+	line-height: 332px;              	/*设置行高，使其文字在模块中垂直居中显示*/
+}
+.mr-block1~div {                   	/*通用兄弟元素选择器,设置出第一个以外的其他版块的样式*/
+	height: 160px;                   	/*设置其高度为160像素*/
+	margin-left: 10px;               	/*设置左边距10像素*/
+	line-height: 160px;
+}
+.mr-content .mr-block2 {             /*设置第二个版块的样式*/
+	width: 210px;                      /*设置宽度为210像素*/
+	background: #7ed5c2;               /*设置背景颜色*/
+}
+.mr-content .mr-block3 {             /*设置第三个版块的样式*/
+	width: 293px;
+	background: #dfb582;
+}
+.mr-content .mr-block4 {             /*设置第四个版块的样式*/
+	width: 191px;
+	background: #9885cc;
+}
+.mr-content .mr-block5 {             /*设置第五个版块的样式*/
+	width: 185px;
+	background: #e49275;
+}
+.mr-content .mr-block6 {            /*设置第六个版块的样式*/
+	width: 312px;
+	margin-top: 10px;
+	background: #6ad87c;
+}
+.mr-content .mr-block7 {            /*设置第七个版块的样式*/
+	width: 276px;
+	margin-top: 10px;
+	background: #71ade7;
+}
+.mr-content .mr-block8 {           /*设置第八个版块的样式*/
+	width: 301px;
+	margin-top: 10px;
+	background: #ecc75b;
+}
+.mr-content div:hover {		/*伪类选择器,设置每一个版块鼠标滑过的样式*/
+	opacity: 0.5;					/*设置透明度*/
+	color: #000;						/*设置字体颜色*/
+}
+nav li:hover {
+	background: #646464;				/*设置背景*/
+	color: #FFF;
+}

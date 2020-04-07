@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>幕帘效果</title>
+</head>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var curtainopen = false;//定义布尔型变量
+	$(".rope").click(function(){//当单击超链接时
+		$(this).blur();//使超链接失去焦点
+		if (curtainopen == false){ //判断变量值是否为false
+			$(this).text("关闭幕帘");//设置超链接文本 
+			$(".leftcurtain").animate({width:'60px'}, 2000 );//设置左侧幕帘动画
+			$(".rightcurtain").animate({width:'60px'},2000 );//设置右侧幕帘动画
+			curtainopen = true;//变量值设为true
+		}else{
+			$(this).text("拉开幕帘"); //设置超链接文本
+			$(".leftcurtain").animate({width:'50%'}, 2000 );//设置左侧幕帘动画
+			$(".rightcurtain").animate({width:'51%'}, 2000 );//设置右侧幕帘动画
+			curtainopen = false;//变量值设为false
+		}
+	});	
+});	
+</script>
+	<style type="text/css">
+	    *{
+	    	margin:0;
+	    	padding:0;
+	    }
+	    body {
+			color: #FFFFFF;
+	    	text-align: center;
+	    	background: #4f3722 url('images/darkcurtain.jpg') repeat-x;
+	    }
+	    img{
+			border: none;
+		}
+		p{
+		margin-bottom:10px;
+		color:#FFFFFF;
+		}
+	    .leftcurtain{
+			width: 50%;
+			height: 495px;
+			top: 0px;
+			left: 0px;
+			position: absolute;
+			z-index: 2;
+		}
+		 .rightcurtain{
+			width: 51%;
+			height: 495px;
+			right: 0px;
+			top: 0px;
+			position: absolute;
+			z-index: 3;
+		}
+		.rightcurtain img, .leftcurtain img{
+			width: 100%;
+			height: 100%;
+		}
+		.rope{
+			position: absolute;
+			top: 70%;
+			left: 60%;
+			z-index: 100;
+			font-size:36px;
+			color:#FFFFFF;
+		}
+	</style>
+</head>
+
+<body>
+欢迎光临奥纳影城<hr />
+<div class="leftcurtain"><img src="images/frontcurtain.jpg"/></div>
+<div class="rightcurtain"><img src="images/frontcurtain.jpg"/></div>
+<a class="rope" href="#">拉开幕帘</a>
+</body>
+</html>

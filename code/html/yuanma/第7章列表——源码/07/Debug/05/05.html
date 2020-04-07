@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+  <title></title>
+  <style>
+	*{padding:0;margin:0}
+	a{text-decoration:none;color:#fff}
+/*将所有列表的项目符号设为none,想让项目符号显示出来，只需要删除这行代码即可*/
+	ul,li{list-style:none}
+	.fr{float:right;}
+	.fl{float:left}
+	body{font-size:12px;font-family:"微软雅黑";}
+	/*背景图片*/
+	.bg{
+		width:100%;/*宽度*/
+		height:100%;
+		position:fixed;/*定位*/
+		top:0;
+		left:0;
+		z-index:1;
+		background-color:#C8EDED;
+	
+	}
+	.wrap{position:relative;z-index:2;}
+	.header{background:rgba(1,1,1,0.3);height:32px;}
+	.header .cl ul{margin-left:20px;}
+	.header  li{float:left;line-height:32px;color:#fff;padding:0 12px;}
+	.header .cl li a.line{text-decoration:underline;}
+	.header .cr li a{font-size:13px;font-weight:bold;text-decoration:underline;}
+	/*搜索框和logo*/
+	.cntbox{width:700px;height:300px;margin:80px auto;}
+	.cntbox .logo{text-align:center;}
+	.cntbox .searchbox {margin-top:22px}
+	.cntbox .searchbox .inpt{height:40px;width:560px;float:left;border:0;outline:none;text-indent:1em;
+		font-family:"微软雅黑";
+		font-size:14px;
+	}
+	.cntbox .searchbox .btn{height:40px;width:100px;background:#eaeaea;color:#333;display:inline-block;
+		text-align:center;
+		line-height:40px;
+		font-size:16px;
+		float:left;
+	}
+
+	/*底部*/
+	.footer{position:absolute;left:0;bottom:30px;width:100%;z-index:2;text-align:center;color:#fff}
+
+	.more{background:#111;position:fixed;right:0;top:0;width:80px;height:100%;z-index:2;display:none;}
+  </style>
+ </head>
+ <body>
+	
+	
+
+	<!--背景图片的制作方式 1920 * 1080 以上-->
+	<div class="bg" style="background-image:url(https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin/609.jpg?2)"></div>
+	<div class="more"></div>
+	<div class="wrap">
+		<div class="header">
+			<div class="cl fl">
+				<ul type="disc">
+					<li><a href="#">长沙： 13℃优18</a></li>
+					<li> | </li>
+					<li><a href="#" class="line">宝箱</a></li>
+					<li><a href="#" class="line">换肤消息(1)</a></li>
+					<li><a href="#" class="line">显示频道</a></li>
+				</ul>
+			</div>
+			<div class="cr fr">
+				<ul type="disc">
+					<li><a href="#" class="line">糯米</a></li>
+					<li><a href="#" class="line">新闻</a></li> 
+					<li><a href="#" class="line">hao123</a></li> 
+					<li><a href="#" class="line">地图</a></li> 
+					<li><a href="#" class="line">视频</a></li>
+					<li><a href="#" class="line">贴吧设置</a></li> 
+					<li><a href="#" class="line">更多产品</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--搜索框和logo-->
+		<div class="cntbox">
+			<div class="logo"><img src="images/logo.png" width="270" height="129"/></div>
+			<div class="searchbox"><input class="inpt" autofocus maxLength="60" placeholder="请输入搜索关键字..."/><a href="#" class="btn">百度一下</a></div>
+		</div>
+	</div>
+
+	<div class="footer">设为首页©2015  &nbsp;Baidu  <a href="#">意见反馈</a>&nbsp; 京ICP证030173号</div>
+
+	<script type="text/javascript">
+			
+
+	</script>
+ </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>排错练习</title>
+</head>
+<body>
+<script type="text/javascript">
+var newDate=new Date();	
+newDate.prototype.mark=null;//正确的格式是Date.prototype.属性名或方法名
+newDate.mark=newDate.getDay();
+alert(newDate.mark);	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //创建2021日期对象
+    var date1 = new Date();
+    //获取2021年的年份
+    var nextYear=date1.getFullYear()+1;
+    date1.setFullYear(nextYear);
+    date1.setMonth(0);
+    date1.setDate(1);
+    //创建当前日期对象
+    var date2=new Date();
+    var min= date1.getTime()-date2.getTime();
+    var day = Math.ceil(min/(24*60*60*1000))
+    document.write("距离明年元旦还有"+day+"天")
+</script>
+</body>
+</html>

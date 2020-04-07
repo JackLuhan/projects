@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>实现复选框的全选、反选和全不选</title>
+<style type="text/css">
+body{
+	font-size:12px;
+}
+.style1{
+font-size:18px}
+</style>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#checkAll").click(function(){								//判断用户是否单击了全选按钮
+			$('[name = checkbox]:checkbox').prop('checked',true);		//将全部复选框设为选中状态
+		});
+		$("#inverse").click(function(){								//判断用户是否单击了反选按钮
+			$('[name = checkbox]:checkbox').each(function(){			//每个复选框都进行判断
+				if($(this).prop('checked')){							//如果复选框为选中状态
+					$(this).prop('checked',false);						//将复选框设为不选中状态
+				}else{
+					$(this).prop('checked',true);						//将复选框设为选中状态
+				}
+			});
+		});
+		$("#checkNo").click(function(){								//判断用户是否单击了全不选按钮
+			$('[name = checkbox]:checkbox').prop('checked',false);		//将全部复选框设为不选中状态
+		});
+	});
+</script>
+</head>
+
+<body>
+  <form name="form1"> 
+<div align="center">
+  <table width="400" border="1" bgcolor="#FFCCCC">
+    <tr height="36"><td colspan="2" class="style1">用户注册信息表</td></tr>
+    <tr>
+      <td width="100"><div align="right">用户名</div></td>
+      <td width="267"><div align="left">
+        <input type="text" name="textfield">
+        <span class="style2">*</span></div></td>
+    </tr>
+    <tr>
+      <td><div align="right">密码</div></td>
+      <td><div align="left">
+        <input type="password" name="textfield2">
+        <span class="style2">*(6-15)位</span></div></td>
+    </tr>
+    <tr>
+      <td><div align="right">确认密码</div></td>
+      <td><div align="left">
+        <input type="password" name="textfield3">
+        <span class="style2">*</span></div></td>
+    </tr>
+    <tr>
+      <td><div align="right">性别</div></td>
+      <td><div align="left">
+        <select name="select">
+          <option>男</option>
+          <option>女</option>
+          <option selected>--</option>
+        </select>
+      </div></td>
+    </tr>
+    <tr>
+      <td height="98"><div align="right">爱好</div></td>
+      <td><div align="left">
+            <p>
+            <input type="checkbox" name="checkbox" value="checkbox">
+          上网
+            <input type="checkbox" name="checkbox" value="checkbox">
+            旅游
+            <input type="checkbox" name="checkbox" value="checkbox">
+            交友
+            <input type="checkbox" name="checkbox" value="checkbox">
+            逛街            </p>
+            <p>
+              <input type="checkbox" name="checkbox" value="checkbox">
+              看书
+              <input type="checkbox" name="checkbox" value="checkbox">
+              书法
+              <input type="checkbox" name="checkbox" value="checkbox">
+              游戏
+              <input type="checkbox" name="checkbox" value="checkbox">
+	球类</p>
+            <p align="right">
+              <input type="button" name="Submit" id="checkAll" value="全选">
+			  <input type="button" name="Submit2" id="inverse" value="反选">
+              <input type="button" name="Submit3" id="checkNo" value="全不选">  
+              </p>
+      </div></td>
+    </tr>
+    <tr>
+      <td><div align="right">邮箱</div></td>
+      <td><div align="left">
+        <input type="text" name="textfield4">
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="button" name="Submit3" value="按钮" >
+        <input type="reset" name="Submit4" value="重置">
+      </div></td>
+      </tr>
+  </table>
+  <p align="left" class="style1">&nbsp;</p>
+</div>
+</form>
+</body>
+</html>

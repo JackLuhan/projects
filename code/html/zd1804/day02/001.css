@@ -1,0 +1,24 @@
+div img{
+    width: 240px;
+    height: 240px;
+    float: left;
+}
+.A:hover img{
+    transform: rotate(90deg);
+    transition: all 2s ease-in;
+}
+.B:hover img{
+    transform: translate(200px);
+    transition: all 10s ;
+}
+.C:hover img{
+    transform: scale(2);
+}
+.D:hover img{
+    transform: skew(-30deg);
+}
+.cont{
+    height: 500px;
+    width: 500px;
+    margin: 0 auto ;
+}

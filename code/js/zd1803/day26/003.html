@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var book =new Object()
+    book.name="JavaScript"
+    book.price=100;
+    book.author="鲁寒"
+    book.showBookInfo=function () {
+        document.write("图书名称为："+this.name+"<br>")
+        document.write("图书价格："+this.price+"<br>")
+        document.write("图书作者："+this.author+"<br>")
+    }
+    book.showBookInfo();
+</script>
+</body>
+</html>

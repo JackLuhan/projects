@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>一个简单的css3示例</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	<link href="css/mr-style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>制作背景渐变和图片移动动画</h1>
+
+                <p class="mr-code-info">
+                    我们所看见的动画有的应用css3就可以完成，只要在css3中可以创建动画并引入动画。本例只是对css动画的一个简单应用。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+<div class="mr-bakg">
+	<div class="mr-picbom">
+    	<div class="mr-pic"><img src="images/phine1.png" alt="" /></div>
+        <div class="mr-picleft"><img src="images/phine2.png" alt="" /></div>
+        <div class="mr-picright"><img src="images/phone3.png" alt="" /></div>
+    </div>
+</div>
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+<div class="mr-bakg">
+	<div class="mr-picbom">
+    	<div class="mr-pic"><img src="images/phine1.png" alt="" /></div>
+        <div class="mr-picleft"><img src="images/phine2.png" alt="" /></div>
+        <div class="mr-picright"><img src="images/phone3.png" alt="" /></div>
+    </div>
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+.mr-bakg{
+	margin:0 25%;
+	width:800px;
+	height:400px;
+	border:1px #f00 solid;
+	background:url(../images/01.jpg);
+	animation:cs1 15s linear normal infinite;
+	}
+@keyframes cs1{
+	25%{ background:url(../images/01.jpg)}
+	50%{ background:url(../images/02.jpg)}
+	75%{ background:url(../images/03.jpg)}
+	100%{ background:url(../images/01.jpg)}
+	}
+.mr-picbom{
+	position:relative;
+	margin:0px 320px;
+	padding-top:120px;
+	width:220px;
+	height:220px;
+	}
+.mr-pic{
+	z-index:50;}
+.picleft,.mr-picright{
+    position: absolute;
+    top: 120px;
+    left: 0;
+    }
+.mr-picbom:hover .mr-picleft{
+	transform: translateX(240px);
+	display:block;
+	transition:all 1s ease;
+	}
+.mr-picbom:hover .mr-picright{
+	transform: translateX(-240px);
+	display:block;
+	transition:all 1s ease;
+	}		
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

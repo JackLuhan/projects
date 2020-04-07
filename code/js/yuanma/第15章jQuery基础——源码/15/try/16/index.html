@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为所有诗句设置相同的字体</title>
+<style type="text/css">
+	ul{ list-style:none;}
+	.title{
+	padding-left:10px;
+	font-size:18px;
+	font-weight:bolder;
+	height:50px;
+	line-height:50px}
+	.poem{
+	width:200px;
+	height:30px;
+	line-height:30px;
+	color:#6633FF;
+	font-size:14px;}
+</style>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".title~li").addClass("poem");
+	});
+</script>
+</head>
+<body background="bg.png">
+<ul>
+  <li class="title">题西林壁</li>
+  <li>横看成岭侧成峰</li>
+  <li>远近高低各不同</li>
+  <li>不识庐山真面目</li>
+  <li>只缘身在此山中</li>
+</ul>
+</body>
+</html>

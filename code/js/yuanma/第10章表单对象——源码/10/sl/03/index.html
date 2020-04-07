@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>获取个人信息</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+	padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function getInfo(){//定义getInfo()函数
+	var message = "";//定义字符串变量
+	message += "姓名：" + form1.name.value + "\n";//获取用户姓名并连接字符串
+	message += "性别：";//连接字符串
+	for(var i=0; i<form1.sex.length; i++){//循环获取单选按钮
+		if(form1.sex[i].checked){//如果该单选按钮被选中
+			message += form1.sex[i].value + "\n";//获取用户性别并连接字符串
+		}
+	}
+	message += "爱好：";//连接字符串
+	for(var i=0; i<form1.interest.length; i++){//循环获取复选框
+		if(form1.interest[i].checked){//如果该复选框被选中
+			message += form1.interest[i].value + " ";//获取用户爱好并连接字符串
+		}
+	}
+	message += "\n自我评价：" + form1.comment.value;//获取用户自我评价并连接字符串
+	alert(message);//输出个人信息
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" onSubmit="getInfo()">
+  <table width="503" border="0" cellspacing="1" bgcolor="#BBBBBB">
+    <tr>
+      <td align="center" height="46" colspan="2" background="images/bg.gif"><h2>请输入你的个人信息</h2></td>
+    </tr>
+    <tr>
+      <td width="82" height="20" align="right" background="images/bg.gif">姓名：</td>
+      <td width="414" height="20" background="images/bg.gif"><input type="text" name="name" /></td>
+    </tr>
+    <tr>
+      <td height="20" align="right" background="images/bg.gif">性别：</td>
+      <td height="20" background="images/bg.gif"><input type="radio" name="sex" value="男" />男
+      &nbsp;&nbsp;<input type="radio" name="sex" value="女" />女</td>
+    </tr>
+    
+    <tr>
+      <td height="20" align="right" background="images/bg.gif">爱好：</td>
+      <td height="20" background="images/bg.gif"><input type="checkbox" name="interest" value="看电影" />看电影
+      <input type="checkbox" name="interest" value="听音乐" />听音乐
+      <input type="checkbox" name="interest" value="演奏乐器" />演奏乐器
+      <input type="checkbox" name="interest" value="打篮球" />打篮球
+      <input type="checkbox" name="interest" value="看书" />看书
+      <input type="checkbox" name="interest" value="上网" />上网</td>
+    </tr>
+    
+    <tr>
+      <td align="right" valign="top" background="images/bg.gif">自我评价：</td>
+      <td background="images/bg.gif"><textarea name="comment" cols="30" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td background="images/bg.gif">&nbsp;</td>
+      <td background="images/bg.gif"><input type="submit" name="Submit" value="提交" />
+      <input type="reset" name="Submit2" value="重置" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

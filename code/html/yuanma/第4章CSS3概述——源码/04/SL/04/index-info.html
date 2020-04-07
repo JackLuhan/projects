@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器及伪元素</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>商城分类模块</h1>
+
+                <p class="mr-code-info">
+                    伪类选择器可以添加鼠标滑过等效果，伪类选择器的类名是固定的。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+			    <!-- 这里填写你的HTML代码-->
+                <div class="mr-header">
+				  <div class="mr-header1">
+					<div class="mr-hout" > 你好，请登录 </div>
+					<nav>
+					  <ul>
+						<li class="mr-li">我的订单</li>
+						<li class="mr-li">我的商城</li>
+						<li class="mr-li">商城会员</li>
+						<li class="mr-li">企业采购</li>
+						<li class="mr-li">客户服务</li>
+						<li class="mr-li">网站导航</li>
+						<li class="mr-li">手机商城</li>
+					  </ul>
+					</nav>
+				  </div>
+				</div>
+				<div class="mr-content">
+				  <div class="mr-block1 mr-block">美妆会场</div>
+				  <div class="mr-block2 mr-block">女装会场</div>
+				  <div class="mr-block3 mr-block">男装会场</div>
+				  <div class="mr-block4 mr-block">首饰会场</div>
+				  <div class="mr-block5 mr-block">零食会场</div>
+				  <div class="mr-block6 mr-block">家居会场</div>
+				  <div class="mr-block7 mr-block">珠宝会场</div>
+				  <div class="mr-block8 mr-block">电子会场</div>
+				</div>
+
+
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+
+div class="mr-header">
+  <div class="mr-header1">
+    <div class="mr-hout" > 你好，请登录 </div>
+    <nav>
+      <ul>
+        <li class="mr-li">我的订单</li>
+        <li class="mr-li">我的商城</li>
+        <li class="mr-li">商城会员</li>
+        <li class="mr-li">企业采购</li>
+        <li class="mr-li">客户服务</li>
+        <li class="mr-li">网站导航</li>
+        <li class="mr-li">手机商城</li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="mr-content">
+  <div class="mr-block1 mr-block">美妆会场</div>
+  <div class="mr-block2 mr-block">女装会场</div>
+  <div class="mr-block3 mr-block">男装会场</div>
+  <div class="mr-block4 mr-block">首饰会场</div>
+  <div class="mr-block5 mr-block">零食会场</div>
+  <div class="mr-block6 mr-block">家居会场</div>
+  <div class="mr-block7 mr-block">珠宝会场</div>
+  <div class="mr-block8 mr-block">电子会场</div>
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+                        
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 12px;
+	}
+.mr-header{
+    height: 30px;
+    width: 100%;
+    background:#393f52;
+    border-bottom: 1px solid #dddddd;
+    color: white;
+}
+.mr-header .mr-header1{
+    width: 1348px;
+    height: 30px;
+    margin: 0 auto;
+	}
+.mr-hout{
+    width: 100px;
+    height: 28px;
+	margin-left: 100px;
+    margin-right: 300px;
+    float: left;
+	line-height:28px;
+	}
+.mr-hout:hover{
+	color:#F00;
+	}
+nav{
+    width: 780px;
+    height: 30px;
+    float: left;
+	}
+nav .mr-li{
+	width:80px;
+	height:28px;
+    float: left;
+	line-height:28px;
+	text-align:center;
+	cursor:pointer;
+	font-size: 14px;
+	}
+.mr-content{
+	width:1199px;
+	height:332px;
+	margin:0 auto;
+	}
+.mr-content .mr-block{
+	float:left;
+	color:white;
+	font-size:36px;
+	font-weight:bolder;
+	text-align:center;
+	}
+.mr-content .mr-block1{
+	width:280px;
+	height:332px;
+	background:#e36e60;
+	line-height:332px;
+	}
+.mr-content .mr-block2{
+	width:210px;
+	height:160px;
+	margin-left:10px;
+	background:#7ed5c2;
+	line-height:160px;
+	}
+.mr-content .mr-block3{
+	width:293px;
+	height:160px;
+	margin-left:10px;
+	background:#dfb582;
+	line-height:160px;
+	}
+.mr-content .mr-block4{
+	width:191px;
+	height:160px;
+	margin-left:10px;
+	background:#9885cc;
+	line-height:160px;
+	}
+.mr-content .mr-block5{
+	width:185px;
+	height:160px;
+	margin-left:10px;
+	background:#e49275;
+	line-height:160px;
+	}
+.mr-content .mr-block6{
+	width:312px;
+	height:162px;
+	margin-left:10px;
+	margin-top:10px;
+	background:#6ad87c;
+	line-height:162px;
+	}
+.mr-content .mr-block7{
+	width:276px;
+	height:162px;
+	margin-left:10px;
+	margin-top:10px;
+	background:#71ade7;
+	line-height:162px;
+	}
+.mr-content .mr-block8{
+	width:301px;
+	height:162px;
+	margin-left:10px;
+	margin-top:10px;
+	background:#ecc75b;
+	line-height:160px;
+	}
+.mr-content .mr-block:hover{		/*伪类选择器*/
+	opacity:0.5;					/*设置透明度*/
+	color:#000;						/*设置字体颜色*/
+	}
+nav .mr-li:hover{
+	background:#646464;				/*设置背景*/
+	color:#FFF;
+	}
+
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

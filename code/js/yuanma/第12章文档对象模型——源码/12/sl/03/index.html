@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>复制节点</title>
+<script type="text/javascript"> 
+	function AddRow(bl){
+		var sel=document.getElementById("shopType");//获取指定id的元素
+		var newSelect=sel.cloneNode(bl);//复制节点
+		var b=document.createElement("br");//创建br元素
+    	di.appendChild(newSelect);//将复制的新节点添加到指定节点的未尾
+		di.appendChild(b);//将创建的br元素添加到指定节点的未尾
+	}
+</script>
+</head>   
+<body background="bg.gif">   
+<form>   
+	<hr>
+    <select name="shopType" id="shopType">   
+     <option value="%">请选择类型</option>   
+     <option value="0">数码电子</option>   
+     <option value="1">家用电器</option>
+	 <option value="2">床上用品</option>
+    </select> 
+	<hr>
+<div id="di"></div>    
+ <input type="button" value="复制" onClick="AddRow(false)"/>
+ <input type="button" value="深度复制" onClick="AddRow(true)"/>
+</form>   
+</body>   
+</html>  

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为图片添加边框</title>
+<script type="text/javascript">
+function addBorder(form){
+	var border = form.border.value;
+	document.images['line'].border = border;
+}
+</script>
+</head>
+<body background="images/bg.gif">
+<form name="myform">
+  边框宽度：<input type="text" name="border">
+  <input type="button" value="添加边框" onClick="addBorder(myform)">
+</form><br>
+<img name="line" width="200" id="mypic" src="line.jpg">
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断取票是否成功</title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+span{
+margin-left:10px;
+}
+</style>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var ticketCode = "99648500463711";
+function checkCode(form){
+	var code = form.code.value;
+	if(code == ""){
+		alert("请输入兑换码！");
+		return false;
+	}else if(code != ticketCode){
+		alert("兑换码不正确！");
+		return false;
+	}else{
+		alert("取票成功！");
+		return true;
+	}
+}
+</script>
+<table width="300" height="100" bgcolor="#1170FF" border="0" cellpadding="0" cellspacing="1">
+  <form name="form1" method="post">
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">取票系统</div></td>
+    </tr>
+    <tr>
+      <td width="120" height="25" bgcolor="#FFFFFF"><div align="right">请输入兑换码：</div></td>
+      <td width="180" bgcolor="#FFFFFF">&nbsp;<input type="text" name="code" size="20"></td>
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="submit" value="取票" onclick="return checkCode(form1)">&nbsp;&nbsp;<input type="reset" value="重新输入"></div></td>
+    </tr>
+  </form> 
+</table>
+</body>
+</html>

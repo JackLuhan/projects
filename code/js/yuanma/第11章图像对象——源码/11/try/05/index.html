@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link href="CSS/style.css" rel="stylesheet">
+<title>随机生成登录图片验证码</title>
+
+</head>
+<body>
+      <table width="350" height="224"  border="0" align="center" cellpadding="0" cellspacing="0" background="Images/login.jpg" class="tableBorder">
+        <tr>
+          <td height="84" align="center">&nbsp;</td>
+        </tr>	  
+              
+        <tr>
+          <td height="45" valign="top"><table width="62%" height="114"  border="0" cellpadding="0" cellspacing="0">
+              <form name="form1" method="post" action="#">
+			<tr>
+              <td height="30" colspan="3" align="center">&nbsp;<span class="blue">用户名</span>：
+              <input name="manager" type="text" id="manager" size="20"></td>
+            </tr>
+            <tr>
+              <td height="27" colspan="3" align="center"><span class="blue">密&nbsp; &nbsp;&nbsp;&nbsp;码：</span>              <input name="PWD" type="password" id="PWD" size="22"></td>
+            </tr>
+            <tr>
+              <td width="35%"  height="27" align="right"><span class="blue">验证码</span>：              </td>
+              <td width="14%" align="right"><input name="checkcode" type="text" id="checkcode" size="5"></td>
+              <td width="51%"  align="left"><div id='div1'></div></td>
+            </tr>
+
+            <tr>
+              <td colspan="3" align="center"><input name="Submit" type="submit" class="btn_grey" value="确认"> &nbsp;
+                <input name="Submit2" type="reset" class="btn_grey" value="重置">
+              &nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+</table>
+<script type="text/javascript">
+var str="";
+var img="";
+var strsource=['明','天','日','科','技','会','更','好','创','新'];
+for(var i=0;i<4;i++){
+	var n=Math.floor(Math.random()*strsource.length);
+	str=str+strsource[n];
+	img=img+"<img src='Images/checkcode/"+n+".gif' width='19' height='20'> ";
+	div1.innerHTML=img;
+}
+</script>
+</body>
+</html>

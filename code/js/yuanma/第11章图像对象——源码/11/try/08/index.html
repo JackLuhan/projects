@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>图片闪烁效果</title>
+<script type="text/javascript">
+var counter = 0; 
+function glint() 
+{
+	div1.style.visibility = (div1.style.visibility == "hidden") ? "visible" : "hidden";
+	counter += 1;
+	setTimeout("glint()", 200);
+}
+</script>
+<body onload="glint();" background="bg.gif">
+<div id="div1" style="position:absolute; left:150; top:0">
+	<a href="http://www.mingrisoft.com" target="_blank">
+	<p></p>
+		<img name="image1" src="Temp.jpg">
+	<p></p>
+	<font size="3pt" color="#FF0000"> 明日科技最新图书 </font>
+	</a>
+</DIV>
+</body>
+</html>

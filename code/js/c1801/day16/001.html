@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.定义人物数组
+    var arr=new Array("张无忌","郭靖","东方不败","乔峰","令狐冲","完颜洪烈","杨过","金轮法王","韦小宝");
+    //2.定义初始化变量
+    var twoName="";
+    var threeName="";
+    var fourName="";
+    //3.遍历数组
+    for (var i = 0; i <arr.length ; i++) {
+        //4.判断人物到底是几个字的
+        if(arr[i].length==2){
+            twoName+=arr[i]+"、"
+        }
+        if(arr[i].length==3){
+            threeName+=arr[i]+"、"
+        }
+        if(arr[i].length==4){
+            fourName+=arr[i]+"、"
+        }
+    }
+    document.write("两字人物有："+twoName+"<br>")
+    document.write("三字人物有："+threeName+"<br>")
+    document.write("四字人物有："+fourName+"<br>")
+</script>
+</body>
+</html>

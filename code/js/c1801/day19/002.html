@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function checkTitle() {
+            var title=form1.title.value;
+            if(title.length>10){
+                alert("新闻的标题超过10")
+            }
+        }
+        function checkContent() {
+            var content=form1.content.value;
+            if(content.length>20){
+                alert("新闻内容超过20")
+            }
+        }
+
+    </script>
+</head>
+<body>
+<table width="443" height="97" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#f9f9f9">
+<form name="form1">
+    <tr bgcolor="#214994">
+        <td align="center" height="25" colspan="2"><h3 style="color:#FFFFFF">添加新闻信息</h3></td>
+    </tr>
+    <tr>
+        <td align="right" width="80" height="28">新闻标题：</td>
+        <td width="363"><input name="title" type="text" size="40" onBlur="checkTitle()"></td>
+    </tr>
+    <tr>
+        <td align="right" height="20">新闻内容：</td>
+        <td rowspan="2"><textarea name="content" cols="40" rows="6" onBlur="checkContent()"></textarea></td>
+    </tr>
+    <tr>
+        <td height="10">&nbsp;</td>
+    </tr>
+    <tr>
+        <td height="32" colspan="2">
+            <div align="center">
+                <input name="add" type="submit" id="add" value="添加">
+                &nbsp;
+                <input name="Submit" type="reset" value="重置">
+            </div></td>
+    </tr>
+</form>
+</table>
+</body>
+</html>

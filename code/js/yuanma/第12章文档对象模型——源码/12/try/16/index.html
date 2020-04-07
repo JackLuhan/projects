@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出游戏胜利图片</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+    resultDiv = document.createElement("div");//创建div元素
+    resultDiv.innerHTML = "<img src='images/success.png' width='100%' height='100%'>";//为div设置图片
+    document.body.appendChild(resultDiv);//向body中添加div元素
+    setTimeout("document.body.removeChild(resultDiv)",3000);//过3秒钟移除div元素
+</script>
+
+</body>
+</html>

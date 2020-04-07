@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<style type="text/css">
+#name{
+font-size:24px;
+color:#9966FF}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+   		$("input[type='button']").click(function(){    
+      		var moviename = $(".moviename").val();    	
+      		$("<div id='name'>"+moviename+"</div>").prepend("body");//将prepend修改为prependTo
+   	});
+});
+
+</script>
+</head>
+<body background="bg.gif">
+	<p>
+	影片讲述了富豪刘轩和为了拯救同族前往刺杀他的美人鱼珊珊坠入爱河，谱写了一段人鱼爱情童话的故事。
+	</p>
+	<form id="form" name="form">
+	请输入影片名称：<input type="text" class="moviename" />
+	<input type="button" value="添加名称" />
+	</form>
+</body>
+</html>

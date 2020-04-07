@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>按下按钮输出通话内容</title>
+</head>
+
+<body background="images/bg.gif">
+<script type="text/javascript">
+function mousedown(){
+	var obj=document.getElementById('talk');
+	obj.innerHTML="长江长江，我是黄河……";
+}
+function mouseup(){
+	var obj=document.getElementById('talk');
+	obj.innerHTML="通话完毕";
+}
+</script>
+<p id="talk">请讲话</p>
+<input type="button" name="but" value="按住 说话" onmousedown="mousedown()" onmouseup="mouseup()" />
+</body>
+</html>

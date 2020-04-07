@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为超链接添加背景颜色</title>
+<style type="text/css">
+li{
+width:140px;}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("li:has(a)").css("background-color","#E8F3D1");
+	});
+</script>
+</head>
+<body>
+<div>
+  <ul>
+    <li><a href="http://www.mingrisoft.com">www.mingrisoft.com</a></li>
+	<li>www.mingribook.com</li>
+	<li><a href="http://www.mrbccd.com">www.mrbccd.com</a></li>
+  </ul>
+</div>
+</body>
+</html>

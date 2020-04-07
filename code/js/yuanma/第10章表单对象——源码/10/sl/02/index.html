@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>获取文本框/编辑框/隐藏域的值</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #FFF8EB;
+	margin-top: 10px;
+}
+-->
+</style>
+<script type="text/javascript">
+function Mycheck(){
+  	var checkstr="获取内容如下：\n";//定义字符串变量
+  	if (document.form1.author.value != ""){//如果作者名称不为空
+     	checkstr+="作者名称："+document.form1.author.value+"\n";//连接用户输入的作者名称
+  	}else{
+  		return false;//返回false不允许提交表单
+  	}
+  	if (document.form1.title.value != ""){//如果文章主题不为空
+     	checkstr+="文章主题："+document.form1.title.value+"\n";//连接用户输入的文章主题
+  	}else{
+  		return false;//返回false不允许提交表单
+  	}
+  	if (document.form1.content.value != ""){//如果文章内容不为空
+     	checkstr+="文章内容："+document.form1.content.value+"\n";//连接用户输入的文章内容
+  	}else{
+  		return false;//返回false不允许提交表单
+  	}
+  	if (document.form1.hid.value != ""){//如果隐藏域的值不为空
+     	checkstr+=document.form1.hid.value;//连接隐藏域的值
+  	}
+    alert(checkstr);//输出变量checkstr的值
+	return true;//提交表单
+}
+</script>
+</head>
+<body style="font-size:12px">
+<table width="500"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" valign="top"><table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="22" align="left"><img src="images/dian.gif" width="7" height="7"> 文章添加</td>
+      </tr>
+      <tr>
+        <td height="1"><img src="images/xian.gif" width="366" height="1"></td>
+      </tr>
+    </table>
+      <br>
+      <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+        <form name="form1" method="post" onSubmit="return Mycheck()">
+          <tr>
+            <td height="28" align="right">作者名称：</td>
+            <td height="28"><input name="author" type="text" id="author"></td>
+          </tr>
+          <tr>
+            <td height="28" align="right">文章主题：</td>
+            <td height="28"><input name="title" type="text" id="title"></td>
+          </tr>
+          <tr>
+            <td height="22" align="right">文章内容：</td>
+            <td height="22"><textarea name="content" cols="45" rows="6" id="content"></textarea></td>
+          </tr>
+          <tr>
+            <td height="28" colspan="2" align="center"><input name="hid" type="hidden" id="hid" value="文章添加成功!">
+            <input name="add" type="submit" id="add" value="添 加">
+&nbsp;
+        <input type="reset" name="Submit2" value="重 置"></td>
+          </tr>
+        </form>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

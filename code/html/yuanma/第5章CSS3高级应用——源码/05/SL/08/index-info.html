@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>51商城小新闻</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>如图所示为商城的新闻滚动播出。</h1>
+
+                <p class="mr-code-info">
+                    要实现Animation动画，在定义了关键帧以后，还需要使用动画相关属性来执行关键帧的变化。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+			    <!-- 这里填写你的HTML代码-->
+                <div class="mr-content">
+                  <div class="mr-news">
+                    <div class="mr-p">
+                      <p>华为年度盛典</p>
+                      <p>惊喜连连</p>
+                      <p>新品手机震撼上市</p>
+                      <p>折扣多多</p>
+                      <p>不容错过</p>
+                      <p>惊喜购机有好礼</p>
+                      <p>满减优惠</p>
+                      <p>神秘幸运奖</p>
+                      <p>华为等你带回家</p>
+                    </div>
+                  </div>
+                </div>
+
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+
+<div class="mr-content">
+  <div class="mr-news">
+    <div class="mr-p">
+      <p>华为年度盛典</p>
+      <p>惊喜连连</p>
+      <p>新品手机震撼上市</p>
+      <p>折扣多多</p>
+      <p>不容错过</p>
+      <p>惊喜购机有好礼</p>
+      <p>满减优惠</p>
+      <p>神秘幸运奖</p>
+      <p>华为等你带回家</p>
+    </div>
+  </div>
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+
+.mr-content{
+	width: 713px;
+    height: 500px;
+	margin: 0 auto;
+    background: url(../images/10-6.jpg) no-repeat;
+    position: relative;
+	}
+.mr-news{
+	width: 200px;
+	height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 130px;
+    left: 472px;
+	}
+.mr-p{
+	height: 30px;
+	margin-top: 0;
+    color: #333;
+    font-size: 24px;
+    -moz-animation: lun 10s linear infinite;
+    -webkit-animation: lun 20s linear normal infinite;
+	}
+@-webkit-keyframes lun {
+	0%{margin-top:0;}
+	10%{margin-top:-30px;}
+	20%{margin-top:-60px;}
+	30%{margin-top:-90;}
+	40%{margin-top:-120px;}
+	50%{margin-top:-150px;}
+	60%{margin-top:-180;}
+	70%{margin-top:-210px;}
+	80%{margin-top:-240px;}
+	90%{margin-top:-270px;}
+	100%{margin-top:-310px;}
+	}
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

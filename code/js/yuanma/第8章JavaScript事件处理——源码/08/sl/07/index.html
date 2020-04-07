@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>按A键对页面进行刷新</title>
+</head>
+
+<body>
+<script type="text/javascript">
+function Refurbish(){//定义Refurbish()函数
+	if (window.event.keyCode==65){//如果按下了键盘上的A键
+		location.reload();//对页面进行刷新
+	}
+}
+document.onkeydown=Refurbish;//当按下键盘上的按键时调用函数
+</script>
+<img src="1.jpg" width="805" height="554">
+</body>
+</html>

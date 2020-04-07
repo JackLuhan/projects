@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<script type="text/javascript">
+   function insertNode(str){					
+      var node=document.getElementById("frm");		
+	  var newP=document.createElement("p");			
+      var newTxt=document.createTextNode(str);		
+      newP.appendChild(newTxt);						
+      if(node.parentNode)       						
+         node.parentNode.insertBefore(node,newP); //将两个参数node和newP交互位置
+   }
+</script>
+<body>
+   <form id="frm" name="frm">
+   输入文本：<input type="text" name="txt" />
+  <input type="button" value="插入节点" onclick="insertNode(document.frm.txt.value);" />
+   </form>
+</body>
+</html>

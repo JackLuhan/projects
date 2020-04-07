@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*css document*/
+.cont {                     /*设置页面的整体样式*/
+    background: rgb(225, 255, 255);                     /*设置页面的背景颜色*/
+    width: 800px;                     /*设置页面的整体宽度*/
+    height: 520px;                     /*设置页面的整体高度*/
+    margin: 0 auto;                     /*设置页面的整体外边距*/
+}
+p {                     /*设置提示文字的样式*/
+    background: #ff0;                     /*设置提示文字的背景颜色*/
+    font-size: 20px;                     /*设置字体的大小*/
+    line-height: 30px;                     /*设置设置行高*/
+}
+img {                     /*设置表情图片的样式*/
+    height: 100px;                     /*设置图片统一高度*/
+    width: 100px;                     /*设置图片同意宽度*/
+}
+.cont:hover.cont div {                     /*当鼠标放置在整体div上时，图片div的样式*/
+    float: left;                     /*设置浮动为左浮动*/
+}
+.cont:active.cont div {                     /*当鼠标单击整体div上时，图片div的样式*/
+    float: right;                     /*设置浮动为右浮动*/
+}

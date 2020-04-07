@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title> 鼠标移入移出时改变图片透明度</title>
+</head>
+
+<body background="images/bg.gif">
+<script type="text/javascript">
+function visible(cursor,i){ //定义visible()函数
+	if (i==0) //如果参数i的值为0
+		cursor.filters.alpha.opacity=100; //将图片透明度设置为100
+	else 
+		cursor.filters.alpha.opacity=50;//将图片透明度设置为50
+}
+</script>
+<table border="0" cellpadding="0" cellspacing="0"> 
+  <tr> 
+    <td align="center" bgcolor="#CCCCCC">
+	  <img src="images/Temp.jpg" border="0" style="filter:alpha(opacity=100)" onMouseOver="visible(this,1)" onMouseOut="visible(this,0)" width="148" height="121">
+	</td> 
+  </tr> 
+</table>
+</body>
+</html>

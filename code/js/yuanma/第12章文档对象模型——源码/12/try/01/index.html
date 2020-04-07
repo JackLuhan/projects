@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>向页面中添加带颜色的书名</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function addBook(){
+	var div = document.createElement('div');
+	var book = myform.book.value;
+	txt=document.createTextNode(book);
+	div.style.color=myform.color.value;
+	div.appendChild(txt);
+	document.getElementById('show').appendChild(div);
+}
+</script>
+<div id="show">
+</div>
+<p>
+<form name="myform">
+  请输入书名：<input type="text" name="book">
+  <select name="color">
+    <option value="red">红色</option>
+	<option value="green">绿色</option>
+	<option value="blue">蓝色</option>
+
+  </select>
+  <input type="button" value="添加" onClick="addBook()">
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*css document*/
+*{            /*清除标签的默认内外边距*/
+    padding: 0;
+    margin: 0;
+}
+.cont{            /*页面的总体大小*/
+    width: 1200px;
+    margin: 0 auto;
+}
+.top ul{            /*第一层导航的样式*/
+    height: 65px;
+    background: rgba(68,123,211,0.8);
+}
+.top ul li{            /*第一层导航的样式*/
+    float: left;
+    font-size: 23px;
+    line-height: 65px;
+    padding: 0px 40px;
+}
+.top ul li:hover{            /*鼠标滑过第一层导航的样式*/
+    background: #c0ff00;
+}
+.list ul li{             /*第二层导航的样式*/
+    margin: 20px 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 65px;
+    list-style: none;
+    font-size: 20px;
+    float: left;
+    border-top: 4px solid #fff;
+    border-bottom: 1px solid #EDF1F7;
+}
+
+.list ul li :hover{              /*鼠标滑过鼠标滑过第二层导航的样式*/
+    border: 1px solid #EDF1F7;
+    border-bottom: none;
+    border-top: 4px solid #B49668;
+}
+.show img{            /*图片大小*/
+    width: 175px;
+    margin: 0 10px;
+}
+.show div{            /*设置图片在一行显示*/
+    float: left;
+}
+.show>:first-child{
+    clear: left;             /*清除第一张图片的浮动*/
+}

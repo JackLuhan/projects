@@ -1,0 +1,41 @@
+.mr-bak{
+    height: 300px;
+    width: 575px;
+    margin: 0 25%;
+    background: url("images/01.jpg") no-repeat 0 0;
+    border: 1px black solid;
+    animation: zd 10s linear infinite normal;
+}
+@keyframes zd {
+    25%{
+        background: url("images/01.jpg");
+    }
+    50%{
+        background: url("images/02.jpg");
+    }
+    75%{
+        background: url("images/03.jpg");
+    }
+    100%{
+        background: url("images/01.jpg");
+    }
+}
+.mr-pic{
+    position: relative;
+    margin: 50px 242px;
+    height: 190px;
+    width: 110px;
+}
+.mr-left,.mr-right{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mr-pic:hover .mr-left{
+    transform: translateX(-190px);
+    transition: all linear 3s ;
+}
+.mr-pic:hover .mr-right{
+    transform: translateX(190px);
+    transition: all linear 3s ;
+}

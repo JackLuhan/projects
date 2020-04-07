@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>实现文字变色和放大的效果</title>
+</head>
+
+<body background="images/bg.gif">
+<script type="text/javascript">
+function change(){
+	var obj=document.getElementById('welcome');
+	obj.style.color="#0000FF";
+	obj.style.fontSize="24px";
+}
+function resume(){
+	var obj=document.getElementById('welcome');
+	obj.style.color="#000000";
+	obj.style.fontSize="18px";
+}
+</script>
+<span id="welcome" style="font-size:18px" onmouseover="change()" onmouseout="resume()">欢迎购买科技图书</span>
+</body>
+</html>

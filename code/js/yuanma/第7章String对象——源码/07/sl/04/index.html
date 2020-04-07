@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出梁山好汉人物信息</title>
+<style type="text/css">
+table{
+font-size:14px;
+color:#0000FF;}
+th{
+font-size:16px;
+color:#FF00FF}
+</style>
+</head>
+
+<body background="bg.gif">
+<table cellspacing="1" bgcolor="#999999"> 
+  <tr height="30" bgcolor="#FFFFFF">
+   <th align="center" width="100">人物名称</th>
+   <th align="center" width="100">人物绰号</th>
+   <th align="center" width="160">主要事迹</th>
+  </tr>
+<script type="text/javascript">
+var name="宋江，卢俊义，林冲，鲁智深，武松";//定义人物名称字符串
+var nickname="及时雨，玉麒麟，豹子头，花和尚，行者";//定义人物绰号字符串
+var story="领导梁山起义，活捉史文恭，风雪山神庙，倒拔垂杨柳，醉打蒋门神";//定义主要事迹字符串
+var nameArray=name.split("，");//将人物名称字符串分割为数组
+var nicknameArray=nickname.split("，");//将人物绰号字符串分割为数组
+var storyArray=story.split("，");//将主要事迹字符串分割为数组
+for(var i=0;i<nicknameArray.length;i++){
+	document.write("<tr height=26 bgcolor='#FFFFFF'>");//输出<tr>标记
+	document.write("<td align='center'>"+nameArray[i]+"</td>");//输出人物名称
+	document.write("<td align='center'>"+nicknameArray[i]+"</td>");//输出人物绰号
+	document.write("<td align='center'>"+storyArray[i]+"</td>");//输出主要事迹
+	document.write("</tr>");//定义</tr>结束标记
+}
+</script>
+</table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>补全古诗最后一句</title>
+<style type="text/css">
+#poemDiv{
+	width:300px;
+	height:180px;
+	background:url(poem.png);
+	font-weight:bolder;
+}
+.poemtitle{
+height:50px;
+line-height:50px;
+margin-left:120px;
+font-size:24px;
+color:#0000FF;}
+.poem{
+margin:0 auto;
+margin-left:100px;
+height:30px;
+line-height:30px;
+color:#0000FF;
+font-size:18px;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function completePoem(){//定义completePoem()函数
+	var div = document.createElement('div');//创建div元素
+	div.className = 'poem';//为div元素添加CSS类
+	var last = myform.last.value;//获取用户输入的古诗最后一句
+	txt=document.createTextNode(last);//创建文本节点
+	div.appendChild(txt);//将文本节点添加到创建的div元素中
+	document.getElementById('poemDiv').appendChild(div);//将创建的div元素添加到id为poemDiv的div元素中
+}
+</script>
+<div id="poemDiv">
+  <div class="poemtitle">春晓</div>
+  <div class="poem">春眠不觉晓</div>
+  <div class="poem">处处闻啼鸟</div>
+  <div class="poem">夜来风雨声</div>
+</div>
+<p>
+<form name="myform">
+  请输入最后一句：<input type="text" name="last">
+  <input type="button" value="添加" onClick="completePoem()">
+</form>
+</body>
+</html>

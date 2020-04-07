@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function createTXT(){
+   var div = document.createElement('div');
+   txt=document.createTextnode("创建的文本");//将createTextnode修改为createTextNode
+   div.appendChild(txt);
+   document.body.appendChild(div);
+}
+</script>
+<input type="button" name="but" value="创建节点" onClick="createTXT()">
+</body>
+</html>

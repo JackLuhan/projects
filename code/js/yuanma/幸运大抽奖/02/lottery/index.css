@@ -1,0 +1,71 @@
+*{
+	margin: 0; 
+	padding: 0; 
+	font-size:12px;
+}
+.header{ 
+	width:100%; 
+	height:30px;
+} 
+.box{
+	width:450px;
+	height:450px;
+	background-color:#66CC66;
+	position:absolute;
+	top:153px;
+	left:153px;
+}
+.play{ 
+	margin:0 auto;
+	width:756px; 
+	height:756px;
+	border:10px solid #3399FF;
+	position:relative;
+}
+.btn_arr{ 
+	position:absolute;
+	left:228px; 
+	top:228px;
+}
+td{
+	width:150px; 
+	height:150px; 
+	background-color:#FFDFDF; 
+	text-align:center; 
+	line-height:115px; 
+	font-size:80px; 
+}
+.light1{
+	background-color:#F60;
+}
+.light2{
+	background-color:#3366FF;
+}
+.playnormal{ 
+	background-color:#FFDFDF;
+}
+.play_btn{
+	width:300px; 
+	height:300px; 
+	display:block;
+	background-image:url(images/lottery.jpg);
+	border:0; 
+	cursor:pointer; 
+	font-family:"微软雅黑";  
+	font-size:40px;
+}
+.prizeDiv{
+	width:400px;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	font-size:24px;
+	font-weight:bolder;
+	color:#FFFFFF;
+	background-color:#666666;
+	opacity:0.9;
+	position:absolute;
+	top:40%;
+	left:38%;
+	z-index:10;
+}

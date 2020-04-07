@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义空变量：其实是为了接收数据，分割
+    //全局变量
+    var str ="";
+    //定义一个带有数据的数组
+    var array = new Array("安徽合肥","山东济南","江苏南京","浙江杭州");
+    //for循环去遍历数组
+    for (var i = 0; i < 4 ; i++) {
+        //str=str+array[i]
+        str+=array[i]+","
+    }
+    document.write(str)
+
+</script>
+</body>
+</html>

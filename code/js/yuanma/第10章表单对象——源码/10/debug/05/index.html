@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<script type="text/javascript">
+var str = "零基础学JavaScript";
+function addWord(){
+	var txt=document.createElement("<span>");//将<span>修改为span
+	txt.innerHTML=str;
+	document.getElementById("show").appendChild(txt);	
+}
+</script>
+</head>
+<body background="bg.gif">
+<form name="form1">
+请选择您喜欢的旅游景点：<br />
+  <select name="tourist" size="6"><!--在select标记中添加multiple="multiple"实现多选-->
+    <option value="1">净月潭森林公园</option>
+	<option value="2">长影世纪城</option>
+	<option value="3">太阳岛公园</option>
+	<option value="4">俄罗斯风情小镇</option>
+	<option value="5">沈阳故宫</option>
+	<option value="6">本溪水洞</option>
+  </select>
+</form>
+<p id="show"></p>
+</body>
+</html>

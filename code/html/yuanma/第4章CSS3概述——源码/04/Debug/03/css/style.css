@@ -1,0 +1,49 @@
+*{
+    margin: 0 auto;
+    text-align: center;
+}
+ul{
+    width: 100%;
+    height: 35px;
+    background-color: gainsboro;
+    line-height: 35px;
+}
+ul li{
+    list-style: none;
+    float: left;
+}
+ul :first-child{   /*结构性伪类选择器，匹配无序列表中的第一个子标签*/
+    color:#f00;
+    width: 25%;
+    margin: 0 10%;
+}
+ul :first-child~li{ /*通用兄弟元素选择器，匹配无序列表中的第一个子元素后面的兄弟元素*/
+    padding-left:3%;
+}
+ul+li:hover{       /*子包含选择器和伪类选择器，设置当鼠标滑过无序列表中的所有li标签是的样式*/
+	color:rgba(201,188,188,1.00)
+}
+ul>div img{
+    width: 60%;
+}
+h3{           /*设置h3标签的样式*/
+    text-align: left;
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+}
+#cont h3~div{      /*相邻选择器，匹配与类“cont”中的h3标签*相邻的div标签*/
+     width: 60%;
+    height: 215px;
+    margin: 0 auto;
+    background:url("../img/bg.jpg")
+}
+dl{
+    float: left;
+    margin: 5px 0.05%;
+    text-align: center;
+}
+dl dt :first-child{    /*结构性伪类选择器，匹配类dt标签中的第一个标签*/
+    height:auto ;
+    width: 80%;
+}

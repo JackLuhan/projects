@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="btn">单词定时器</button>
+<button id="btn2">循环定时器</button>
+<button id="btn3">清除单次定时器</button>
+<button id="btn4">清除循环定时器</button>
+
+
+</body>
+<script>
+    var time1,time2;
+    var byId = document.getElementById("btn");
+    byId.onclick=function () {
+        // 设置定时器
+        time1=setTimeout(function () {
+            alert("你的手机爆炸了！！！！")
+        },1000)
+    }
+    var elementById = document.getElementById("btn2");
+    elementById.onclick=function () {
+        //循环定时器
+        time2=setInterval(function () {
+            document.write("你能起床了，再不起床，我就一直轰炸你！！！")
+        },1000)
+    }
+    var btn3 = document.getElementById("btn3");
+    btn3.onclick=function () {
+        clearTimeout(time1)
+    }
+    var btn4 = document.getElementById("btn4");
+    btn4.onclick=function () {
+        clearInterval(time2)
+    }
+</script>
+</html>

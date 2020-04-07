@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function check() {
+            var username =form1.username.value;
+            var pwd =form1.pwd.value;
+            if(username==""){
+                alert("请输入用户名")
+                form1.username.focus();
+                return false;
+            }
+            if(pwd==""){
+                alert("请输入密码")
+                form1.pwd.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<form action="" name="form1">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="pwd"><br>
+    <input type="submit" onclick="return check()" value="提交">
+</form>
+
+</body>
+</html>

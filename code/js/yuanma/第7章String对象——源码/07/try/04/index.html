@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出通讯录中含有0431的所有手机号码</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var telArr=new Array("1385566****","1560431****","1304316****","1516369****","1580433****","139****0431");
+var tetStr="";
+for(var i=0; i<telArr.length; i++){
+	if(telArr[i].indexOf("0431")!=-1){
+		tetStr+=telArr[i]+"<br>";
+	}
+}
+document.write("通讯录中含有0431的手机号码如下：<p>"+tetStr);
+</script>
+</body>
+</html>

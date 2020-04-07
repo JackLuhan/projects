@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+var isLogin=function(username,pwd){
+	if(username=='1111' && pwd=='1111'){
+		alert("登录成功！");
+	}else{
+		alert("微信号或密码不正确！");
+	}
+}
+</script>
+</head>
+<body background="bg.gif">
+<form action="" name="form">
+    <input type="text" name="user">
+    <input type="password" name="pwd">
+    <input type="button" onclick="isLogin(user,pwd);" value="提交">
+</form>
+<script type="text/javascript">
+    var user=form.user.value
+    var pwd=form.pwd.value
+	// isLogin(user,pwd);	//调用函数并传递参数
+</script>
+</body>
+</html>

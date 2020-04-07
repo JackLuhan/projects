@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>将数组中的数据添加到下拉菜单中</title>
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+-->
+</style>
+
+</head>
+<body>
+<table width="280" height="150" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td height="30" align="center" background="images/top_03.jpg"><span class="style1" style="font-weight:bold ">将数组中的数据添加到下拉菜单中</span></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#9ACCFF"><form name="form1">
+      <table width="235" height="69" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" height="69"><select name="sel" id="sel">
+          </select></td>
+        </tr>
+      </table>
+    </form></td>
+  </tr>
+</table>
+<script type="text/javascript">
+var counts=0;
+var arr = new Array("JavaScript与PHP","JavaScript与JSP","JavaScript与ASP.NET","JavaScript与ASP");	
+counts=arr.length;
+function Myselect(){
+  var i;
+  for (i=0;i < counts; i++)	{
+    document.form1.sel.options[i] = new Option(arr[i],i);
+  }
+}
+Myselect();
+</script>
+</body>
+</html>

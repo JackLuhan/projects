@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>将一串长数字分位显示</title>
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript">
+function convert(num){
+	var result=0;//定义变量并初始化
+	var dec="";//定义变量并初始化
+	if(isNaN(num)){
+		result=0;//如果输入的是NaN，将变量赋值为0
+	}else{
+		if (num.length<4){
+			result=num;//如果输入的数字小于4位，将该数字赋值给变量
+		}else{	
+			pos=num.indexOf(".",1);//获取数字中小数点的位置
+			if (pos>0){
+				dec=num.substr(pos);   //获取小数部分的字符串，包括小数点
+				res=num.substr(0,pos);//获取整数部分的字符串
+			}else{
+				res=num;//如果没有小数部分，将数字赋值给变量res
+			}
+			var tempResult="";//定义变量并初始化
+			for(i=res.length;i>0;i-=3){     //将整数部分分位显示
+				if(i-3>0){
+				tempResult=","+res.substr(i-3,3)+tempResult;
+				}else{
+					tempResult=res.substr(0,i)+tempResult;	
+				}	
+			}
+			result=tempResult+dec;//连接整数部分和小数部分
+		}
+	}
+	return result;//返回结果
+}
+</script>
+<script type="text/javascript">
+function deal(){
+	result.innerHTML="&nbsp;转换结果："+convert(form1.number.value);
+}
+</script>
+</head>
+<body background="images/bg.jpeg">
+<form name="form1" method="post" action="">
+<table width="271" height="178"  border="0" cellpadding="0" cellspacing="0" background="images/result.gif">
+  <tr>
+    <td valign="top"><table width="100%" height="150"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="15%" height="55">&nbsp;</td>
+        <td width="73%" valign="bottom"><div id="result">转换结果：</div></td>
+        <td width="12%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="68">&nbsp;</td>
+        <td align="center">
+            <br>
+            请输入要转换的长数字：<br>
+            <br>
+            <input name="number" type="text" class="wenbenkuang" id="number" value="" maxlength="15">
+            (1-15)</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="center"><input name="Submit" type="button" class="go-wenbenkuang" value="转换" onClick="deal()">
+          &nbsp;
+          <input name="Submit2" type="reset" class="go-wenbenkuang" value="重置"></td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</html>

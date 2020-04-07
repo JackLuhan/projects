@@ -1,0 +1,36 @@
+@charset "utf-8";
+.cont{
+	margin:0 auto;
+	height:500px;
+	width: 1000px;
+	text-align: center;
+	background: url(../img/img1.jpg);
+	animation: 15s change alternate infinite;  /*引用背景切换的动画*/
+	
+}
+@keyframes change{                          /*创建页面中的背景图片自动切换的动画*/
+	5%{background: url(../img/img1.jpg);}
+	20%{background: url(../img/img2.jpg);}
+	40%{background: url(../img/img3.jpg);}
+	60%{background: url(../img/img4.jpg);}
+	80%{background: url(../img/img5.jpg);}
+	100%{background: url(../img/img1.jpg);}
+}
+.bom{                                     /*滚动文字外部的块级元素*/
+	padding: 45px 530px;
+	width: 440px;
+	height: 350px;
+	overflow: hidden;                     /*设置其溢出部分内容为隐藏*/
+}
+.txt{
+	font-size: 20px;
+	height: 496px;
+	font-weight: bold;
+	color:#fff;
+	animation: 5s lun normal infinite linear;   /*引用其文字滚动的动画*/
+}
+@keyframes lun {                         /*创建其文字滚动的动画*/
+	0%{margin-top:0;}
+	100%{margin-top:440px;}
+	}
+

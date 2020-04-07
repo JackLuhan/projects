@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+function showDateTime() {
+    //获取时间对象
+	var now = new Date();
+	var year=now.getFullYear();				//获取当前年份
+	var month=now.getMonth()+1;				//获取当前月份
+	var date=now.getDate();					//获取当前日期
+	var hour=now.getHours();					//获取当前小时数
+	var minute=now.getMinutes();				//获取当前分钟数
+	var second=now.getSeconds();				//获取当前秒数
+	alert("今天是："+year+"年"+month+"月"+date+"日 "+"\n现在是："+hour+":"+minute+":"+second);		
+} 
+</script>
+</head>
+<!--页面加载事件-->
+<body onLoad="showDateTime()">
+</body>
+</html>

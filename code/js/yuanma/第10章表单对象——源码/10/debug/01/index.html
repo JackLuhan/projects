@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function checkinput(){
+	if(form1.name.value==""){
+		alert("请输入用户名!");
+   		form1.name.focus;//focus是方法名，需要在后面加上()
+		return false;
+    }		        		
+    if(form1.pwd.value==""){
+		alert("请输入密码!");
+		form1.pwd.focus;//focus是方法名，需要在后面加上()
+		return false ;
+	}
+	return true;
+}	
+</script>
+<form id="form1" name="form1" method="post" action="">
+用户名：<input name="name" type="text" size="20" /><br>
+密&nbsp;&nbsp;码：<input name="pwd" type="password" size="20" /><br>
+<input type="submit" name="submit" onclick="return checkinput()" value="登录" />
+<input type="reset" name="reset" onclick="form.reset(); return false;" value="重置" />
+</form>
+</body>
+</html>

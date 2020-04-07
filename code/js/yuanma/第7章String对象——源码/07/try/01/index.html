@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出所有书名为4个字的书籍</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var arr=new Array("《明史讲义》","《明代社会生活史》","《紫禁城的黄昏》","《国史十六讲》","《停滞的帝国》","《唐朝定居指南》","《明史简述》","《明史十讲》","《大明风物志》","《皇帝与秀才》");
+var newarr=new Array();
+var j=0;
+for(var i=0; i<arr.length; i++){
+	if(arr[i].length==6){
+		newarr[j]=arr[i];
+		j++;
+	}
+}
+document.write("书名为4个字的书籍："+newarr.join("、"));
+</script>
+</body>
+</html>

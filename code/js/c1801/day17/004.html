@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn5">Click</button>
+<div id="box" style="width: 100px;height: 100px;background: pink;"></div>
+</body>
+</html>
+<script>
+    //单击按钮，让盒子往右边移动起来
+    var timer3;
+    var btn5 = document.getElementById('btn5');
+    var oBox = document.getElementById('box');
+    var num = 0;
+    btn5.onclick = function(){
+        setInterval(function(){
+            num+=10;
+            oBox.style.marginLeft = num+'px';
+
+        },30);
+    }
+</script>

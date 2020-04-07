@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding: 0; margin: 0}
+.mr-cont{
+	width: 1030px;
+	margin: 0 auto;
+	border:1px solid red;
+}
+.mr-top{
+	height: 60px;
+	width: 100%;
+	margin: 0 50px;
+	}
+/*导航*/
+ul{
+	height: 25px;
+	margin-top: 37px;
+}
+ul li{
+	 width: 90px;
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 30px;
+	text-align: center;
+	list-style: none;
+	
+}
+ul li:hover{
+	background-color:burlywood;
+	color: white;
+}
+.mr-pic,nav{
+	float: left;
+}
+.mr-out{
+	width:1030px;
+	height:500px;
+	overflow:hidden;   /*设置一处的内容为隐藏*/
+	margin:0 auto;
+	
+	}
+.mr-in img{
+	width:1030px;
+	height:500px;
+	margin-left:0;
+	float:left;
+	}
+.mr-in{
+	width:5650px;
+	height:500px;
+	animation: lun 15s linear infinite;
+	}
+/*创建图片轮播动画*/
+@keyframes lun {
+	0%{margin-left:0;}
+	20%{margin-left:0;}
+	25%{margin-left:-1030px;}
+	45%{margin-left:-1030px;}
+	50%{margin-left:-2060px;}
+	65%{margin-left:-2060px;}
+	70%{margin-left:-3090px;}
+	100%{margin-left:-3090px;}
+	}

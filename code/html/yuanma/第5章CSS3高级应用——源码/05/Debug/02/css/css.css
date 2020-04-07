@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*css document*/
+.cont{
+    width: 1024px;
+    margin: 0 auto;
+}
+.date{
+    border: 1px solid #00f;
+    background: #EDF1F7;
+}
+.date ul{
+    height: 50px;
+}
+.date ul li{
+    list-style: none;
+    float: left;
+    padding: 0 10px;
+    line-height: 50px;
+    font-size: 20px;
+}
+.date ul li [type="text"],[type="date"]{
+    height: 30px;
+}
+[type="button"]{
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    background: #FF8102;
+}
+.checi{
+    margin-top: 20px;
+    border: 1px solid #00f;
+
+}
+.checi ul{
+    height: 40px;
+}
+.checi ul li{
+    list-style: none;
+    float: left;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 0 20px;
+}
+.checi ul li input{
+margin-right: 20px;
+}
+.checi ul>:first-child{
+    margin: 0 20px;
+}
+.result{
+    height: 200px;
+    background: #EDF1F7;
+    font-size: 30px;
+    color: #FF8102;
+    padding-left: 60px;
+}

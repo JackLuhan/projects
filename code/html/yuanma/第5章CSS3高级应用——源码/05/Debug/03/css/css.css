@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*css document*/
+*{      /*清除默认的内外边距*/
+    padding: 0;
+    margin: 0;
+}
+.cont{      /*页面总体大小*/
+    width: 1248px;
+    height: 460px;
+    border:1px dashed #f0f;
+}
+dl{      /*手机信息*/
+    width: 300px;
+    float: left;
+}
+dd{      /*文字样式*/
+    text-align: center;
+    height: 60px;
+    font-size: 23px;
+    line-height: 60px;
+}
+img{      /*图片样式*/
+    width: 250px;
+    padding: 20px 30px 0;
+}
+dt+dd{      /*设置第一行文字样式*/
+    color: #acacac;
+    padding-top: 20px;
+}
+dl:hover{      /*鼠标放置在图片上，出现边框*/
+    border:1px solid #BED902 1px solid #02AD4F 1px solid #1465AE 1px solid #EEBAAD;
+}

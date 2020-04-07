@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+/*设置页面的整体的打下和布局*/
+	.mr-cont{
+	width: 1080px;
+	height: auto;
+	margin: 0 auto;
+	background: url(../img/bg1.jpg);
+	}
+/*页面内容*/
+	.cont{
+		width: 900px;
+		padding: 98px 0 70px;
+		margin: 50px auto;
+		letter-spacing: 2px;
+	}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>鼠标指向行变色</title>
+<style type="text/css">
+table{ border:0;border-collapse:collapse;}					/*设置表格整体样式*/
+td{font:normal 12px/17px Arial;padding:2px;width:100px;}	/*设置单元格的样式*/
+
+th{	/*设置表头的样式*/
+	font:bold 12px/17px Arial;
+	text-align:left;
+	padding:4px;
+	border-bottom:1px solid #333;
+}
+.odd{background:#cef;}		/*设置奇数行样式*/
+.even{background:#ffc;}		/*设置偶数行样式*/
+.light{background:#00A1DA;}	/*设置鼠标移到行的样式*/
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("tbody tr:even").addClass("odd");
+  $("tbody tr:odd").addClass("even");
+  $("tbody tr").hover(
+	  function() {$(this).addClass("light");},
+	  function() {$(this).removeClass("light");}
+  );
+});
+</script>
+</head>
+
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>产品名称</th>
+      <th>产地</th>
+      <th>厂商</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>爱美电视机</td>
+      <td>福州</td>
+      <td>爱美电子</td>
+    </tr>
+    <tr>
+      <td>美好微波炉</td>
+      <td>北京</td>
+      <td>美好集团</td>
+    </tr>
+    <tr>
+      <td>理想电脑</td>
+      <td>沈阳</td>
+      <td>理想科技</td>
+    </tr>
+    <tr>
+      <td>编程词典</td>
+      <td>长春</td>
+      <td>明日科技</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

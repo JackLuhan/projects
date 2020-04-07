@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>通过选择不同的单选按钮进行不同的查询</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+	padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function check(){//定义check()函数
+	for(var i=0; i<form1.type.length; i++){//循环获取单选按钮
+		if(form1.type[i].checked){//如果该单选按钮被选中
+			if(form1.type[i].value == "balance"){
+				alert("您的话费余额为6.66元");
+			}else{
+				alert("您的剩余流量为20兆");
+			}
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1">
+  <table width="260" border="0" cellspacing="1" bgcolor="#BBBBBB">
+    <tr>
+      <td align="center" height="46" background="images/bg.gif"><h2>查话费查流量</h2></td>
+    </tr>
+    <tr>
+      <td height="20" align="center" background="images/bg.gif">选择查询类别：<input type="radio" name="type" value="balance" />查话费
+      &nbsp;&nbsp;<input type="radio" name="type" value="traffic" />查流量</td>
+    </tr>
+    <tr>
+      <td align="center" background="images/bg.gif"><input type="button" name="but" value="查询" onclick="check()" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出用户的出生年月</title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+span{
+margin-left:10px;
+}
+</style>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function showBirth(){
+	var year=form1.year.value;
+	var month=form1.month.value;
+	if(year!="" && month!=""){
+		alert("您的出生年月是"+year+"年"+month+"月");
+	}
+}
+</script>
+<table width="300" height="157" bgcolor="#1170FF" border="0" cellpadding="0" cellspacing="1">
+  <form name="form1">
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">用户个人信息</div></td>
+    </tr>
+    <tr>
+      <td width="80" height="25" bgcolor="#FFFFFF"><div align="center">姓名：</div></td>
+      <td width="220" bgcolor="#FFFFFF">&nbsp;<input type="text" name="username" size="15"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">性别：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="radio" name="sex" value="男">男&nbsp;<input type="radio" name="sex" value="女">女</td>
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">出生年月：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;
+	    <select name="year" onchange="showBirth()">
+		  <option value="">请选择年份</option>
+		  <script type="text/javascript">
+              var date = new Date()
+		  	for(var i=1970; i<=date.getFullYear(); i++){
+				document.write("<option value="+i+">"+i+"年</option>");
+			}
+		  </script>
+		</select>
+		<select name="month" onchange="showBirth()">
+		  <option value="">请选择月份</option>
+		  <script type="text/javascript">
+		  	for(var i=1; i<=12; i++){
+				document.write("<option value="+i+">"+i+"月</option>");
+			}
+		  </script>
+		</select>
+	  </td>
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="button" value="提交">&nbsp;&nbsp;<input type="reset" value="重写"></div></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>

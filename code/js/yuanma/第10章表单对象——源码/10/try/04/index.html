@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>通过控制按钮调整多行文本框的高度</title>
+<script type="text/javascript">
+function resizeTextarea(type){
+	if(type == "increase"){
+		if(myform.content.rows < 20){
+			myform.content.rows += 2;
+		}
+	}else if(type == "reduce"){
+		if(myform.content.rows > 5){
+			myform.content.rows -= 2;
+		}
+	}
+}
+</script>
+</head>
+<body background="bg.gif">
+<h3>调整多行文本框大小</h3>
+<form name="myform">
+  <input type="button" value="+" onClick="resizeTextarea('increase')">
+  <input type="button" value="-" onClick="resizeTextarea('reduce')"><br>
+  <textarea name="content" cols="40" rows="5"></textarea>
+</form>
+</body>
+</html>

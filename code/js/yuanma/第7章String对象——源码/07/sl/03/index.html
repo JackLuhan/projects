@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>截取超长字符串</title>
+<style type="text/css">
+.public{
+width:202px;
+height:182px;
+background-image:url(images/bg.png);
+background-repeat:no-repeat;
+font-size:12px;
+color:#CC00FF;
+padding-top:65px;
+line-height:20px;
+}
+</style>
+</head>
+<script type="text/javascript">
+var str1="即将重磅推出零基础学系列课程";//定义公告标题字符串
+var str2="商城热烈欢迎新老朋友光临惠顾";//定义公告标题字符串
+var str3="商品让利销售欢迎";//定义公告标题字符串
+var str4="所有电子商品一律5折销售";//定义公告标题字符串
+function subStr(str){
+	if(str.length>10){ 				//如果字符串长度大于10
+		return str.substr(0,10)+"...";		//返回字符串前10个字符，然后输出省略号
+	}else{									//如果字符串长度不大于10
+		return str; 						//直接返回该字符串
+	}
+}
+
+</script>
+<body background="images/bg.jpeg">
+<div class="public">
+  <ul>
+	<script type="text/javascript">
+		document.write("<li>"+subStr(str1)+"</li>");//输出截取后的公告标题
+		document.write("<li>"+subStr(str2)+"</li>");//输出截取后的公告标题
+		document.write("<li>"+subStr(str3)+"</li>");//输出截取后的公告标题
+		document.write("<li>"+subStr(str4)+"</li>");//输出截取后的公告标题
+	</script>
+  </ul>
+</div>
+</body>
+</html>

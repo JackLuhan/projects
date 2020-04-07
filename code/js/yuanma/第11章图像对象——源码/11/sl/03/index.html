@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>随机变化的网页背景</title>
+<style type="text/css">
+<!--
+.style2 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 16px;
+}
+.style5 {color: #0000FF}
+
+</style>
+</head>
+<body onLoad="changebg();">
+<script type="text/javascript">
+function changebg(){
+	var i = Math.floor(Math.random()*5);//获取0～5之间的随机数
+	var src = "";//初始化变量
+	switch(i){
+	 	case 0://如果随机数为0
+	 		src = "0.jpg";//为变量src赋值
+			break;//跳出switch语句
+	 	case 1: //如果随机数为1
+	 		src = "1.jpg";//为变量src赋值
+	 		break;//跳出switch语句
+	 	case 2://如果随机数为2
+	 		src = "2.jpg";//为变量src赋值
+			break;//跳出switch语句
+		case 3://如果随机数为3
+			src = "3.jpg";//为变量src赋值
+			break;//跳出switch语句
+		case 4://如果随机数为4
+			src = "4.jpg";//为变量src赋值
+			break;		//跳出switch语句
+	}
+	document.body.background=src;	//将变量src的值作为页面的背景图片
+
+	setTimeout("changebg()",1000);//每隔一秒执行一次changebg()函数
+}
+</script>
+</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <script src="JS/jquery-3.2.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+    $(document).ready(function(){
+   		$("input[type='button']").click(function(){
+			var str = "";
+      		var length = $("input:checked").length;
+      		for(var i=0; i<length; i++){
+				str+=$("input:checked:eq(i)").val()+"\n";//将$("input:checked:eq(i)")修改为$("input:checked").eq(i)
+			}
+			alert(str);
+   		});
+	});
+</script>
+选择您喜欢的城市：
+<input type="checkbox" value="长春">长春
+<input type="checkbox" value="哈尔滨">哈尔滨
+<input type="checkbox" value="沈阳">沈阳
+<input type="button" value="提交">
+</body>
+
+</html>

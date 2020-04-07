@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出10行10列的表格</title>
+</head>
+<body background="bg.jpeg">
+<table align="center" border="1">
+<caption><h1>输出表格</h1></caption>
+<script type="text/javascript">
+var bgcolor;										//声明背景颜色的变量
+var i = 0;											//外层循环使用的变量
+while(i<10){										//指定外层循环
+	if(i%2 == 0){									//设置奇数行和偶数行的背景颜色
+		bgcolor = "#FFFFFF";
+	}else{
+		bgcolor = "#EEEEEE";
+	}
+	document.write("<tr bgcolor="+bgcolor+">");				//输出行标记及其背景颜色
+	var j = 1;										//内层循环使用的变量
+	while(j<=10){									//指定内层循环
+		document.write("<td width=50 align=center>"+(i*10+j)+"</td>");	//输出单元格标记和显示的数字
+		j++;										//内层循环变量加1
+	}
+	document.write("</tr>");							//输出行的结束标记
+	i++;											//外层循环变量加1
+}
+</script>
+</table>
+
+</body>
+</html>

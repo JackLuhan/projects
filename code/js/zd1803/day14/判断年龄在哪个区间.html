@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断年龄在哪个区间</title>
+</head>
+<body>
+<script>
+    var age=27;
+    var group="";
+    debugger//进行程序debugger调试
+    if(age<18){
+        //童年
+        if(age<=6&&age>0){
+
+            group="童年";
+        }else {//少年
+            group="少年"
+        }
+    }else {
+        debugger
+        //青年
+        if(age>=18 && age<40){
+            group="青年";
+        }else if(age>=40 && age<60){
+            //中年
+            group="中年"
+        }else {
+            //老年
+            group="老年"
+        }
+    }
+    alert(group)
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+begintime = new Date();
+function outtime() {
+	endtime = new Date();
+	minutes = endtime.getMinutes() - begintime.getMinutes();
+	seconds = endtime.getSeconds() - begintime.getSeconds();
+	time = seconds + (minutes * 60);
+	alert('您在本页共停留了 ' + time+" 秒钟");
+} 
+</script>
+</head>
+<body onUnload="outtime()">
+<img src="Images/image1.jpg" width="792" height="542">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<script type="text/javascript">
+var xmlHttp;
+function createXmlHttpRequestObject(){
+	if(window.ActiveXObject){
+		try{
+			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}catch(e){
+			xmlHttp=false;
+		}
+
+	}else{
+		try{
+			xmlHttp=new XMLHttpRequest();
+		}catch(e){
+			xmlHttp=false;
+		}
+	}
+	if(!xmlHttp)
+		alert("返回创建的对象或显示错误信息");
+	else
+		return xmlHttp;
+}
+function ReqHtml(){
+	createXmlHttpRequestObject();
+	xmlHttp.onreadystatechange=StatHandler();//将StatHandler后面的()去掉
+	xmlHttp.open("GET","text.html",true);
+	xmlHttp.send(null);
+}
+function StatHandler(){
+	if(xmlHttp.readyState==4 && xmlHttp.status==200){
+		document.getElementById("webpage").innerHTML=xmlHttp.responseText;
+	}
+}
+</script>
+<body>
+<a href="#" onclick="ReqHtml();">读取HTML文件</a>
+<div id="webpage"></div>
+</body>
+</html>

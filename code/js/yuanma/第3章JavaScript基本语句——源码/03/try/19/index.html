@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算100以内所有5的倍数的和</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var i,sum;//声明变量
+sum = 0;//对变量初始化
+for(i=1;i<=100;i++){//应用for循环语句
+	if(i%5!=0){//如果i的值不是5的倍数
+		continue;//跳过本次循环
+	}
+	sum+=i;//对变量i的值进行累加
+}
+alert("1~100以内所有5的倍数的和为："+sum);//输出结果
+</script>
+</body>
+</html>

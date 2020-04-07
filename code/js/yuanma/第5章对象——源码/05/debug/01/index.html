@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>排错练习</title>
+</head>
+<body>
+<script type="text/javascript">
+function book(bookname,bookprice){		
+	this.bookname=bookname;
+	this.bookprice=bookprice;
+	this.show=show();		//初始化对象的方法时不能加括号()
+}
+function show(){
+	alert("书名："+this.bookname+"\n价格："+this.bookprice);
+}
+var book1=new book("JavaScript经典实例",56);
+book1.show();
+</script>
+</body>
+</html>

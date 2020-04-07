@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算两个时间的时间间隔</title>
+<script type="text/javascript">
+var date1=new Date();
+var year=date1.getFullYear();
+var month=date1.getMonth();
+var date=date1.getDate();
+var date2=new Date(year,month,date);
+var date3=new Date(year+"/05/01");
+if(date2.getTime()==date3.getTime()){
+	alert("五一劳动节快乐！");
+}else{
+	alert("今天不是五一劳动节！");
+}
+</script>
+</body>
+</html>
+

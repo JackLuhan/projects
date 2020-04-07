@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断体温是否正常</title>
+</head>
+<body>
+<script>
+    //定义体温变量
+    var tiwen=38.5;
+    //定义结果变量
+    var result="";
+    if(tiwen<36.5){
+        result="体温偏低"
+    }else if(tiwen>=36.5 && tiwen<=37.5){
+        result="体温正常"
+    }else {
+        result="体温过高"
+    }
+    alert("您的体温目前是"+tiwen+result)
+</script>
+</body>
+</html>

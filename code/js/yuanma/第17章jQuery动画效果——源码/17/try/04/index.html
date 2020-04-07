@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>滑动显示文章内容</title>
+</head>
+    
+<body background="bg.gif">
+<style type="text/css">
+.title{
+font-size:16px;
+cursor:pointer;}
+.content{
+display:none;
+font-size:14px;
+width:500px;
+line-height:30px;
+margin-top:20px;}
+</style>
+<script src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".title").click(function(){
+			if($(".content").is(":hidden")){
+				$(".content").slideDown(500);
+			}else{
+				$(".content").slideUp(500);
+			}
+		});
+	});
+</script>
+<div align="center" class="menubar">
+	<div class="title">公司简介</div>
+	<div align="left" class="content">
+		&nbsp;&nbsp;&nbsp;&nbsp;吉林省晨*科技有限公司是一家以计算机软件技术为核心的高科技型企业。公司创建于1999年12月，是专业的应用软件开发商和服务提供商。多年来始终致力于行业管理软件开发、数字化出版物开发制作、行业电子商务网站开发等，先后成功开发了涉及生产、管理、物流、营销、服务等领域的多种企业管理应用软件和应用平台，目前已成为计算机出版行业的知名品牌。
+
+
+	</div>
+</div>
+</body>
+</html>

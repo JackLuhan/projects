@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function jump(){
+   var bool = window.confirm("您确定要跳转页面吗？");
+   if(bool == true){
+      alert("您已成功跳转");
+   }else{
+      return false;
+   }
+}
+</script>
+<a href="test.html" onclick="jump()">是否跳转到指定页面</a><!--在jump()前加上return语句-->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 模拟淘宝网计算购物车中商品总价的功能。假设购物车中有如下商品信息：
+    // ①苹果手机：单价5000元，购买数量2台；
+    // ②联想笔记本电脑：单价4000元，购买数量10台。
+    //定义一个带有两个参数的函数price()，将商品单价和商品数量作为参数进行传递。通过调用函数并传递不同的参数分别计算苹果手机和联想笔记本电脑的总价，
+    // 最后计算购物车中所有商品的总价并输出。
+
+    //1.定义函数price 商品单价和商品数量作为参数
+    function price(danjia,number) {
+        var price =danjia*number;
+        return price;
+    }
+    //2.计算苹果手机总价
+    var iphone= price(5000,2);
+    //3.计算电脑总价
+    var cpu=price(4000,10);
+    //4.计算总价
+    var sum= iphone+cpu;
+    // document.write(sum);
+   alert( price(iphone,cpu))
+
+</script>
+</body>
+</html>

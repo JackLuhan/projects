@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>排错练习</title>
+</head>
+<body>
+<script type="text/javascript">
+var arr=new Array(1,2,3,4,5,6,7,8);
+arr.prototype.outAll=function(){	//将arr修改为Array
+	for(var i=0;i<this.length;i++){
+		document.write(this[i]+" ");
+	}
+}
+arr.outAll(" ");
+</script>
+</body>
+</html>

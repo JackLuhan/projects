@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<table width="400" height="157" bgcolor="#1170FF" border="0" align="center" cellpadding="0" cellspacing="1">
+  <form name="form1" method="post" onSubmit="AllSubmit(form1)"><!--在函数名的前面加return语句-->
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">用户注册</div></td>
+    </tr>
+    <tr>
+      <td width="130" height="25" bgcolor="#FFFFFF"><div align="center">用户昵称：</div></td>
+      <td width="267" bgcolor="#FFFFFF">&nbsp;<input type="text" name="username" size="25"></td>
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">注册密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd" size="25"></td>
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">确认密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd2" size="25"></td>
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="submit" value="注册">&nbsp;&nbsp;<input type="reset" value="重写"></div></td>
+    </tr>
+  </form> 
+</table>
+<script type="text/javascript">
+function AllSubmit(form){
+	if(form.username.value==""){
+   		alert("用户昵称不能为空！");
+		return false;
+	}
+	if(form.pwd.value==""){
+   		alert("注册密码不能为空！");
+		return false;
+	}
+	if(form.pwd2.value==""){
+   		alert("确认密码不能为空！");
+		return false;
+	}
+	if(form.pwd.value!=form.pwd2.value){
+   		alert("两次输入密码不一致！");
+		return false;
+	}
+	alert("注册成功！");
+}
+</script>
+
+</body>
+</html>

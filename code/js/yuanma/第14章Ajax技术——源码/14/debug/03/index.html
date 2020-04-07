@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<script type="text/javascript">
+var xmlHttp;
+function ReqHtml(){
+	if(window.ActiveXObject){
+		xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xmlHttp=new XMLHttpRequest();
+	}
+	xmlHttp.onreadystatechange=function(){
+		if(xmlHttp.readyState==4 && xmlHttp.status==200){
+			document.getElementById("story").innerHTML=xmlHttp.responseText;
+		}
+	}
+	xmlHttp.Open("GET","text.html",true);//将Open修改为open
+	xmlHttp.send(null);
+}
+</script>
+<body>
+石中玉是金庸的哪部小说中的人物？
+<input type="button" value="查看小说名称" onclick="ReqHtml()"><p>
+<div id="story"></div>
+</body>
+</html>

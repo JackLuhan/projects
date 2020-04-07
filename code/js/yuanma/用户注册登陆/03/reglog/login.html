@@ -1,0 +1,150 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册登录</title>
+   
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="Js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//文本框失去焦点事件
+	$("input").blur(function(){
+		$(this).parent().find("span").remove();//移除span元素
+		if($(this).is("#username")){//如果账号文本框失去焦点
+			if(this.value==""){//如果账号文本框为空
+				var show=$("<span class='error'>请输入账号</span>");//创建span元素
+	   	   		$(this).parent().append(show);//向页面添加元素
+			}
+		}
+		if($(this).is("#password")){//如果密码框失去焦点
+			if(this.value==""){//如果密码框为空
+				var show=$("<span class='error'>请输入密码</span>");//创建span元素
+	   	   		$(this).parent().append(show);//向页面添加元素
+			}
+		}
+	});
+	//登录按钮单击事件
+	$("#login").click(function(){
+		$(".form-group>span").remove();//移除span元素
+		var username=$("input[name='username']");
+		var password=$("input[name='password']");
+		var result=$(".drag-out").find("span").html();//获取拖动区域文本
+		if(username.val()==""){//如果账号文本框为空
+		   	var show=$("<span class='error'>请输入账号</span>");//创建span元素
+	   	   	username.parent().append(show);//向页面添加元素
+			username.focus();//账号文本框获取焦点
+			return false;
+		}else if(username.val()!="mingri"){
+			var show=$("<span class='error'>账号不正确</span>");//创建span元素
+	   	   	username.parent().append(show);//向页面添加元素
+			return false;
+		}
+		if(password.val()==""){//如果密码框为空
+		   	var show=$("<span class='error'>请输入密码</span>");//创建span元素
+	   	   	password.parent().append(show);//向页面添加元素
+			password.focus();//密码框获取焦点
+			return false;
+		}else if(password.val()!="mingrisoft"){
+			var show=$("<span class='error'>密码不正确</span>");//创建span元素
+	   	   	password.parent().append(show);//向页面添加元素
+			return false;
+		}
+		if(result!="验证通过"){
+			var show=$("<span class='error'>请拖动滑块</span>");//创建span元素
+	   	   	$(".drag-out").after(show);//向页面添加元素
+			return false;
+		}
+		//验证登录是否成功
+		if(username.val()=="mingri" && password.val()=="mingrisoft" && result=="验证通过"){
+			alert("登录成功");//提示登录成功
+		}
+	});
+});
+</script>
+</head>
+
+<body class="gray-bg">
+
+<div class="middle-box">
+    <div>
+        <div>
+            <h1 class="logo-name">MR</h1>
+        </div>
+		<span>
+			<a href="register.html">注册</a>
+			<a class="active" href="login.html">登录</a>
+		</span>
+        <form id="form" name="form" method="post" action=""  autocomplete="off">
+            <div class="form-group">
+                <label>账 号：</label>
+				<input name="username" id="username" type="text"  class="form-control" placeholder="用户名" >
+            </div>
+            <div class="form-group">
+                <label>密 码：</label>
+				<input name="password" id="password" type="password" class="form-control" placeholder="密码">
+            </div>
+            <!--滑块区域-->
+			<div class="form-group">
+            	<div class="drag-out">
+                	<span>按住滑块，拖动到最右侧</span>
+                	<div class="drag-area">》</div>
+                	<div class="drag-code"></div>
+            	</div>
+            </div>
+            <button type="submit" id="login" class="btn-primary">登 录</button>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+	var dragFun = function(){
+		var maxWidth ; //可拖动最大距离
+        var move = false;//设置拖动区域是否可以拖动
+        var leftArae;//拖动区域距左边的距离
+        var dragOut = $(".drag-out");
+        var dragArea = $(".drag-out .drag-area");
+        var dragCode = $(".drag-out .drag-code");
+		//鼠标按下事件
+        dragArea.mousedown(function(){
+            move = true ;
+            maxWidth = dragOut.width() - dragArea.width() ;//可以移动的最大距离
+            leftArae= parseInt(dragOut.offset().left); //获取拖动区域距左边的距离
+        })
+        //鼠标拖动事件
+        $(document).mousemove(function(e){
+            movePx = e.pageX - leftArae ;//获取滑块移动的距离
+            if(move == true){
+                if(movePx > 0 && movePx <= maxWidth){//如果滑块未拖动到最右边
+                    dragArea.css({"left":movePx});
+                    dragCode.css({"width":movePx});
+                }else if(movePx > maxWidth){//如果滑块拖动到最右边
+					dragArea.unbind("mousedown");
+					$(document).unbind("mousemove");
+					$(document).unbind("mouseup");
+					dragOut.find("span").html("验证通过").css({"color":"#fff"});
+					dragArea.html("");
+					dragArea.css("background","url(images/ok.gif) no-repeat center");
+                }
+            }
+        })
+		//鼠标松开事件
+        $(document).mouseup(function(){
+            if(move == true){
+                move = false;
+                if(maxWidth > movePx){//如果滑块未拖动到最右边
+                    dragArea.css({"left":0});
+                    dragCode.css({"width":0});
+                }
+            }
+        })
+    }
+    $(function(){
+        dragFun();//执行函数
+    })
+</script>
+
+
+
+</body>
+</html>

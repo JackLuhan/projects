@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var url = document.URL;
+if(url.indexOf("\\")!=-1){
+	alert("当前文档位于计算机中的"+url.substr(7,1)+"盘");
+}else{
+	alert("当前文档位于计算机中的"+url.substr(8,1)+"盘");
+}
+</script>
+</body>
+</html>

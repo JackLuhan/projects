@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.创建构造函数
+    function Circle(r) {
+        this.r=r;
+    }
+    //2.向对象中添加属性pi
+    Circle.prototype.pi=3.14;
+    //3.相对象中添加计算周长的方法
+    Circle.prototype.zhouchang=function () {
+        return 2*this.pi*this.r;
+    }
+    //4.向对象中添加计算面积的方法
+    Circle.prototype.area=function () {
+        return this.pi*this.r*this.r;
+    }
+
+    //5.构造新的对象
+    var circle1=new Circle(10);
+    document.write("面积是："+parseInt(circle1.area())+"<br>")
+    document.write("周长是："+parseInt(circle1.zhouchang()))
+    
+    
+</script>
+
+</body>
+</html>

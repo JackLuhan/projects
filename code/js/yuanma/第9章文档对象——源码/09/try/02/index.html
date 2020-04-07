@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>设置超链接文字的颜色</title>
+<style type="text/css">
+input{
+margin-bottom:3px;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function setLink(){
+	document.linkColor=form1.dlink.value;
+	document.alinkColor=form1.alink.value;
+	document.vlinkColor=form1.vlink.value;
+}
+</script>
+<form name="form1">
+  默认的超链接文字颜色：<input type="text" name="dlink"><br>
+  单击时超链接文字颜色：<input type="text" name="alink"><br>
+  单击过超链接文字颜色：<input type="text" name="vlink"><br>
+  <input type="button" name="but" value="确定" onClick="setLink()">
+</form>
+<a id="a1" href="#">单击进入明日学院官方网站</a>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name="myform">
+    <table>
+        <tr>
+            <td>可选职位</td>
+            <td></td>
+            <td>已选职位</td>
+        </tr>
+        <tr>
+            <td>
+                <!--添加“可选职位”列表框-->
+                <select name="job" size="6" multiple="multiple">
+                    <option value="歌手">歌手</option>
+                    <option value="演员">演员</option>
+                    <option value="画家">画家</option>
+                    <option value="教师">教师</option>
+                    <option value="公务员">公务员</option>
+                    <option value="职员">职员</option>
+                </select>
+            </td>
+            <td>
+                <!--添加“>>”和“<<”按钮-->
+                <input type="button" value=">>" onClick="myJob()"><br>
+                <input type="button" value="<<" onClick="toJob()">
+            </td>
+            <td>
+                <!--添加“已选职位”列表框-->
+                <select name="myjob" size="6" multiple="multiple">
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    //定义myJob函数
+    function myJob() {
+        //获取可选职位下拉框的个数
+        var jobLength = document.myform.job.length;
+        //从最后一个往前面循环输出
+        for (let i = jobLength-1; i >-1 ; i--) {
+            if(document.myform.job[i].selected){
+                var option = new Option(document.myform.job[i].text,document.myform.job[i].value);
+                //为已选职位添加下拉框
+                document.myform.myjob.options[document.myform.myjob.options.length]=option;
+                document.myform.job.remove(i);
+            }
+        }
+    }
+    function toJob() {
+        //获取可选职位下拉框的个数
+        var myJobLength = document.myform.myjob.length;
+        //从最后一个往前面循环输出
+        for (let i = myJobLength-1; i >-1 ; i--) {
+            if(document.myform.myjob[i].selected){
+                var option = new Option(document.myform.myjob[i].text,document.myform.myjob[i].value);
+                //为已选职位添加下拉框
+                document.myform.job.options[document.myform.job.options.length]=option;
+                document.myform.myjob.remove(i);
+
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

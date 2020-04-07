@@ -1,0 +1,57 @@
+.mr-img {
+	width: 405px;
+	float: left;
+	margin: 42px;
+}
+.mr-font1 {
+	width: 610px;
+	float: left;
+	font-size: 60px;
+	font-weight: bolder;
+	text-align: center; 
+}
+.mr-font1 span {
+	margin-left: 15px;  
+	font-size: 55px;  
+}
+.mr-box {
+	width: 1108px;
+	margin: 0 auto;
+	border: 2px solid red;
+	height: 551px;
+	font-weight: 500;
+}
+.mr-font2 {
+	float: left;
+	margin: -64px 0 64px 130px;
+	font-size: 41px;
+}
+.mr-font3 {
+	float: left;
+	margin: -34px 0 34px 155px;
+	font-size: 16px;
+	color: #A00501;
+	font-weight: 600;
+}
+.mr-font4 {
+	float: left;
+	margin:20px 0 0 113px;
+	font-size: 54px;
+	color: #A00501;
+	font-weight: lighter;
+}
+.mr-font4 span font {
+	font-size: 12px;
+	margin-left: 30px;
+}
+.mr-buy {
+	float: left;
+	margin: -137px 650px;
+	height: 44px;
+	width: 221px;
+	background: #A00501;
+	text-align: center;
+	line-height: 44px;
+	color: #fff;
+}
+

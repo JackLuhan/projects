@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<script type="text/javascript">
+var xmlHttp;
+function ReqHtml(){
+	if(window.ActiveXObject){
+		xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xmlHttp=new XMLHttpRequest();
+	}
+	xmlHttp.onreadystatechange=function(){
+		if(xmlHttp.readyState==4 && xmlHttp.status==200){
+			document.getElementById("story").innerHTML=xmlHttp.responseHTML;//将responseHTML修改为responseText
+		}
+	}
+	xmlHttp.open("GET","text.html",true);
+	xmlHttp.send(null);
+}
+</script>
+<body>
+<input type="button" value="查看商品" onclick="ReqHtml()"><p>
+<div id="story"></div>
+</body>
+</html>

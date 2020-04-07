@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>通过下拉菜单更换头像</title>
+<link type="text/css" rel="stylesheet" href="css/in.css"/>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function changeface(){
+	var oldface = document.getElementById('myface');
+	var face = myform.face.value;
+	var img = document.createElement('img');
+	img.id = 'myface';
+	img.src = face;	
+	document.body.replaceChild(img,oldface);
+}
+</script>
+<img id="myface" src="pic/1.jpg"><p>
+<form name="myform">
+  选择头像：<select name="face" onChange="changeface()">
+    <option value="pic/1.jpg">头像1</option>
+	<option value="pic/2.jpg">头像2</option>
+	<option value="pic/3.jpg">头像3</option>
+  </select>
+</form>
+</body>
+</html>

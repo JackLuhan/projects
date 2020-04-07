@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>排错练习</title>
+</head>
+<body>
+<script type="text/javascript">
+function add(number1,number2){		
+	var out=10;												
+	return number1+number2;							
+}
+document.write(add(10,20));
+document.write(out);	//局部变量不能在函数体外输出，将变量out定义为全局变量
+</script>
+</body>
+</html>

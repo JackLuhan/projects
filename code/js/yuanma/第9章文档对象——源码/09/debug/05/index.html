@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<script type="text/javascript">
+var str = "零基础学JavaScript";
+function addWord(){
+	var txt=document.createElement("<span>");//将<span>修改为span
+	txt.innerHTML=str;
+	document.getElementById("show").appendChild(txt);	
+}
+</script>
+</head>
+<body background="bg.gif">
+<form name="form1">
+<input type="button" name="btn1" value="添加文字" onclick="addWord()" />
+</form>
+<p id="show"></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="changeImg()">
+<script>
+    function changeImg() {
+        //获取0-5之间的随机数
+        var number = parseInt(Math.random()*5);
+        var src="";
+        switch (number) {
+            case 0:
+                src="images/5.jpg"
+                break;
+            case 1:
+                src="images/17.jpg"
+                break;
+            case 2:
+                src="images/20.jpg"
+                break;
+            case 3:
+                src="images/23.jpg"
+                break;
+            case 4:
+                src="images/25.jpg"
+                break;
+        }
+        document.body.background=src;
+        setTimeout("changeImg()",1000)
+    }
+</script>
+</body>
+</html>

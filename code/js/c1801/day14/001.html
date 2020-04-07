@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="001.js"></script>
+</head>
+<body>
+<!--点击事件 onclick-->
+<input type="button" onclick="alert('安徽新华')" value="点击弹出">
+<input type="button" onclick="alert(JiSuan(1000))" value="点击弹出">
+<!--<input type="button" onfocus="alert(JiSuan(1000))" value="聚焦弹出">-->
+<input type="button" onmouseover="alert(JiSuan(1000))" value="点击弹出">
+
+<form name="form1">
+    <input type="button" value="提交" name="input1">
+</form>
+<script>
+    form1.input1.onclick=function () {
+                alert("你点击了提交按钮")
+    }
+</script>
+</body>
+</html>

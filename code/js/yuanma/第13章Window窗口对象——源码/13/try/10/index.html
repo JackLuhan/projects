@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>旋转的窗口</title>
+</head>
+
+<body>
+<img align="left" src="6.jpg" width="150" height="60">
+<script type="text/javascript"> 
+var a=275; 
+var b=275; 
+var pp;
+var r=60;
+var x=y=0;
+window.resizeTo(200,200);  
+function eddy(i){ 
+	var ob=document.all("tt");
+	x = r*Math.cos((i*Math.PI)/180)+a; 
+	y = r*Math.sin((i*Math.PI)/180)+b;
+	window.moveTo(x,y); 
+	i=i+1;
+	if (r>100){window.clearTimeout(pp);}
+	else{
+		if (i>360){i=0;}
+ 		pp=setTimeout("eddy("+i+")",10);
+	}
+}
+eddy(0);
+</script>
+</body>
+</html>

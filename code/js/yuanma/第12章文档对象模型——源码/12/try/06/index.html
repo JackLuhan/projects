@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>对影片列表进行复制</title>
+<style type="text/css">
+h3{
+margin-left:50px;}
+li{
+list-style-type:none;
+line-height:23px;}
+input{
+margin-left:30px;}
+span{
+float:left;}
+div{
+overflow:hidden;}
+</style>
+<script type="text/javascript"> 
+	function copyMovie(boo){
+		var newmovie=document.getElementById("newmovie");
+		var newMovieList=newmovie.cloneNode(boo);
+    	movie.appendChild(newMovieList);
+	}
+</script>
+</head>   
+<body background="bg.gif">   
+<div id="movie">
+<span id="newmovie">
+	<h3>最新影片</h3>
+	<ul>
+	    <li>变形金刚5：最后的骑士</li>
+		<li>神奇女侠</li>
+		<li>新木乃伊</li>
+		<li>加勒比海盗5：死无对证</li>
+    </ul>
+</span>
+</div>
+
+ <input type="button" value="复制影片列表" onClick="copyMovie(true)"/>
+</body>   
+</html>  

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>选择页面的背景颜色</title>
+</head>
+<body>
+<script type="text/javascript">
+function changeBgColor(){
+	var bgColor = form1.color.value;
+	document.bgColor=bgColor;
+}
+</script>
+
+<form name="form1">
+  请选择页面背景颜色：
+  <select name="color" onChange="changeBgColor()">
+    <option value="black">黑色</option>
+    <option value="yellow">黄色</option>
+    <option value="blue">蓝色</option>
+    <option value="green">绿色</option>
+    <option value="red">红色</option>
+    <option value="purple">紫色</option>
+  </select>
+</form>
+</body>
+</html>

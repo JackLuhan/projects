@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>测试你是否是一个金庸迷</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function check(){
+	var answer1,answer2,answer3;
+	var menpai = document.getElementsByName('menpai');
+	for(var i=0; i<menpai.length; i++){
+		if(menpai[i].checked){
+			answer1=menpai[i].value;
+		}
+	}
+	var num = document.getElementsByName('num');
+	for(var i=0; i<num.length; i++){
+		if(num[i].checked){
+			answer2=num[i].value;
+		}
+	}
+	var nickname = document.getElementsByName('nickname');
+	answer3=nickname[0].value;
+	if(answer1=="B" && answer2=="C" && answer3=="西狂"){
+		alert("你是一个地道的金庸迷");
+	}else{
+		alert("你还不算是一个金庸迷");
+	}
+}
+</script>
+  <h3>在《天龙八部》中，虚竹是______派的掌门？</h3>
+  <input type="radio" name="menpai" value="A">A 星宿&nbsp;&nbsp;
+  <input type="radio" name="menpai" value="B">B 逍遥&nbsp;&nbsp;
+  <input type="radio" name="menpai" value="C">C 少林&nbsp;&nbsp;
+  <input type="radio" name="menpai" value="D">D 天山
+  <br><br><br>
+  <h3>在《鹿鼎记》中，四十二章经共有______本？</h3>
+  <input type="radio" name="num" value="A">A 6&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="num" value="B">B 7&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="num" value="C">C 8&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="num" value="D">D 9
+  <br><br><br>
+  <h3>在《神雕侠侣》中，杨过在最后“五绝”中的称谓是<input type="text" name="nickname" size="10"></h3>
+  <p><input type="button" name="but" value="提交答案" onClick="check()">
+</body>
+</html>

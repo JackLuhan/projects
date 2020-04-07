@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>网页加载时缩小图片</title>
+</head>
+
+<body onunload="pclose()"><!--调用页面的卸载事件-->
+<img src="image1.jpg" name="img1" onload="blowup()" onmouseout="blowup()" onmouseover="reduce()"><!--在图片标记中调用相关事件-->
+<script type="text/javascript">
+var h=img1.height;//获取图片的原始高度
+var w=img1.width;//获取图片的原始宽度
+function blowup(){//缩小图片
+	if (img1.height>=h){//如果当前图片高度大于或等于图片原始高度
+		img1.height=h-100;//缩小图片的高度
+		img1.width=w-100;//缩小图片的宽度
+	}
+}
+function reduce(){//恢复图片的原始大小
+	if (img1.height<h){//如果当前图片高度小于图片原始高度
+		img1.height=h;//恢复图片为原始高度
+		img1.width=w;//恢复图片为原始宽度
+	}
+}
+function pclose(){//定义卸载网页时的函数
+	alert("欢迎浏览本网页");//弹出对话框
+}
+</script>
+</body>
+</html>

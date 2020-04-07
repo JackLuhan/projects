@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环定时器</title>
+</head>
+<body>
+<button id="btn2">循环定时器</button>
+<script>
+    var elementById = document.getElementById("btn2");
+    elementById.onclick=function () {
+        //循环定时器
+        setInterval(function () {
+            alert("你能起床了，再不起床，我就一直轰炸你！！！")
+        },1000)
+    }
+</script>
+</body>
+</html>

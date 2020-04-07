@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*css document*/
+*{
+    padding: 0;
+    margin: 0
+}
+.cont{                                   /*类选择器设置页面的整体样式*/
+    width: 1388px;                         /*设置整体页面宽度为536像素*/
+    height: 840px;                       /*设置页面整体高度800像素*/
+    margin:0 auto;                       /*设置页面外边距上下为0，左右自适应*/
+    background: url("../img/bg1.jpg"); /*为页面设置背景图片*/
+}
+dl{              /*设置文本部分的样式*/
+margin: 320px 0px 0 300px;              /*设置文本部分的外边距*/
+}
+dl,.cont div{              /*设置文本和图片的样式*/
+    float: left;              /*设置其浮动方式，使他们在一行显示*/
+}
+dl dt{                          /*设置文本标题的样式*/
+    font-size: 35px;                        /*设置字体*/
+    height: 50px;                           /*设置高度*/
+    line-height: 50px;                      /*设置行高*/
+    color: #000;                            /*设置字体颜色*/
+}
+dl dd{                          /*设置文本内容的样式*/
+    width: 284px;                          /*设置文本的宽度*/
+    font-size: 18px;                        /*设置字体大小*/
+    line-height: 25px;                      /*设置文本的行间距*/
+}
+.cont div{                                /*设置图片部分的样式*/
+    margin: 40px 0px 0px 103px;            /*添加外边距*/
+}

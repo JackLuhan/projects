@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>图片加载出错时显示默认图片</title>
+<script type="text/javascript">
+function showDefaultImage(img){
+	img.src = "images/error.gif";
+}
+</script>
+</head>
+<body background="images/bg.gif">
+<img name="book" id="mypic" src="book.jpg" onerror="showDefaultImage(this)">
+</body>
+</html>

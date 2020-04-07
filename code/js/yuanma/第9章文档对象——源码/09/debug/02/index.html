@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<form name="form">
+  请输入名称：<input type="text" name="name">
+  <input type="button" name="but" value="提交" onClick="outText()">
+</form>
+<script type="text/javascript">   
+function outText(){
+	document.write("您输入的名称为");
+	document.write(form.name.value);//将form.name.value放在第一个write()语句中输出
+}
+</script>
+</body>
+</html>

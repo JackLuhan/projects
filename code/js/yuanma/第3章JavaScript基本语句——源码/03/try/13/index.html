@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出员工工龄工资的增加情况</title>
+
+
+</head>
+
+<body background="bg.gif">
+<h2>员工工龄工资增加情况</h2>
+<script type="text/javascript">
+	var year=0;				//定义表示工作年数的变量
+	var wages=0;//定义表示工龄工资的变量
+	do{
+		year++;			//变量year自加1
+		wages=30*year;//计算工龄工资
+		document.write("该员工第"+year+"年的工龄工资为<b>"+wages+"</b>元<br>");//输出每一年的工龄工资
+	}while(year<5);
+</script>
+</body>
+</html>

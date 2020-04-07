@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+ul{
+	font-size:12px;
+	list-style:none;
+	margin:0px;		
+	padding:0px;	
+}
+li{
+	padding:7px;	
+}
+a{
+	color:#000;			
+	text-decoration: none;
+}
+a:hover{
+	color:#F90;
+}
+#menu{
+	float:left; 
+	text-align:center;
+	width:70px; 
+	height:295px;
+	padding-top:5px;
+	display:none;
+	background-image:url(images/menu_bg.gif);
+}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#box").hover(function(){
+			$("#menu").fadeTo(0.8,500);//将0.8和500调换位置
+		},function(){
+			$("#menu").fadeOut(500);
+		});		
+	});
+</script>
+</head>
+
+<body background="bg.gif">
+<span id="box">
+<img  src="images/title.gif" width="30" height="80" id="flag" />
+<div id="menu">
+<ul>
+	<li><a href="#">图书介绍</a></li>
+    <li><a href="#">新书预告</a></li>
+    <li><a href="#">图书销售</a></li>
+    <li><a href="#">勘误发布</a></li>
+    <li><a href="#">资料下载</a></li>
+    <li><a href="#">好书推荐</a></li>
+    <li><a href="#">技术支持</a></li>
+    <li><a href="#">联系我们</a></li>
+</ul>
+</div>
+</span>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>图片的时钟显示</title>
+<script language="javascript">
+var imgs=[];
+for(var i=0;i<10;i++){
+	imgs[i]=new Image();
+	imgs[i].src='img/'+i+'.jpg';
+}
+function displayTime(){
+	var now=new Date();
+	var time=[];
+	var hrs=now.getHours();
+	hrs=(hrs<10?'0':'')+hrs;
+	time[0]=hrs.charAt(0);
+	time[1]=hrs.charAt(1);
+	var mins=now.getMinutes();
+	mins=(mins<10?'0':'')+mins;
+	time[2]=mins.charAt(0);
+	time[3]=mins.charAt(1);
+	var secs=now.getSeconds();
+	secs=(secs<10?'0':'')+secs;
+	time[4]=secs.charAt(0);
+	time[5]=secs.charAt(1);
+	for(var i=0;i<time.length;i++){
+		var img=document.getElementById('d'+i);
+		img.src=imgs[time[i]].src;
+		img.alt=time[i];
+	}
+}
+
+</script>
+<style type="text/css">
+<!--
+.style1 {color: #52C6FF; font-weight:bolder}
+-->
+</style>
+</head>
+
+<body onLoad="setInterval('displayTime()',1000);" background="bg.gif">
+
+<p class="style1">当前时间：</p>
+<img id="d0" src="img/0.jpg" alt="0">
+<img id="d1" src="img/0.jpg" alt="0">
+<img src="img/10.jpg" alt=":">
+<img id="d2" src="img/0.jpg" alt="0">
+<img id="d3" src="img/0.jpg" alt="0">
+<img src="img/10.jpg" alt=":">
+<img id="d4" src="img/0.jpg" alt="0">
+<img id="d5" src="img/0.jpg" alt="0">
+</body>
+</html>

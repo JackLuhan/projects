@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>分时问候</title>
+<script type="text/javascript">
+function ShowTime(){
+	var strgreet = "";
+	var datetime = new Date();		//获取当前时间
+	var hour = datetime.getHours();	//获取小时
+	var minu = datetime.getMinutes();	//获取分钟
+	var seco = datetime.getSeconds();	//获取秒钟
+	strtime =hour+":"+minu+":"+seco+" ";	//组合当前时间
+	if(hour >= 0  && hour < 8){	//判断是否为早上
+		strgreet ="早上好";
+	}
+	if(hour >= 8  && hour < 11){	//判断是否为上午
+		strgreet ="上午好";
+	}
+	if(hour >= 11  && hour < 13){	//判断是否为中午
+		strgreet = "中午好";
+	}
+	if(hour >= 13  && hour < 17){	//判断是否为下午
+		strgreet ="下午好";
+	}
+	if(hour >= 17  && hour < 24){	//判断是否为晚上
+		strgreet ="晚上好";
+	}
+	window.setTimeout("ShowTime()",1000);	//每隔1秒重新获取一次时间
+	document.getElementById("time").innerHTML="现在是：<b>"+strtime+"</b>";
+	document.getElementById("greet").innerText="<b>"+strgreet+"</b>";
+}
+window.onload=ShowTime;	//在页面载入后调用ShowTime()函数
+</script>
+</head>
+<body background="bg.gif">
+<div id="time">显示当前时间</div>
+<div id="greet">显示问候语</div>
+
+</body>
+</html>

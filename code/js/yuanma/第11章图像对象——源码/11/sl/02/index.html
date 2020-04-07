@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>置换图片</title>
+</head>
+<body background="images/bg.gif">
+<script type="text/javascript">
+function changeImage(imageName){//定义changeImage()函数
+	document.images[imageName].src = 'images/book2.jpg';//将图片置换为book2.jpg
+}
+function resetImage(imageName){//定义resetImage()函数
+	document.images[imageName].src = 'images/book1.jpg';//将图片置换为book1.jpg
+}
+</script>
+<img name="book1" src="images/book1.jpg" onMouseOver="changeImage('book1')" onMouseOut="resetImage('book1')">
+</body>
+</html>

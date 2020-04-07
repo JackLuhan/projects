@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>根据下拉菜单的值显示不同控件</title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+</style>
+<script type="text/javascript">
+function changeMenu(num){
+  if(num == 1){
+    document.all.NumID.style.display="";
+	document.all.DateID.style.display="none";
+  }
+  if(num == 2){
+    document.all.DateID.style.display="";
+	document.all.NumID.style.display="none";
+  }
+  if(num == 3){
+    document.all.DateID.style.display="none";
+    document.all.NumID.style.display="none";
+  }
+}
+</script>
+</head>
+<body>
+<table width="784" height="430" border="0" align="center" cellpadding="0" cellspacing="0" background="bg.JPG">
+  <tr>
+    <td width="650" align="right" valign="middle"> <br>
+      <br>      <br>
+      <br>
+      <br>      <br>      <table width="300"  border="0" cellspacing="1" cellpadding="1">
+      <form name="form1">
+        <tr align="left" bgcolor="#E3E3E3">
+          <td height="22" colspan="2" align="center">商品销售统计</td>
+        </tr>
+        <tr align="left" bgcolor="#E3E3E3">
+          <td width="125" height="22" align="right">统计类型:</td>
+          <td width="291" height="22">
+            <select name="type" id="type" onChange="changeMenu(document.form1.type.value)">
+                <option selected value="3">选择统计类型</option>
+                <option value="1">按月统计</option>
+                <option value="2">按年统计</option>
+            </select>
+          </td>
+        </tr>
+        <tr align="left" bgcolor="#E3E3E3" id="NumID" style="display:none">
+          <td height="22" align="right">统计月份:</td>
+          <td height="22"><input type="checkbox" name="checkbox" value="checkbox">
+            5月
+              <input name="checkbox2" type="checkbox" value="checkbox" checked>
+            6月</td>
+        </tr>
+        <tr align="left" bgcolor="#E3E3E3" id="DateID" style="display:none">
+          <td width="125" height="22" align="right">统计年份:</td>
+          <td height="22"><input name="radiobutton" type="radio" value="radiobutton" checked>
+            2016年
+              <input type="radio" name="radiobutton" value="radiobutton">
+            2017年</td>
+        </tr>
+        <tr align="left" bgcolor="#E3E3E3">
+          <td height="32" colspan="2" align="center"><input name="btt_sell" type="submit" id="btt_sell" value="销售统计">
+&nbsp;
+        <input type="reset" name="Submit2" value="重置内容"></td>
+          </tr>
+      </form>
+    </table>
+</td>
+    <td width="134" align="right" valign="middle">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

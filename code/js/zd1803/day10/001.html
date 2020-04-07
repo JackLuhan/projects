@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//     某公司年会举行抽奖活动，中奖号码及其对应的奖品设置如下：
+//     ①“1”代表“一等奖”，奖品是“华为手机”；
+//     ②“2”代表“二等奖”，奖品是“光波炉”；
+//     ③“3”代表“三等奖”，奖品是“电饭煲”；
+//     ④其他号码代表“安慰奖”，奖品是“16G-U盘”。
+// 假设某员工抽中的奖号为3，输出该员工抽中的奖项级别以及所获得的奖品
+    //定义变量
+    var grade="";
+    var jiangping="";
+    var code="3";
+    switch (code) {
+        case 1:  //注意 case后面为冒号
+           grade="一等奖";
+           jiangping="华为手机";
+           break; //注意 break不可以省略
+        case 2:
+            grade="二等奖";
+            jiangping="光波炉";
+            break;
+        case "3":
+            grade="三等奖";
+            jiangping="电饭煲";
+            break;
+        default:
+            grade="安慰奖";
+            jiangping="16G-u盘";
+            break;
+    }
+    document.write("该员工获得的奖项为："+grade+"+奖品为："+jiangping)
+</script>
+</body>
+</html>

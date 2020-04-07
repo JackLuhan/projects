@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出列表框中选中的值</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+   		$("input[type='button']").click(function(){
+			var str = ""
+      		var length = $("select option:selected").length;   
+      		for(var i=0; i<length; i++){
+				str+=$("select option:selected").eq(i).val()+"\n";
+			}
+			alert(str);				
+   		});
+	});
+</script>
+</head>
+<body background="bg.gif">
+<form>
+  <select multiple="multiple" size="5">
+    <option value="列表项1">列表项1</option>
+    <option value="列表项2">列表项2</option>
+    <option value="列表项3">列表项3</option>
+	<option value="列表项4">列表项4</option>
+	<option value="列表项5">列表项5</option>
+  </select>
+  <input type="button" value="查看选择结果" />
+</form>
+</body>
+</html>

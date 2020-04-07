@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算员工的实际收入</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var salary = 5000;
+var insurance = 500;
+var threshold = 3500;
+var tax = 0.03;
+salary-=insurance;
+var salary1=salary;
+salary1-=threshold;
+salary1*=tax;
+salary-=salary1;
+document.write("该员工的实际收入为"+salary+"元");
+</script>
+</body>
+</html>

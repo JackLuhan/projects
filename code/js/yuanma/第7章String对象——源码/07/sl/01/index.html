@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为金庸小说人物名称按字数分类</title>
+<style type="text/css">
+body{
+margin-left:80px;}
+</style>
+</head>
+
+<body background="bg.jpeg">
+<script type="text/javascript">
+//定义人物数组
+var arr=new Array("张无忌","郭靖","东方不败","乔峰","令狐冲","完颜洪烈","杨过","金轮法王","韦小宝");
+var twoname="";//初始化二字人物变量
+var threename="";//初始化三字人物变量
+var fourname="";//初始化四字人物变量
+for(var i=0; i<arr.length; i++){
+	if(arr[i].length==2){//如果人物名称长度为2
+		twoname+=arr[i]+" ";//将人物名称连接在一起
+	}
+	if(arr[i].length==3){//如果人物名称长度为3
+		threename+=arr[i]+" ";//将人物名称连接在一起
+	}
+	if(arr[i].length==4){//如果人物名称长度为4
+		fourname+=arr[i]+" ";//将人物名称连接在一起
+	}
+}
+document.write("二字人物："+twoname);//输出二字人物
+document.write("<br>三字人物："+threename);//输出三字人物
+document.write("<br>四字人物："+fourname);//输出四字人物
+</script>
+</body>
+</html>

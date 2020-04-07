@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>动态改变图片大小</title>
+<script type="text/javascript">
+function changeImage(status){
+	if(status == "reduce"){
+		document.images["flower"].width=document.images["flower"].width*0.9;
+	}else if(status == "increase"){
+		document.images["flower"].width=document.images["flower"].width*1.1;
+	}
+}
+</script>
+</head>
+<body background="images/bg.gif">
+<input type="button" value="-" onClick="changeImage('reduce')">
+<input type="button" value="+" onClick="changeImage('increase')"><br>
+<img name="flower" id="mypic" src="images/rabbit.jpg">
+</body>
+</html>

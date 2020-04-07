@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(images/bg.png) no-repeat center center #19122d;
+    background-size: cover;
+}
+
+html, body {
+    width: 100%;
+    height: 100%
+}
+
+li {
+    list-style: none;
+}
+.cont{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index:9999;
+    overflow: auto;
+}
+
+.tclogo {
+    width: 100%;
+    height: 350px;
+}
+
+.tclogo li {
+    width: 450px;
+    height: 154px;
+    margin: auto;
+}
+
+.tclogo li img {
+    margin-top: 98px;
+}
+
+.tcdl {
+    width: 100%;
+    height: 465px;
+}
+
+.tcdl li {
+    width: 312px;
+    line-height: 90px;
+    margin: auto;
+}
+
+.tcdb {
+    width: 100%;
+    height: 105px;
+    background: rgba(0, 0, 0, .37);
+}
+
+.tcdb h2 {
+    float: left;
+    font-size: 24px;
+    color: #FFF;
+    margin-top: 40px;
+}
+
+.tcdb ul {
+    width: 540px;
+    height: 105px;
+    margin: auto;
+}
+
+.tcdb li {
+    width: 190px;
+    height: 105px;
+    float: left;
+    margin-right: 20px;
+}
+
+.tcdb img {
+    float: left;
+    margin-top: 25px;
+}
+
+.tcdb p {
+    font-size: 18px;
+    color: #FFF;
+    margin-top: 46px;
+    float: right;
+}
+
+@media screen and (max-width: 950px) {
+    html, body {
+        height: 100%;
+        overflow1: hidden;
+    }
+
+    .tclogo {
+        width: 100%;
+        height: 300px;
+    }
+
+    .tclogo li {
+        width: 100%;
+        height: 136px;
+        margin: auto;
+    }
+
+    .tclogo li img {
+        width: 98%;
+        height: 136px;
+        margin-top: 70px;
+    }
+
+    .tcdl {
+        width: 100%;
+        height: 325px;
+    }
+
+    .tcdl li {
+        width: 312px;
+        line-height: 90px;
+        margin: auto;
+    }
+
+    .tcdb {
+        width: 100%;
+        height: 105px;
+        background: rgba(0, 0, 0, .37);
+    }
+
+    .tcdb h2 {
+        float: left;
+        font-size: 14px;
+        color: #FFF;
+        margin-top: 44px;
+    }
+
+    .tcdb ul {
+        width: 354px;
+        height: 105px;
+        margin: auto;
+    }
+
+    .tcdb li {
+        width: 132px;
+        height: 105px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .tcdb img {
+        width: 38px;
+        height: 38px;
+        float: left;
+        margin-top: 36px;
+    }
+
+    .tcdb p {
+        font-size: 13px;
+        color: #FFF;
+        margin-top: 46px;
+        float: right;
+    }
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

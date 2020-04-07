@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出自定义的分时问候信息</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function ShowTime(){
+	var temp = "";
+	var datetime = new Date();
+	var hour = datetime.getHours();
+	var minu = datetime.getMinutes();
+	var seco = datetime.getSeconds();
+	if(hour < 10){
+		hour = "0" + hour;
+	}
+	if(minu < 10){
+		minu = "0" + minu;
+	}
+	if(seco < 10){
+		seco = "0" + seco;
+	}
+	temp = temp+hour+":"+minu+":"+seco+" ";
+	if(hour >= 0 && hour < 5){
+		temp = temp + "凌晨好";
+	}
+	if(hour >= 5  && hour < 8){
+		temp = temp + "早上好";
+	}
+	if(hour >= 8  && hour < 11){
+		temp = temp + "上午好";
+	}
+	if(hour >= 11  && hour < 13){
+		temp = temp + "中午好";
+	}
+	if(hour >= 13  && hour < 17){
+		temp = temp + "下午好";
+	}
+	if(hour >= 17  && hour < 24){
+		temp = temp + "晚上好";
+	}
+	document.write("<span style='font-size:24px;color:#CC00FF'>"+temp+"</span>");
+}
+ShowTime();
+</script>
+</body>
+</html>

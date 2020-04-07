@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 1024px;
+	height: 475px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../image/1.jpg)
+}
+.mr-out{
+	height: 260px;
+    width: 300px;
+    position: absolute;
+    margin: 150px 120px;
+	overflow: hidden;       /*将溢出的内容设为隐藏*/
+}
+.mr-in{
+	font-size: 20px;
+	font-weight: bold;
+	color:violet;
+	line-height: 30px;
+	margin: 17px 20px;
+}
+/*为滚动文字引入滚动的动画*/
+.scrol1{
+	animation: scroll 5.5s normal infinite ease;
+	animation-delay: 0.05s
+}
+.scrol2{
+	animation: scroll 5.3s normal infinite ease;
+	animation-delay: 1s
+}
+.scrol3{
+	animation: scroll 5s normal infinite ease;
+	animation-delay: 1.5s
+}
+.scrol4{
+	animation: scroll 5.7s normal infinite ease;
+	animation-delay: 2s
+}
+.scrol5{
+	animation: scroll 4.5s normal infinite ease;
+	animation-delay: 2.5s
+}
+/*创建文字滚动的动画*/
+@keyframes scroll{
+	0%{ margin-left: 20px;}
+	100%{ margin-left: -300px;}
+}

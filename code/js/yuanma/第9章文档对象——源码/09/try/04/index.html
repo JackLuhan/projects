@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>实现文档背景色和前景色的互换</title>
+</head>
+<body bgcolor="#FFCCFF">
+<script type="text/javascript">
+function change(){
+	var fgColor = document.fgColor;
+	var bgColor = document.bgColor;
+	document.bgColor=fgColor;
+	document.fgColor=bgColor;
+}
+</script>
+明日科技出品必属佳品
+<input type="button" value="交互颜色" onClick="change()">
+</body>
+</html>

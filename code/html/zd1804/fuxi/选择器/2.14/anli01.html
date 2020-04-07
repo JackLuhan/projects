@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爆款特卖</title>
+    <style>
+        /*通配符*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .cont{
+            width: 1100px;
+            height: 400px;
+            border: red solid 1px;
+            background: yellow;
+            margin: 0 auto;
+        }
+        .top{
+            font-size: 30px;
+            color: red;
+            height: 50px;
+            border: 1px green solid;
+            /*垂直居中*/
+            line-height: 50px;
+            /*水平剧中*/
+            text-align: center;
+        }
+        .bottom{
+            height: 350px;
+            border: #0000FF dashed 1px;
+        }
+        .block{
+            height: 100%;
+            width: 250px;
+            border: 1px solid gray;
+            float: left;
+            background: white;
+        }
+        .block img{
+           padding-left: 15px;
+            padding-top: 10px;
+        }
+        .block p{
+            margin-left: 90px;
+            margin-top: 20px;
+        }
+        .block .box .price{
+            float: left;
+            margin-left: 60px;
+        }
+        .miaosha{
+
+            margin-left: 130px;
+        }
+    </style>
+</head>
+<body>
+<!--区块标签-->
+<div class="cont">
+    <div class="top">爆款特卖</div>
+    <div class="bottom">
+        <div class="block">
+            <img src="images/8-2.jpg" >
+            <p>华为手机</p>
+            <div class="box">
+                <div class="price">￥5000</div>
+                <div class="miaosha">秒杀</div>
+            </div>
+        </div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+
+    </div>
+</div>
+
+</body>
+</html>

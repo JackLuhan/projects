@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>删除节点</title>
+<script type="text/javascript">
+	function delNode(){
+		var deleteN=document.getElementById('di');//获取指定id的元素
+		if(deleteN.hasChildNodes()){//判断是否有子节点
+			deleteN.removeChild(deleteN.lastChild);//删除节点
+		}
+	}	
+</script>
+</head>
+<body background="bg.gif">
+<h2>删除节点</h2>
+<div id="di"><p>少林派掌门空闻大师</p><p>武当派掌门张三丰</p><p>峨眉派掌门灭绝师太</p></div>
+<form>
+	<input type="button" value="删除" onclick="delNode()" />	
+</form>
+</body>
+</html>

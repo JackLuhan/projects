@@ -1,0 +1,27 @@
+#content{
+    margin: 0 auto;
+     width: 500px;          /*电影票的总体大小*/
+    height: 600px;
+
+}
+.title{                  /*电影票标题居中显示*/
+    text-align: center;
+}
+.list{
+    margin: 10px;
+    height: 45px;         /*每一条信息的高度*/
+    background-color: beige;/*信息的背景颜色*/
+    border:1px solid #ff0000;
+}
+#chinese{               /*中文信息的样式设置*/
+    margin: 0 130px;    /*中文信息的外边距*/
+    height: 25px;       /*中文信息的高度*/
+    line-height:25px;   /*中文信息的行高*/
+}
+.english{              /*英文信息的样式*/
+    margin: 0 102px;
+    color:#000;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+}

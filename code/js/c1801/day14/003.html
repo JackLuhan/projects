@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="form1">
+    <input name="textfield" type="text" size="18" value="零基础学JavaScript">
+    <select name="menu1" onChange="Fcolor()">
+        <option value="black">黑色</option>
+        <option value="yellow">黄色</option>
+        <option value="blue">蓝色</option>
+        <option value="green">绿色</option>
+        <option value="red">红色</option>
+        <option value="purple">紫色</option>
+    </select>
+</form>
+<script>
+    function Fcolor() {
+        var e = window.event;
+        var obj=e.srcElement;
+        //设置样式
+        form1.textfield.style.color=obj.value;
+        form1.textfield.style.fontSize="50px";
+    }
+</script>
+</body>
+</html>

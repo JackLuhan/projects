@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function changeImage1(imgName) {
+            document.images[imgName].src="images/book2.jpg"
+        }
+        function changeImage2(imgName) {
+            document.images[imgName].src="images/book1.jpg"
+        }
+    </script>
+</head>
+<body>
+<img src="images/book1.jpg"  name="book1" alt="" onmouseover="changeImage1('book1')" onmouseout="changeImage2('book1')">
+</body>
+</html>

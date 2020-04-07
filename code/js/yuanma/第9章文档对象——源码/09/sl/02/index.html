@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>背景颜色和字体颜色自动变色</title>
+</head>
+<body>
+背景自动变色
+<script type="text/javascript">
+var Arraycolor=new Array("#00FF66","#FFFF99","#99CCFF","#FFCCFF","#FFCC99","#00FFFF");//定义颜色数组
+var n=0;//初始化变量
+function changecolors(){
+	n++;//对变量进行加1操作
+	if (n==(Arraycolor.length-1)) n=0;//判断数组下标是否指向最后一个元素
+	document.bgColor = Arraycolor[n];//设置文档背景颜色
+	document.fgColor=Arraycolor[n-1];//设置文档字体颜色
+	setTimeout("changecolors()",100);//每隔1秒执行一次函数
+}
+changecolors();//调用函数
+</script>
+</body>
+</html>

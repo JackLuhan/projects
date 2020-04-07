@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function mousedown() {
+            var obj = document.getElementById("talk")
+            obj.innerHTML="长江长江，我是黄河。。。。"
+        }
+        function mouseup() {
+            var obj = document.getElementById("talk")
+            obj.innerHTML="通话结束"
+        }
+    </script>
+</head>
+<body>
+<p id="talk">请说话</p>
+<input type="button" value="长按说活" onmousedown="mousedown()" onmouseup="mouseup()">
+</body>
+</html>

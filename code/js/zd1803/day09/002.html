@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if else if语句</title>
+</head>
+<body>
+<script>
+//将某学校的学生成绩转化为不同等级，划分标准如下：
+//     ①“优秀”，大于等于90分；
+//     ②“良好”，大于等于75分；
+//     ③“及格”，大于等于60分；
+//     ④“不及格”，小于60分。
+// 假设周星星的考试成绩是85分，输出该成绩对应的等级
+    //定义变量
+    var dengji="";
+    var score=85;
+    if(score>=90){
+        dengji="优秀"
+    }else if(score>=75){
+        dengji="良好"
+    }else if(score>=60){
+        dengji="及格"
+    }else{
+        dengji="不及格"
+    }
+    alert(dengji)
+</script>
+</body>
+</html>

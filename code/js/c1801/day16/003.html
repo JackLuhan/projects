@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table cellspacing="1" bgcolor="#999999">
+    <tr height="30" bgcolor="#FFFFFF">
+        <th align="center" width="100">人物名称</th>
+        <th align="center" width="100">人物绰号</th>
+        <th align="center" width="160">主要事迹</th>
+    </tr>
+    <script type="text/javascript">
+        var name="宋江，卢俊义，林冲，鲁智深，武松";//定义人物名称字符串
+        var nickname="及时雨，玉麒麟，豹子头，花和尚，行者";//定义人物绰号字符串
+        var story="领导梁山起义，活捉史文恭，风雪山神庙，倒拔垂杨柳，醉打蒋门神";//定义主要事迹字符串
+        var nameArr=name.split("，")
+        var nicknameArr=nickname.split("，")
+        var storyArr=story.split("，")
+        for (var i = 0; i <nameArr.length ; i++) {
+            document.write("<tr height=26 bgcolor='#FFFFFF'>");//输出<tr>标记
+            document.write("<td align='center'>"+nameArr[i]+"</td>");
+            document.write("<td align='center'>"+nicknameArr[i]+"</td>");
+            document.write("<td align='center'>"+storyArr[i]+"</td>");
+            document.write("</tr>");//输出<tr>标记
+        }
+    </script>
+</table >
+</body>
+</html>

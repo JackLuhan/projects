@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>根据键盘上的按键来选择正确的答案</title>
+<style type="text/css">
+
+</style>
+</head>
+
+<body background="images/bg.gif">
+<script type="text/javascript">
+function Refurbish(){
+    //keycode键盘上的按键
+	var code=window.event.keyCode;
+	if (code==65){
+		alert("您的答案是A\n答案不正确！");
+	}else if (code==66){
+		alert("您的答案是B\n答案不正确！");
+	}else if (code==68){
+		alert("您的答案是D\n答案不正确！");
+	}else if(code==67){
+		alert("您的答案是C\n答案正确！");
+	}else {
+	    alert("请你不要乱输入")
+    }
+}
+document.onkeydown=Refurbish;
+</script>
+（单项选择题）被称为“国球”的球类运动是__________。<p>
+A、篮球<br />B、排球<br />C、乒乓球<br />D、羽毛球
+</body>
+</html>

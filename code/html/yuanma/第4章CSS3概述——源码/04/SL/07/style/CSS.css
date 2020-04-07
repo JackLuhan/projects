@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*css document*/
+*{                      /*通配选择器，选中页面中页面中所有标签*/
+    margin:0;           /*清除页面中所有标签的外边距*/
+    padding:0;          /*清除页面中所有标签的内边距*/
+}
+.cont{                 /*类选择器设置页面的整体样式*/
+    height: 400px;          /*设置页面的整体高度*/
+    width: 800px;          /*设置页面的整体宽度*/
+    margin: 0 auto;          /*使内容在页面中左右自适应*/
+    background: url("../img/bg.jpg") no-repeat;/*设置背景图片以及重复方式*/
+    background-size: 100% 100%;          /*设置背景图片的尺寸*/
+}
+.top{          /*设置上方导航栏的样式*/
+    height: 30px;          /*设置导航栏高度*/
+    background: #ff0000;          /*设置导航栏背景颜色*/
+    text-align: left;          /*设置列表对齐方式*/
+}
+.bottom{          /*设置侧边导航栏的样式*/
+    width: 210px;          /*设置侧边导航栏的宽度*/
+    text-align: left;          /*设置侧边导航的对其方式*/
+    margin-left: 10px;          /*设置向左的外边距*/
+}
+.top ul>:first-child{          /*单独设置导航栏中第一项的样式*/
+    width: 250px;          /*设置导航栏中第一项的宽度*/
+}
+.top ul li{          /*设置导航栏中其他列表项的样式*/
+    text-align: center;          /*文字的对齐方式*/
+    width: 130px;          /*其他列表项的宽度*/
+    list-style-type: none;          /*设置列表项的项目符号的类型*/
+    float: left;          /*设置列表项的浮动方式*/
+    line-height: 30px;          /*设置行高*/
+}
+.bottom ul li{          /*设置侧边导航的列表项的样式*/
+    text-align: center;          /*设置列表项中文字的对齐方式*/
+    height: 40px;          /*设置列表项的高度*/
+    list-style-image: url("../img/list1.png");          /*设置列表项的图标*/
+    list-style-position: inside;          /*设置列表项的图标的位置*/
+    border-radius: 10px;          /*设置列表项的圆角边框*/
+    margin-top: 5px;          /*设置列表项的向上的外边距*/
+    border: 1px dashed red;          /*设置边框样式*/
+}
+.bottom ul li:hover{          /*设置当鼠标滑过列表项的样式*/
+    list-style-image: url("../img/list2.png");          /*设置列表项的项目符号*/
+    background: rgba(255,255,255,0.5);          /*设置背景颜色*/
+}

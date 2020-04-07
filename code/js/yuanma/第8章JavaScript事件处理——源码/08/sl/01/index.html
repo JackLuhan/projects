@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>文本框获得焦点时改变背景颜色</title>
+</head>
+
+<body background="bg.gif">
+<table align="center" width="300" height="160" border="0">
+  <form name="form1">
+  <tr>
+    <td width="80" align="right">用户名：</td>
+    <td width="200">
+      <input type="text" onFocus="txtfocus()" onBlur="txtblur()">
+    </td>
+  </tr>
+  <tr>
+    <td align="right">密码：</td>
+    <td>
+      <input type="text" onFocus="txtfocus()" onBlur="txtblur()">
+    </td>
+  </tr>
+  <tr>
+    <td align="right">真实姓名：</td>
+    <td>
+      <input type="text" onFocus="txtfocus()" onBlur="txtblur()">
+    </td>
+  </tr>
+  <tr>
+    <td align="right">性别：</td>
+    <td>
+      <input type="text" onFocus="txtfocus()" onBlur="txtblur()">
+    </td>
+  </tr>
+  <tr>
+    <td align="right">邮箱：</td>
+    <td>
+      <input type="text" onFocus="txtfocus()" onBlur="txtblur()">
+    </td>
+  </tr>
+  </form>
+</table>
+<script type="text/javascript">
+function txtfocus(){			//当前元素获得焦点
+    var e=window.event;//获取事件对象
+    var obj=e.srcElement;			//获取发生事件的元素
+    obj.style.background="#FF9966";//设置元素背景颜色
+}
+function txtblur(){				//当前元素失去焦点
+    var e=window.event;//获取事件对象
+    var obj=e.srcElement;//获取发生事件的元素
+    obj.style.background="#FFFFFF";//设置元素背景颜色
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+
+<body>
+<center>
+<img id="mappedimg" src="MRsoft.jpg">
+</center>
+<br>
+<script type="text/javascript">
+	function mapped ()
+	{
+		setInterval("img1.filters.wave.phase+=10",100);
+	}
+	if (document.all)
+	{
+		document.write('<Center><img id=img1 src="'+document.all.mappedimg.src+'" style="filter:wave(strength=3,freq=3,phase=0,lightstrength=30)  blur() flipv()"></Center>');
+		window.onload = mapped; 
+	}
+</script>
+</body>
+</html>

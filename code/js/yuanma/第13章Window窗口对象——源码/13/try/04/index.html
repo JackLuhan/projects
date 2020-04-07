@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>弹出确认对话框</title>
+<script type="text/javascript">	
+function exitroom(){
+	var bool = window.confirm("您确定要退出房间吗？");
+	if(bool == true){
+		alert("您已退出游戏房间");
+	}else{
+		return false;
+	}
+}
+</script>
+
+</head>
+
+<body>
+<table>
+<tr>
+  <td width="191" height="126" align="center">
+     <img src="images/left3.png" style="margin-top:6px;">
+	 <a href="#" onclick="return exitroom()"><img src="images/btn_exit.png" width=90 height=39 style="margin-top:8px;"></a>
+	 <img src="images/btn_end.png" width=90 height=39 border=0>
+	 <br>
+  </td>
+</tr>
+</table>
+</body>
+</html>

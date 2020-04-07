@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出商品名称和商品总价</title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+input{
+margin-bottom:5px;}
+</style>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function account(){
+	var name=form.name.value;
+	var unitprice=form.unitprice.value;
+	var num=form.num.value;
+	var totalprice=unitprice*num;
+	if(isNaN(unitprice)){
+		alert("请输入正确的商品单价！");
+		return false;
+	}
+	if(isNaN(num)){
+		alert("请输入正确的商品数量！");
+		return false;
+	}
+	alert("商品名称："+name+"\n商品总价："+totalprice);
+}
+</script>
+<h3>商品结算</h3>
+<form name="form">
+  商品名称：<input type="text" name="name" size="15" /><br />
+  商品单价：<input type="text" name="unitprice" size="15" /><br />
+  商品数量：<input type="text" name="num" size="15" /><br />
+  <input type="button" name="but" value="结算" onclick="account()" />
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>移动的窗口</title>
+</head>
+<body onresize=resizeTo(300,300) background="bg.gif">
+<script language="JavaScript">
+window.resizeTo(300,300);//指定将窗口改变的大小
+window.moveTo(0,0);//将窗口移动到指定坐标处
+inter=setInterval("go()", 1);
+var aa=0;
+var bb=0;
+var a=0;
+var b=0;
+function go(){
+	try{
+		if (aa==0) 
+			a=a+2;
+		if (a>screen.availWidth-300)
+			aa=1;
+		if (aa==1) 
+			a=a-2;
+		if (a==0) 
+			aa=0;
+		if (bb==0) 
+			b=b+2;
+		if (b>screen.availHeight-300) 
+			bb=1;
+		if (bb==1) 
+			b=b-2;
+		if (b==0) 
+			bb=0;
+		window.moveTo(a,b);
+	}catch(e){}
+}
+</script> 
+会自动移动的窗口
+</body>
+</html>

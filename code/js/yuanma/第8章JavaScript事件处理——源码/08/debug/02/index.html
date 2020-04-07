@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<form name="form">
+  用户名：<input type="text" name="name"><br>
+  密&nbsp;&nbsp;码：<input type="password" name="pwd"><br>
+  <input type="button" name="but" value="注册">
+</form>
+<script type="text/javascript">   
+form.but.onClick=function(){		//事件名应全部小写
+    if(form.name.value==""){
+		alert("用户名不能为空！");
+	}else if(form.pwd.value==""){
+		alert("密码不能为空！");
+	}else{
+		alert("注册成功！");
+	}
+}
+</script>
+</body>
+</html>

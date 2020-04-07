@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .fl {
+            float: left
+        }
+
+        .fr {
+            float: right
+        }
+
+        .content {
+            width: 500px;
+            box-sizing: border-box;
+            border: 1px solid #0a628f;
+            height: 200px;
+            margin-top: 20px;
+            color: #fff
+        }
+
+        .a1 {
+            background: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .a2 {
+            background: #333;
+            width: 100px;
+            height: 100px;
+        }
+
+        .a3 {
+            background: #000;
+            width: 100px;
+            height: 100px;
+        }
+
+        .clear {
+            clear: both
+        }
+
+        .div1, .div2 {
+            width: 200px;
+            transition: all ease-in 5s ;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="a1 fl">a1</div>
+    <div class="a2 fl">a2</div>
+    <div class="a3 fl">a3</div>
+</div>
+<div class="clear"></div>
+
+<div class="content">
+    <div class="div1">
+        <div class="a1 fl">a1</div>
+        <div class="a2 fl">a2</div>
+    </div>
+    <div class="div2">
+        <div class="a3 fr">a3</div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="div1">
+        <div class="a1 fl">a1</div>
+        <div class="a2 fl">a2</div>
+    </div>
+    <div class="div2">
+        <div class="a3 fl">a3</div>
+    </div>
+</div>
+</body>
+</html>

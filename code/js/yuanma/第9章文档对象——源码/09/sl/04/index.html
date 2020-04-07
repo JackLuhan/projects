@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>动态添加一个文本框</title>
+<script type="text/javascript">
+	function addInput(){
+
+
+
+    var txt=document.createElement("input");//动态添加一个input文本框
+    txt.type="text";//为添加的文本框type属性赋值
+    txt.name="txt";//为添加的文本框name属性赋值
+    txt.value="动态添加的文本框"+i;//为添加的文本框value属性赋值
+    document.form1.appendChild(txt);//把文本框作为子节点追加到表单中
+
+
+	}
+</script>
+</head>
+<body background="bg.gif">
+<form name="form1">
+<input type="button" name="btn1" value="动态添加文本框" onclick="addInput()" />
+</form>
+</body>
+</html>

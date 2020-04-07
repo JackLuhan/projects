@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>随机显示图片</title>
+
+</head>
+<body onLoad="changebg()">
+<img name="book" id="imgs">
+<script type="text/javascript">
+function changebg(){
+	var test = new Array("image1.jpg","image2.jpg","image3.jpg","image4.jpg");
+	var n=Math.round(Math.random()*test.length);//将round修改为floor
+	var img=document.getElementById('imgs');
+	img.src=test[n]; 	
+	setTimeout("changebg()",1000);	
+}
+</script>
+</body>
+</html>

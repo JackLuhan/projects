@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断两次输入的密码是否一致</title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+span{
+margin-left:10px;
+}
+</style>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function checkPwd(form){
+	var pwd=form.pwd.value;
+	var pwd2=form.pwd2.value;
+	if(pwd==""){
+		alert("注册密码不能为空！");
+		return false;
+	}else if(pwd2==""){
+		alert("确认密码不能为空！");
+		return false;
+	}else if(pwd!=pwd2){
+		alert("两次密码不一致！");
+		return false;
+	}else{
+		alert("密码输入一致！");
+	}
+	return true;
+}
+
+</script>
+<table width="300" height="157" bgcolor="#1170FF" border="0" align="center" cellpadding="0" cellspacing="1">
+  <form name="form1">
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">用户注册</div></td>
+    </tr>
+    <tr>
+      <td width="100" height="25" bgcolor="#FFFFFF"><div align="center">用户昵称：</div></td>
+      <td width="200" bgcolor="#FFFFFF">&nbsp;<input type="text" name="username" size="23"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">注册密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd" size="23"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">确认密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd2" size="23"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="button" value="注册" onclick="return checkPwd(form1)">&nbsp;&nbsp;<input type="reset" value="重写"></div></td>
+    </tr>
+  </form> 
+</table>
+</body>
+</html>

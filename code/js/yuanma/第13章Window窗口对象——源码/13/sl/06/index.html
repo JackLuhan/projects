@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>改变窗口大小</title>
+</head>
+<body>
+<script type="text/javascript">
+var winheight,winsize,x;//声明变量
+function openwin(){
+	winheight=100;//打开窗口的初始高度
+	winsize=100;//打开窗口的初始宽度
+	x=5;//设置窗口改变大小的垂直高度
+	win2=window.open("melody.html","","scrollbars='no'");//打开窗口
+	win2.moveTo(0,0);//移动窗口至屏幕左上角
+	win2.resizeTo(100,100);//设置窗口大小
+	resize();//调用改变窗口大小的函数
+}
+function resize(){
+	if (winheight>=screen.availHeight-3)//如果窗口高度大于等于屏幕可见高度减3
+		x=0;//窗口的高度停止变化
+	win2.resizeBy(5,x);//改变窗口大小
+	winheight+=5;//窗口的高度值加5
+	winsize+=5;//窗口的宽度值加5
+	if (winsize>=screen.width-5){//如果窗口宽度大于等于屏幕宽度减5
+		winheight=100;//将winheight变量值恢复为初始值
+		winsize=100;//将winsize变量值恢复为初始值
+		return;//返回
+	}
+	setTimeout("resize()",50);//每隔50毫秒调用一次resize()函数
+}
+</script>
+<a href="javascript:openwin()">打开一个自动改变大小的窗口</a>
+</body>
+</html>

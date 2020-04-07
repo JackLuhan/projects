@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var url = document.URL;
+var position = 0;
+if(url.indexOf("\\")!=-1){
+	position = url.lastIndexOf("\\");
+}else{
+	position = url.lastIndexOf("/");
+}
+var filename = url.substr(position+1);
+alert("当前文档的文件名称："+filename);
+</script>
+</body>
+</html>

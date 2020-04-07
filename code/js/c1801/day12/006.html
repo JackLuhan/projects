@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr1 = new Array("安徽新华","山东新华")
+    var arr2 =new Array("北京新华","南京新华")
+    //    链接两个数组
+    var arr3 = arr1.concat(arr2)
+    document.write("删除钱的数组为："+arr3+"<br>")
+    //shift删除数组中的第一一个元素并返回删除元素的值
+    var del  =arr3.shift()
+    document.write("删除的元素为："+del+"<br>")
+    document.write("删除后的数组为："+arr3)
+</script>
+</body>
+</html>

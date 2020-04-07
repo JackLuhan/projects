@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+</style>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function dial(){
+	var tel=form.tel.value;
+	if(tel!=""){
+		alert("正在拨通，请稍候！");
+	}else {
+        alert("请输入电话号码！");
+    }
+}
+</script>
+<form name="form">
+  请输入电话号码：
+  <input type="text" name="tel" />
+  <input type="button" name="but" value="拨号" onclick="dial()" />
+</form>
+</body>
+</html>

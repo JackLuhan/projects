@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+span{
+margin-left:10px;
+}
+</style>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+function check(form){
+	var username=form.username.value;
+	if(username==""){
+		showuser.innerHTML="用户名不能为空！";
+		return false;
+	}
+	var pwd=form.pwd.value;
+	if(pwd==""){
+		showpwd.innerHTML="密码不能为空！";
+		return false;
+	}
+	var pwd2=form.pwd2.value;
+	if(pwd2==""){
+		showpwd2.innerHTML="确认密码不能为空！";
+		return false;
+	}else if(pwd!=pwd2){
+		showpwd2.innerHTML="两次输入的密码不一致！";
+		return false;
+	}
+	alert("注册成功！");
+}
+</script>
+<table align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="banner.gif" width="400" height="65" /></td>
+  </tr>
+</table>
+<table width="400" height="10" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<table width="400" height="157" bgcolor="#1170FF" border="0" align="center" cellpadding="0" cellspacing="1">
+  <form name="form1" method="post" onsubmit="return check(form1)">
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">用户注册</div></td>
+    </tr>
+    <tr>
+      <td width="100" height="25" bgcolor="#FFFFFF"><div align="center">用户昵称：</div></td>
+      <td width="300" bgcolor="#FFFFFF">&nbsp;<input type="text" name="username" size="15" onblur="checkUsername(form1)"><span id="showuser"></span></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">注册密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd" size="15" onblur="checkPwd(form1)"><span id="showpwd"></span></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">确认密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd2" size="15" onblur="checkPwd2(form1)"><span id="showpwd2"></span></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="button" value="注册">&nbsp;&nbsp;<input type="reset" value="重写"></div></td><!--将“注册”按钮的type属性值修改为submit-->
+    </tr>
+  </form> 
+</table>
+</body>
+</html>

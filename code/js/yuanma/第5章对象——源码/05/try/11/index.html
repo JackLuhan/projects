@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出两个日期的间隔小时数</title>
+<script language="javascript">
+function interval(begindate,enddate){
+	var end = new Date(enddate);
+	var begin = new Date(begindate);
+	var resultdate = end.getTime() - begin.getTime();
+	var hour = Math.round(resultdate / (1000 * 60 * 60));//计算间隔小时数
+	//为字体设置样式
+	document.write("<span style='font-size:24px;font-family:楷体;color:#CC00FF'>");
+	document.write("开始日期："+begindate);
+	document.write("<br>结束日期："+enddate);
+	document.write("<br>两个日期之间的间隔小时数为"+hour);//输出间隔小时数
+	document.write("</span>");//输出</span>结束标记
+}
+</script>
+</head>
+
+<body background="bg.jpeg">
+<script type="text/javascript">
+interval("2017/05/01","2017/06/01");
+</script>
+</body>
+</html>

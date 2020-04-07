@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function MyCheck() {
+            var str="获取的内容如下：\n"
+            if(form1.username.value!=""){
+                str+="用户名为："+form1.username.value+"\n"
+            }else {
+                return false;
+            }
+            if(form1.pwd.value!=""){
+                str+="密码为："+form1.pwd.value+"\n"
+            }else {
+                return false;
+            }
+            if(form1.author.value!=""){
+                str+="作者为："+form1.author.value+"\n"
+            }else {
+                return false;
+            }
+            alert(str)
+            return true;
+        }
+    </script>
+</head>
+<body>
+<form action="" name="form1" onsubmit="return MyCheck()">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="pwd"><br>
+    作者：<input type="text" name="author"><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

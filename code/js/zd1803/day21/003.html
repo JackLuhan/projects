@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //获取任意三个值的最大值
+    //定义函数
+    function max(num1,num2,num3) {
+        //定义最大值假设为num1
+        var MaxNum=num1;
+        // var result=0;
+        if(MaxNum<num2){
+            MaxNum=num2;
+        }
+        if (MaxNum<num3){
+            MaxNum=num3;
+        }
+        return MaxNum;
+    }
+    //调用函数
+    alert("最大值为："+max(11,2,3))
+</script>
+</body>
+</html>

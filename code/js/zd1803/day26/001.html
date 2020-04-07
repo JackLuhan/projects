@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 应用构造函数创建一个圆的对象Circle，
+    // 定义构造函数Circle()，然后应用prototype属性向对象中添加属性和方法，
+    // 通过调用方法实现计算圆的周长和面积的功能。
+    //1.定义构造函数
+    function Circle(r) {
+        this.r=r;
+    }
+    //2.向对象中添加属性和方法
+    Circle.prototype.pi=Math.PI;
+    //计算周长的方法
+    Circle.prototype.perimeter=function() {
+        return 2*this.pi*this.r;
+    };
+    Circle.prototype.area=function() {
+        return this.r*this.pi*this.r;
+    };
+    //创建对象
+    var circle = new Circle(10);
+    alert(parseInt(circle.area()))
+    alert(parseInt(circle.perimeter()))
+</script>
+</body>
+</html>

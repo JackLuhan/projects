@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算两个时间的时间间隔</title>
+<script type="text/javascript">
+var date1=new Date("2017/10/01"); //创建指定的日期对象
+var date2=new Date(); //创建当前的日期对象
+var date3=date1.getTime()-date2.getTime();//获取两个日期相差的毫秒数
+var days=Math.floor(date3/(24*60*60*1000)); //将毫秒数转换成天数
+var hours=Math.floor((date3-days*24*60*60*1000)/(60*60*1000));//将剩余毫秒数转换成小时数
+alert("今天距离2017年国庆节还有"+days+"天"+hours+"小时");//输出结果 
+</script>
+</body>
+</html>
+

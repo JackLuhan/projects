@@ -1,0 +1,35 @@
+.mr-box{
+    width:1400px;
+    height:400px;
+    margin:0 auto;
+    position:relative;
+    background: url(images/1.jpg) no-repeat 0 0;/*设置背景图像*/
+}
+li{
+    list-style:none;
+    width:158px;
+    height:55px;
+    float: left;
+    background:#949494;
+    margin-top:300px;
+    margin-left:2px;
+    font-family: "微软雅黑";
+    font-size:14px;
+    text-indent:2em;
+    text-align: center;
+    line-height: 20px;
+    color:#fff;
+    padding-top:10px;/*设置内边距*/
+}
+li img{
+    position:absolute;/*设置定位方式*/
+    top:0;
+    left:0;
+    display:none;
+}
+li:hover img{
+    display:block;
+}
+li:hover{  /*鼠标滑过时候的样式*/
+    background:orange;
+}

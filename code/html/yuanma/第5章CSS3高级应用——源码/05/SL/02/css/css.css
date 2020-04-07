@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*css document*/
+*{                                 /*清除文档中默认的内外边距*/
+    padding: 0;
+    margin: 0
+}
+.cont{                                     /*设置页面的整体样式*/
+    width: 1200px;                          /*设置页面的整体宽度*/
+    height: 620px;                          /*设置页面的整体高度*/
+    margin: 0 auto;                         /*设置页面的整体外边距*/
+    background: rgb(220,255,255);           /*设置整体的背景颜色*/
+}
+h1{                                  /*设置标题样式*/
+    padding: 30px 50px 30px 525px;  /*设置标题文字的内间距*/
+}
+.bottom{                             /*设置手机部分的整体样式*/
+    height: 500px;                     /*设置其高度*/
+}
+dl{                                   /*设置每一个手机部分的样式*/
+    float: left;                      /*设置浮动为左浮动*/
+    height: 511px;                     /*设置高度*/
+    width: 394px;                     /*设置宽度*/
+    margin-left: 4px;                 /*设置想做的外边距*/
+    background: #fff;                 /*设置背景颜色*/
+}
+dd{                                    /*设置文字介绍部分的样式*/
+    border: 1px dashed #f0f;         /*添加边框样式*/
+    border-radius: 10px;               /*设置圆角边框*/
+    padding: 10px 90px;                /*设置文字的内边距*/
+    margin: 5px;                       /*设置文字的外边距*/
+}
+img{
+    width: 250px;                       /*设置图片大小*/
+    padding: 50px 65px;               /*设置图片的内边距*/
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>实现年月日的联动</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+    function append(d,v){
+	  var option=document.createElement("option");//创建元素option
+	  option.value=v;//把参数v作为元素的值
+	  option.innerText=v+"日";//把参数v作为元素的显示内容
+	  d.appendChild(option);//把元素option作为参数d的子节点
+	}
+    function getday(){
+	  var y=form1.year.value;//取得年份的值
+	  var m=form1.month.value;//取得月份的值
+	  var d=document.getElementById("day");//定位到id=day的节点
+	  d.innerHTML="";//把id=day节点的内容清空
+	  if(m==4 || m==6 || m==9 || m==11){//如果月份的值是4或6或9或11
+	    for(j=1;j<=30;j++){
+		  append(d,j);//把1到30循环加到天数当中
+		}
+	  }else if(m==2){//如果月份的值是2
+	    if(y%4==0 || y%400==0 && y%100!=0){//如果年份是闰年
+		  for(j=1;j<=29;j++){
+		    append(d,j);//把1到29循环加到天数当中
+		  }
+		}else{
+		  for(j=1;j<=28;j++){
+		    append(d,j);//不是闰年就把1到28循环加到天数当中
+		  }
+		}
+	  }else{//否则如果月份的值是1或3或5或7或8或10或12
+	    for(j=1;j<=31;j++){
+		  append(d,j);//把1到31循环加到天数当中
+		}
+	  }
+	}
+</script>
+<form id="form1" name="form1" method="post" action="">
+	<select name="year" id="year" onchange="getday()">
+      <script type="text/javascript">
+          var mydate=new Date();
+		  for(i=1990;i<=mydate.getFullYear();i++){
+		    document.write("<option value='"+i+"' "+(i==1986?"selected":"")+">"+i+"年</option>");
+		  }
+      </script>
+      </select>
+        <select name="month" id="month" onchange="getday()">
+      <script type="text/javascript">
+		  for(i=1;i<=12;i++){
+		    document.write("<option value='"+i+"' "+(i==1?"selected":"")+">"+i+"月</option>");
+		  }
+      </script>
+        </select>
+        <select name="day" id="day">
+      <script type="text/javascript">
+		  for(i=1;i<=31;i++){
+		    document.write("<option value='"+i+"' "+(i==1?"selected":"")+">"+i+"日</option>");
+		  }		  
+      </script>
+      </select>
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //创建新的节点
+        function createNode(str) {
+            //创建p元素
+            var newP = document.createElement("p");
+            //创建文本节点
+            var newTxt = document.createTextNode(str);
+            //将文本节点添加到创建的p元素当中
+            newP.appendChild(newTxt)
+            return newP
+        }
+        //创建插入节点的函数
+        function insetNode(nodeId,str) {
+            //获取指定id的元素
+            var node = document.getElementById(nodeId);
+            //创建节点
+            var newNode = createNode(str);
+            //判断是否有父节点
+            if(node.parentNode){
+                node.parentNode.insertBefore(newNode,node)
+            }
+        }
+    </script>
+</head>
+<body>
+<h2 id="h">在上面插入节点</h2>
+<form id="frm" name="frm">
+    输入文本：<input type="text" name="txt" />
+    <input type="button" value="前插入" onclick="insetNode('h',document.frm.txt.value);" />
+</form>
+</body>
+</html>

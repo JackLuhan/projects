@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+
+<img src="1.jpg" name="myImage" border="1" style="filter:alpha(opacity=0)">
+<script type="text/javascript">
+var b = 1;
+var c = true;
+function latent()
+{
+  if(document.all)
+  if(c == true) 
+  	b++;
+  else 
+  	b--;
+  if(b==100)
+  {
+    b--;
+    c = false
+  }
+  if(b==10)
+  {
+    b++;
+    c = true;
+  }
+  myImage.filters.alpha.opacity=b;
+  setTimeout("latent()",25);
+}
+latent();
+</script>
+</head>
+<body>
+</body>
+</html>

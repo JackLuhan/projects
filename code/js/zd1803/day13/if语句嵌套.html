@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义变量 商品总价
+    var total=300;
+    //定义变量会员卡
+    var card=true;
+    var result=0;
+    if(total>=260){
+        if (card=true){
+            result=(total-20)*0.95
+        }else {
+            result=total-20
+        }
+    }else {
+        result=total;
+    }
+    alert("花费的总价为："+result+"元")
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table cellspacing="1" bgcolor="#CC00FF">
+    <tr height="30" bgcolor="#FFFFFF">
+        <td align="center" width="50">序号</td>
+        <td align="center" width="100">省份</td>
+        <td align="center" width="100">省会</td>
+        <td align="center" width="260">旅游景点</td>
+    </tr>
+    <script>
+        debugger
+        //定义省份
+        var shen = new Array("安徽省","江苏省","浙江省")
+        //定义省会
+        var city=new Array("合肥","南京","杭州")
+        //定义景点
+        var jindian=new Array("步行街 大蜀山 包公祠","夫子庙 中山陵 玄武门","西湖 灵隐寺 断桥残雪")
+        for (var i = 0; i < shen.length; i++) {
+            document.write("<tr  height=\"30\" bgcolor=\"#FFFFFF\">")
+            document.write("<td align=\"center\" width=\"50\">"+(i+1)+"</td>")
+            document.write("<td align=\"center\" width=\"100\">"+shen[i]+"</td>")
+            document.write("<td align=\"center\" width=\"100\">"+city[i]+"</td>")
+            document.write("<td align=\"center\" width=\"200\">"+jindian[i]+"</td>")
+            document.write("</tr>")
+        }
+    </script>
+</table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体布局*/
+div {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+/*删除超链接的下划线*/
+a {
+	text-decoration: none;
+}
+/*设置文字标题和内容的对齐方式以及位置*/
+.cont p, .cont h3 {
+	text-align: left;
+	padding: 0 150px;
+}

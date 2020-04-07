@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>导航条的动画效果</title>
+</head>
+<body>
+<table width="688" border="0" align="center" cellpadding="-2" cellspacing="-2" class="tableBorder">
+  <tr>
+    <td valign="top"><table width="100%" height="26"  border="0" cellpadding="-2" cellspacing="-2">
+      <tr>
+        <td><div align="right" style="color:#FFFFFF ">
+		设为首页| 收藏本站|&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      </tr>
+    </table>
+      <table width="100%" height="119" border="0" cellpadding="-2" cellspacing="-2">
+	  <script type="text/javascript">
+	  //鼠标移动效果
+	  var A_Img=new Image();
+	  function move(imageid,num){
+	  	document.getElementById(imageid).src='Images/top/menu_0'+num+'_over.gif';
+	  }
+	  function out(imageid,num){
+		document.getElementById(imageid).src='Images/top/menu_0'+num+'.gif';
+	  }	  
+	  </script>
+        <tr>
+          
+          <td width="95" align="center"><img src="Images/top/menu_01.gif" id="image1" width="95" height="119" border="0" onMouseMove="move('image1','1')" onMouseout="out('image1','1')"></td>
+          <td width="95" align="center"><img src="Images/top/menu_02.gif" id="image2" width="95" height="119" border="0" onMouseMove="move('image2','2')" onMouseout="out('image2','2')"></td>
+          <td width="94" align="center"><img src="Images/top/menu_03.gif" id="image3"  width="95" height="119" border="0" onMouseMove="move('image3','3')" onMouseout="out('image3','3')"></td>
+          <td width="94" align="center"><img src="Images/top/menu_04.gif" id="image4" width="94" height="119" border="0" onMouseMove="move('image4','4')" onMouseout="out('image4','4')"></td>
+          <td width="94" align="center"><img src="Images/top/menu_05.gif" id="image5" width="95" height="119" border="0" onMouseMove="move('image5','5')" onMouseout="out('image5','5')"></td>
+          <td width="94" align="center"><img src="Images/top/menu_06.gif" id="image6" width="94" height="119" border="0" onMouseMove="move('image6','6')" onMouseout="out('image6','6')"></td>
+          <td width="95" align="center"><img src="Images/top/menu_07.gif" width="95" id="image7" height="119" border="0" onMouseMove="move('image7','7')" onMouseout="out('image7','7')"></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <table width="100%" height="193"  border="0" cellpadding="-2" cellspacing="-2">
+        <tr>
+          <td width="38%">&nbsp;</td>
+          <td width="43%">&nbsp;</td>
+          <td width="19%" valign="bottom">&nbsp;</td>
+        </tr>
+      </table>
+</td>
+  </tr>
+</table>
+</body>
+</html>

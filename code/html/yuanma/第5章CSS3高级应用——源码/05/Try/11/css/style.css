@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*css document*/
+.mr-cont{
+	height:500px;
+	width:800px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../img/bg.jpg)
+}
+/*设置风车样式*/
+.go{
+	position: absolute;
+	top:80px;
+	left: 120px;
+	height: 200px;
+	z-index: 50;
+}
+/*当鼠标滑过风车时，风车转动*/
+.go:hover  {
+	transform:rotate(1000000deg);
+	transition:1000s all ease-out;
+	transform-origin:50% 49%;	
+}
+/*风车把手*/
+.bar{
+	position: absolute;
+	top:220px;
+	left: 180px;
+	z-index: 0;
+	transform:rotate(29deg);
+}
+/*提示文字*/
+p{
+	font-size: 24px;
+	font-weight: bold;
+	width: 300px;
+	line-height: 40px;
+	color:#9acd32;
+
+}
+.line1{
+		padding:50px 450px;
+}
+.line2{
+		padding:30px 450px;
+}

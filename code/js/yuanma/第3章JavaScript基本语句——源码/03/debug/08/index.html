@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<title>循环3次输出1~10</title>
+</head>
+<body>
+<script type="text/javascript">
+var i = 1;
+while(i<4){
+	document.write("第"+i+"次循环：");
+	//for循环语句中的循环变量和while语句相同，把for语句中的循环变量i改成j
+	for(i=1;i<=10;i++){	
+		document.write(i+"\n");
+	}
+	document.write("<br>");
+	i++;
+}
+</script>
+</body>
+</html>

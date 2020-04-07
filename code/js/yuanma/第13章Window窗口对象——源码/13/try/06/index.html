@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>打开注册页面窗口</title>
+<style type="text/css">
+#login #name  {
+	margin: 0px;
+	padding: 0px;
+	height: 16px;
+	width: 100px;
+	border: 1px outset #1356A4;
+	font-size: 12px;
+	background-color: #e8f4ff;
+}
+#login #password {
+	margin: 0px;
+	padding: 0px;
+	height: 16px;
+	width: 100px;
+	border: 1px outset #1356A4;
+	font-size: 12px;
+	background-color: #e8f4ff;
+}
+#login #enter {
+	background-attachment: fixed;
+	background-image: url(../images/login.JPG);
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0px;
+	padding: 0px;
+	height: 23px;
+	width: 58px;
+	border: 0px solid #006699;
+}
+#login #check {
+	margin: 0px;
+	padding: 0px;
+	height: 16px;
+	width: 44px;
+	border: 1px outset #1356A4;
+	font-size: 12px;
+	background-color: #e8f4ff;
+}
+</style>
+<script type="text/javascript">
+function reg(){
+	window.open('reg.html','reg','height=226,width=380,top=100,left=400');
+}
+</script>
+</head>
+
+<body background="bg.gif">
+<table width="210" height="150" border="0" cellpadding="0" cellspacing="0" background="images/shop_04.gif">
+<form id="login" name="login" action="#">
+  <tr>
+    <td width="80" height="40">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="32" align="right">用户名：</td>
+    <td colspan="2"><input name="name" type="text" id="name"  onmouseover="this.style.backgroundColor='#ffffff'" onmouseout="this.style.backgroundColor='#e8f4ff'" size="15" /></td>
+  </tr>
+  <tr>
+    <td height="32" align="right">密码：</td>
+    <td colspan="2"><input name="password" type="password" id="password"  onmouseover="this.style.backgroundColor='#ffffff'" onmouseout="this.style.backgroundColor='#e8f4ff'" size="15" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><a href="#" id="login"><img src="images/login.JPG" width="59" height="23" border="0" /></a>&nbsp;<a id="login" href="#" onclick="reg()"><img src="images/reg.JPG" width="59" height="23" border="0" /></a><strong></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>输出电影名称</title>
+
+</head>
+<body>
+请输入电影名称：<input type="text" name="movie">
+<input type="button" name="but" value="提交" onClick="show()">
+<script type="text/javascript">
+function show(){
+    alert(document.getElementsByName("movie").value);	//在document.getElementsByName("movie")后面加上[0]
+}
+</script>
+</body>
+</html>

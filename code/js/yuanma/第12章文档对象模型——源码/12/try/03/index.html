@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>添加歌名</title>
+<style type="text/css">
+div{
+margin:0 auto;
+line-height:23px;}
+</style>
+<script type="text/javascript">
+	function addSongName(nodeId){
+		var newNode=document.createElement("h3");
+		newNode.style.marginLeft="50px";
+		var songname=document.form.songname.value;
+		var newTxt=document.createTextNode(songname);
+		newNode.appendChild(newTxt);
+		var node=document.getElementById(nodeId);
+		if(node.parentNode)
+			node.parentNode.insertBefore(newNode,node);
+	}	
+</script>
+</head>
+<body background="bg.gif">
+	<div id="h">月溅星河 长路漫漫<br />
+	风烟残尽 独影阑珊<br />
+	谁叫我身手不凡<br />
+	谁让我爱恨两难<br />
+	到后来 肝肠寸断</div>
+	<p>
+	<form id="form" name="form">
+	请输入歌名：<input type="text" name="songname" />
+	<input type="button" value="添加歌名" onclick="addSongName('h');" />
+	</form>
+</body>
+</html>
