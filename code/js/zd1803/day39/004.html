@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="anhui" style="border: 1px solid red" width="500px" height="500px"></canvas>
+<script>
+    function draw() {
+        //获取指定的canvas元素
+        var elementById = document.getElementById("anhui");
+        if(!elementById.getContext) {
+            return
+        }
+        //绘制2d画布
+        var cxt = elementById.getContext("2d");
+        cxt.transform(1,0,0,1,50,50)
+        cxt.strokeRect(0,0,100,100)
+
+
+    }
+    draw()
+</script>
+
+</body>
+</html>

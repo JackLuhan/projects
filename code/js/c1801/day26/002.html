@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="can" style="border: 1px solid red" height="500" width="500"></canvas>
+<script>
+    function draw() {
+        var cv = document.getElementById("can");//获取canvas元素
+        if (!cv.getContext) {  //判断浏览器是否兼容
+            return;
+        }
+        var cxt = cv.getContext("2d");  //绘制画布
+        //新建路径起始点
+        cxt.beginPath();
+        cxt.moveTo(40,200)
+        //绘制三次贝塞尔曲线
+        cxt.bezierCurveTo(20,100,100,120,200,200)
+        cxt.stroke();
+
+        cxt.beginPath();
+        cxt.rect(40,200,5,5)
+        cxt.rect(20,100,5,5)
+        cxt.rect(100,120,5,5)
+        cxt.rect(200,200,5,5)
+        cxt.fill()
+
+    }
+    draw()
+</script>
+
+</body>
+</html>

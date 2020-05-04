@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="anhui" style="border: 1px solid red" width="500px" height="500px"></canvas>
+<script>
+    function draw() {
+        //获取指定的canvas元素
+        var elementById = document.getElementById("anhui");
+        if(!elementById.getContext) {
+            return
+        }
+        //绘制2d画布
+        var cxt = elementById.getContext("2d");
+        //新建一个路径
+        cxt.beginPath();
+        //把画笔移动到指定的坐标
+        cxt.moveTo(50,300);
+        //绘制一条从当前位置到指定坐标(300, 300)的直线
+        cxt.lineTo(300,300)
+        //绘制一条从当前位置到指定坐标(50, 50)的直线
+        cxt.lineTo(50,50);
+        //闭合路径
+        cxt.closePath();
+        //绘制路径
+        cxt.stroke()
+    }
+    draw()
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+       function clock() {
+           //创建日期对象
+           var now = new Date();
+           var year = now.getFullYear(); //获取年份
+           var month = now.getMonth(); //获取月份
+           var date = now.getDate(); //获取日期
+           var day = now.getDay(); //获取天数
+           var week;
+           month=month+1;
+           //定义星期的数组
+           var arr_week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");//定义星期数组
+           week=arr_week[day];
+           var time =year+"年"+month+"月"+date+"日"+week;
+           var text = document.createTextNode(time);
+           document.getElementById("clock").appendChild(text);
+       }
+       //在页面加载的时候直接调用方法
+       window.onload=clock
+    </script>
+</head>
+<body>
+<div id="clock">当前日期：</div>
+</body>
+</html>

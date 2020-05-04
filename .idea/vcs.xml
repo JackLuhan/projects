@@ -4,5 +4,10 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HtmlDemo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/anli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fuzhupingtai" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/houtai" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pig-config" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qifeiye" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tfkz" vcs="Git" />
   </component>
 </project>

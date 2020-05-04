@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url("1.jpg");
+        }
+        h1,div{
+            text-align: center;
+            color: white;
+        }
+        div button{
+            background: pink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button>开始点名！</button>
+    <button>你说停就停！</button>
+</div>
+<h1>看看谁比较幸运</h1>
+<h1>看看每次输出的索引</h1>
+</body>
+</html>
+<script>
+    //获取按钮
+    var btn = document.getElementsByTagName("button");
+    //获取标题标签
+    var h= document.getElementsByTagName("h1");
+    //定义存放人员名单的数组
+    var allName=["潘富雷","陈劲东","武星宇","张三","李四","安徽新华","王二麻子"]
+    //用于存放时间的全局变量
+    var timer=null;
+    btn[0].onclick=function () {
+        clearInterval(timer);
+        timer=setInterval(function () {
+            //动态获取数组的索引
+            var number =parseInt(Math.random()*allName.length);
+            //0~1随机数
+
+            h[0].innerHTML=allName[number]
+            h[1].innerHTML=number;
+        },300)
+    }
+    btn[1].onclick=function () {
+        clearInterval(timer)
+    }
+
+</script>

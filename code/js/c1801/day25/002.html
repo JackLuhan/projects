@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="can" style="border: 1px solid red" height="500" width="500"></canvas>
+<script>
+    function draw() {
+        var cv = document.getElementById("can");//获取canvas元素
+        if (!cv.getContext) {  //判断浏览器是否兼容
+            return;
+        }
+        var cxt = cv.getContext("2d");  //绘制画布
+        //新建路径起始点
+        cxt.beginPath();
+        cxt.moveTo(50,50)
+        var x1=200;
+        var y1=50;
+        var x2=200;
+        var y2=200;
+        cxt.arcTo(x1,y1,x2,y2,150)
+        cxt.stroke()
+
+        cxt.beginPath();
+        cxt.rect(50, 50, 10, 10);
+        cxt.rect(200, 50, 10, 10)
+        cxt.rect(200, 200, 10, 10)
+        cxt.fill()
+    }
+    draw()
+</script>
+
+</body>
+</html>

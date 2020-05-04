@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1,div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button>开始点名！</button>
+    <button>你说停就停</button>
+</div>
+<h1>谁那么幸运被我点中？？？？</h1>
+</body>
+</html>
+<script>
+    //获取按钮
+    var btn = document.getElementsByTagName("button");
+    //获取h1标签
+    var h = document.getElementsByTagName("h1");
+    var timer=null;
+    //人员数组
+    var allName=["周辉","范杨慧","岳兰","周轩薇","卢鑫","张三","李四","王超","安徽"]
+
+    btn[0].onclick=function () {
+        //清除定时器
+        clearInterval(timer);
+        timer=setInterval(function () {
+            //随机获取数组下标
+            var number = parseInt(Math.random()*allName.length);
+            h[0].innerHTML=allName[number]
+        },300)
+    }
+    btn[1].onclick=function () {
+        clearInterval(timer)
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function repN(str,bj) {
+            //获取指定id的元素
+            var rep = document.getElementById("b1");
+            //判断id元素是否存在
+            if(rep){
+                //创建节点
+                var element = document.createElement(bj);
+                //添加节点样式
+                element.style.color="red"
+                element.id="b1";
+                //创建文本节点
+                var text = document.createTextNode(str);
+                //将文本节点添加到创建的节点当中
+                element.appendChild(text)
+                //替换节点内容
+                rep.parentNode.replaceChild(element,rep)
+            }
+        }
+    </script>
+</head>
+<body>
+<b id="b1">要被替换的文本内容</b>
+<p>
+    输入标记：<input id="bj" type="text" size="15" /><br />
+    输入文本：<input id="txt" type="text" size="15" /><br />
+    <input type="button" value="替换" onclick="repN(txt.value,bj.value)" />
+</body>
+</html>

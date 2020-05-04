@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="003.jpg" alt="">
+<canvas id="anhui" style="border: 1px solid red" width="500px" height="500px"></canvas>
+<script>
+    function draw() {
+        //获取指定的canvas元素
+        var elementById = document.getElementById("anhui");
+        if(!elementById.getContext) {
+            return
+        }
+        //绘制2d画布
+        var cxt = elementById.getContext("2d");
+        var querySelector = document.querySelector("img");
+        cxt.drawImage(querySelector,0,0,200,100)
+        
+    }
+   document.querySelector("img").onclick=function () {
+    draw()
+   }
+</script>
+
+</body>
+</html>

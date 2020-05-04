@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id="can" width="300px" height="300px"></canvas>
+
+<script>
+  function draw() {
+      //根据id获取canvas元素
+      var canvas = document.getElementById("can");
+      //判断浏览器是否支持canvas
+      if(!canvas.getContext){
+          return
+      }
+      //绘制2d画布
+      var cxt = canvas.getContext("2d");
+      //绘制两个带有颜色长方形
+      cxt.fillStyle="rgb(255,212,0)"
+      //参数一：距离左边的距离 参数二：距离顶部的距离 参数三：宽度 参数四：高度
+      cxt.fillRect(10,30,100,100)
+      // cxt.fillStyle="rgb(133,122,0)"
+      // cxt.fillRect(10,10,55,50)
+  }
+  draw();
+</script>
+</body>
+</html>

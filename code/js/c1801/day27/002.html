@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="anhui" style="border: 1px solid red" width="500px" height="500px"></canvas>
+<script>
+    function draw() {
+        //获取指定的canvas元素
+        var elementById = document.getElementById("anhui");
+        if(!elementById.getContext) {
+            return
+        }
+        //绘制2d画布
+        var cxt = elementById.getContext("2d");
+
+       var cap =["butt","round","square"]
+        for (var i = 0; i < cap.length; i++) {
+            cxt.beginPath()
+            cxt.moveTo(30+i*50,50)
+            cxt.lineTo(30+i*50,100)
+            cxt.lineCap=cap[i]
+            cxt.lineWidth=20;
+            cxt.stroke();
+        }
+        cxt.beginPath()
+        cxt.moveTo(0,50)
+        cxt.lineTo(300,50)
+        cxt.moveTo(0,100)
+        cxt.lineTo(300,100)
+        cxt.lineWidth=1;
+        cxt.strokeStyle="red";
+        cxt.stroke()
+    }
+    draw()
+</script>
+
+</body>
+</html>
